@@ -14,26 +14,31 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-		<?php
-		if ( have_posts() ) :
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php
-			endif;
-			while ( have_posts() ) : the_post();
-				get_template_part( 'template-parts/content', get_post_format() );
-			endwhile;
-			the_posts_navigation();
-		else :
-			get_template_part( 'template-parts/content', 'none' );
-		endif; ?>
+	<div id="primary" class="content-area container">
+		<main id="main" class="site-main row" role="main">
+			<setion class="col-sm-8">
+				<?php
+				if ( have_posts() ) :
+					if ( is_home() && ! is_front_page() ) : ?>
+						<header>
+							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+						</header>
+					<?php
+					endif;
+					while ( have_posts() ) : the_post();
+						get_template_part( 'template-parts/content', get_post_format() );
+					endwhile;
+					the_posts_navigation();
+				else :
+					get_template_part( 'template-parts/content', 'none' );
+				endif; ?>
+			</setion>
+			<aside class="col-sm-4">
+				<?php get_sidebar(); ?>
+			</aside>
 		</main>
 	</div>
 
 <?php
-get_sidebar();
+
 get_footer();
