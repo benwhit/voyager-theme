@@ -3,19 +3,17 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 
 gulp.task('sass', function () {
-    gulp.src('scss/styles.scss')
+    gulp.src('sass/styles.scss')
         .pipe(sass({includePaths: ['scss']}))
         .pipe(gulp.dest('css'));
 });
 
 gulp.task('browser-sync', function() {
-    browserSync.init(["css/*.css", "js/*.js", "*.html"], {
-        server: {
-            baseDir: "./"
-        }
+    browserSync.init(["css/*.css", "js/*.js", "*.html", "*.php"], {
+        proxy: "local.wordpress.dev"
     });
 });
 
 gulp.task('default', ['sass', 'browser-sync'], function () {
-    gulp.watch("scss/*.scss", ['sass']);
+    gulp.watch("sass/*.scss", ['sass']);
 });
