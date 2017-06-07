@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area container">
+	<div id="primary" class="content-area container-fluid">
 		<main id="main" class="site-main row" role="main">
 			<setion class="col-sm-8">
 				<?php
