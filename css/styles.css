@@ -9022,7 +9022,28 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   width: 100%;
   overflow: hidden; }
   .site-header .navbar {
-    padding: 0; }
+    background: transparent;
+    padding: 0;
+    transition: background-color 0.5s; }
+    .site-header .navbar .navbar-brand {
+      color: #FFF;
+      font-size: 3rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding-right: 10px; }
+    .site-header .navbar span {
+      display: inline-block;
+      font-family: "elliot-light";
+      color: #FFF;
+      font-size: 1.5rem;
+      padding-top: 10px; }
+    .site-header .navbar.stuck {
+      color: #000;
+      background-color: #FFF;
+      transition: background-color 0.5s; }
+      .site-header .navbar.stuck a,
+      .site-header .navbar.stuck span {
+        color: #000; }
 
 .page__header {
   position: relative;
@@ -9032,7 +9053,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 400px;
     overflow: hidden;
     z-index: -999; }
   .page__header .page__title {
