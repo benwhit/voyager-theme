@@ -12,7 +12,7 @@ gulp.task('sass', function () {
 
 gulp.task('browser-sync', function() {
     browserSync.init(["css/*.css", "js/*.js", "*.html", "*.php"], {
-        proxy: "local.wordpress.dev"
+        proxy: "pwc.dev"
     });
 });
 

@@ -1,6 +1,13 @@
-// Theme Files
-@import './theme-variables';
-
 // Config Files
+@import './theme-variables';
 @import './underscores-default/underscores';
 @import './bootstrap/bootstrap';
+@import './font-awesome/font-awesome.scss';
+
+// Template Files
+@import './header';
+@import './page';
+@import './widgets';
+
+// leave at the bottom
+@import './theme';

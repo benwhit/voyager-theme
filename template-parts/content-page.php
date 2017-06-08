@@ -10,9 +10,18 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<header>
+		<h4 class="content__subtitle">
+			<?php the_field('content_subtitle'); ?>
+		</h4>
+		<h1 class="content__title">
+			<?php the_field('content_title') ?>
+		</h1>
+		<hr>
+		<p class="content__topic">
+			<?php the_field('content_topic'); ?>
+		</p>
+	</header>
 
 	<div class="entry-content">
 		<?php

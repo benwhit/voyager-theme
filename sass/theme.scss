@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "elliot";
+  src: url('../fonts/ElliotSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: "elliot-light";
+  src: url('../fonts/ElliotSans-Light.ttf');
+}
+
+hr {
+	width: 100px;
+	height: 10px;
+	background-color: $brand-primary;
+}

@@ -1,5 +1,12 @@
+// Theme Variables
+$font-primary: 'elliot';
+$font-primary-light: 'elliot-light';
+
+
 // Bootstrap overrides
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
-//$brand-primary: #0F0;
+
+$brand-primary: #8800ff;
+$headings-font-family: $font-primary-light;
