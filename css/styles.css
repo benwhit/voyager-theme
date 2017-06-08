@@ -9018,6 +9018,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .site-header {
   position: fixed;
   z-index: 999;
+  columns: #FFF;
   top: 0;
   width: 100%;
   overflow: hidden; }
@@ -9045,6 +9046,28 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
       .site-header .navbar.stuck span {
         color: #000; }
 
+.site-footer {
+  padding: 100px 0;
+  background-color: #414042; }
+  .site-footer .footer__logo {
+    padding: 50px 10px 0 0;
+    color: #FFF;
+    text-align: center;
+    border-right: 1px solid #FFF; }
+    .site-footer .footer__logo .footer__logo__title {
+      font-family: "elliot-bold";
+      font-size: 8rem;
+      font-weight: 900;
+      text-transform: uppercase; }
+    .site-footer .footer__logo .footer__logo__subtitle {
+      font-size: 3rem; }
+  .site-footer .footer__widgets {
+    padding-left: 100px; }
+  .site-footer .widget__title {
+    color: #FFF; }
+  .site-footer li a {
+    color: #FFF; }
+
 .page__header {
   position: relative;
   z-index: -1;
@@ -9066,7 +9089,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     text-transform: lowercase; }
 
 .page-content {
-  padding-top: 25px; }
+  padding: 25px 0 100px; }
 
 .content-area {
   background-color: #fff; }
@@ -9100,18 +9123,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   font-size: 1rem;
   padding-bottom: 25px; }
 
-.widget-area ul {
-  margin: 0;
-  padding: 0; }
-  .widget-area ul li {
-    margin: 0;
-    padding: 0;
-    font-family: "elliot";
-    font-weight: 900;
-    font-size: 1rem;
-    padding-bottom: 5px;
-    list-style: none; }
-
 @font-face {
   font-family: "elliot";
   src: url("../fonts/ElliotSans-Regular.ttf"); }
@@ -9120,7 +9131,41 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   font-family: "elliot-light";
   src: url("../fonts/ElliotSans-Light.ttf"); }
 
+@font-face {
+  font-family: "elliot-bold";
+  src: url("../fonts/ElliotSans-Bold.ttf"); }
+
 hr {
   width: 100px;
   height: 10px;
   background-color: #8800ff; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    margin: 0;
+    padding: 0;
+    font-family: "elliot";
+    font-weight: 900;
+    font-size: 1rem;
+    padding-bottom: 5px;
+    list-style: none; }
+
+.color-adopt {
+  color: #ff0055; }
+
+.color-involved {
+  color: #49d322; }
+
+.color-about {
+  color: #641aad; }
+
+.color-programs {
+  color: #1690db; }
+
+.color-news {
+  color: #ff6100; }
+
+.color-contact {
+  color: #bcbec0; }

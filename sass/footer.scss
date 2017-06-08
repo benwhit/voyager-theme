@@ -1,0 +1,30 @@
+.site-footer {
+	padding: 100px 0;
+	background-color: #414042;
+	.footer__logo {
+		padding: 50px 10px 0 0;
+		color: #FFF;
+		text-align: center;
+		border-right: 1px solid #FFF;
+		.footer__logo__title {
+			font-family: $font-primary-bold;
+			font-size: 8rem;
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+		.footer__logo__subtitle {
+			font-size: 3rem;
+		}
+	}
+	.footer__widgets {
+		padding-left: 100px;
+	}
+	.widget__title {
+		color: #FFF;
+	}
+	li {
+		a {
+			color: #FFF;
+		}
+	}
+}

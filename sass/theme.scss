@@ -2,10 +2,13 @@
   font-family: "elliot";
   src: url('../fonts/ElliotSans-Regular.ttf');
 }
-
 @font-face {
   font-family: "elliot-light";
   src: url('../fonts/ElliotSans-Light.ttf');
+}
+@font-face {
+  font-family: "elliot-bold";
+  src: url('../fonts/ElliotSans-Bold.ttf');
 }
 
 hr {
@@ -13,3 +16,26 @@ hr {
 	height: 10px;
 	background-color: $brand-primary;
 }
+
+
+ul {
+	margin: 0;
+	padding: 0;
+	li {		
+		margin: 0;
+		padding: 0;
+		font-family: $font-primary;
+		font-weight: 900;
+		font-size: 1rem;
+		padding-bottom: 5px;
+		list-style: none;
+	}
+}
+
+// Colors
+.color-adopt 	{ color: #ff0055; }
+.color-involved { color: #49d322; }
+.color-about 	{ color: #641aad; }
+.color-programs { color: #1690db; }
+.color-news 	{ color: #ff6100; }
+.color-contact 	{ color: #bcbec0; }
