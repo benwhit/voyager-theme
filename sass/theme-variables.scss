@@ -4,6 +4,14 @@ $font-primary-light: 'elliot-light';
 $font-primary-bold: 'elliot-bold';
 
 
+// Colors
+$color-adopt 			: #ff0055;
+$color-involved		: #49d322;
+$color-about 			: #641aad;
+$color-programs		: #1690db;
+$color-news 			: #ff6100;
+$color-contact 		: #bcbec0;
+
 // Bootstrap overrides
 //
 // Copy variables from `_variables.scss` to this file to override default values
@@ -11,3 +19,7 @@ $font-primary-bold: 'elliot-bold';
 
 $brand-primary: #8800ff;
 $headings-font-family: $font-primary-light;
+
+// Buttons
+$btn-primary-color:      #FFF;
+$border-radius:          0rem;

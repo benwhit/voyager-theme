@@ -21,7 +21,7 @@ function voyager_theme_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'voyager-theme' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h4 class="widget__title">',
+		'before_title'  => '<h4 class="widget__title color-adopt">',
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
@@ -30,7 +30,7 @@ function voyager_theme_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'voyager-theme' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h4 class="widget__title">',
+		'before_title'  => '<h4 class="widget__title color-involved">',
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
@@ -39,7 +39,7 @@ function voyager_theme_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'voyager-theme' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h4 class="widget__title">',
+		'before_title'  => '<h4 class="widget__title color-about">',
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
@@ -48,7 +48,7 @@ function voyager_theme_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'voyager-theme' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h4 class="widget__title">',
+		'before_title'  => '<h4 class="widget__title color-programs">',
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
@@ -57,7 +57,7 @@ function voyager_theme_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'voyager-theme' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h4 class="widget__title">',
+		'before_title'  => '<h4 class="widget__title color-news">',
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
@@ -66,7 +66,7 @@ function voyager_theme_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'voyager-theme' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h4 class="widget__title">',
+		'before_title'  => '<h4 class="widget__title color-contact">',
 		'after_title'   => '</h4>',
 	) );
 }

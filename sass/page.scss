@@ -35,25 +35,34 @@
 		margin: 0;
 		padding: 30px 20px;
 	}
-	.content__subtitle {
-		margin: 0;
-		font-family: $font-primary;
-		font-weight: 900;
-		font-size: 1rem;
-	}
-	.content__title {
-		font-size: 4rem;
-		line-height: 5rem;
-		font-weight: 100;
-	}
-	hr {
-		margin-top: 20px;
-		display: inline-block;
-	}
-	.content__topic {
-		text-transform: lowercase;
-		font-size: 1.7rem;
-		line-height: 2rem;
-		color: $brand-primary;
+	article {
+		padding: 60px 0;
+		.bg-image {
+			position: absolute;
+			width: 100%;
+			z-index: 0;
+			background-repeat: none;
+		}
+		.subtitle {
+			margin: 0;
+			font-family: $font-primary;
+			font-weight: 900;
+			font-size: 1rem;
+		}
+		.title {
+			font-size: 4rem;
+			line-height: 5rem;
+			font-weight: 100;
+		}
+		hr {
+			margin-top: 20px;
+			display: inline-block;
+		}
+		.topic {
+			text-transform: lowercase;
+			font-size: 1.7rem;
+			line-height: 2rem;
+    	padding-right: 80px;
+		}
 	}
 }
