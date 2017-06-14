@@ -1,11 +1,11 @@
 .site-header {
+	.navbar {
 	position: fixed;
 	z-index: 999;
 	columns: #FFF;
 	top: 0;
 	width: 100%;
 	overflow: hidden;
-	.navbar {
 		background: transparent;
 		padding: 0;
 		transition: background-color 0.5s;

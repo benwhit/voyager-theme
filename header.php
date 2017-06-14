@@ -48,6 +48,83 @@
 		   ]);
 		   ?>
 		 </nav>
+
+		 <?php if ( is_front_page() || is_home() ) : ?>
+
+		 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+		 		<!-- Count Slides, Display Indicators -->
+		 		<ol class="carousel-indicators">
+		 			<?php if (have_rows('flexible_slider')) :
+		 			$count = 0; ?>
+					  <?php // count slides
+					    while (have_rows('flexible_slider')) :
+					    	the_row();
+					    $count++; ?>
+					    <?php if ( $count == 1 ) { ?>
+					    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+					    	<?php if( get_sub_field('slider_title') != '' ): ?>
+					    		<h5>
+					    			<?php the_sub_field('slider_title') ?>
+					    		</h5>
+					    	<?php endif; ?>
+					    </li>
+					    <?php } else { ?>
+					    <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $count - 1  ?>" class="">					    	
+					    	<?php if( get_sub_field('slider_title') != '' ): ?>
+					    		<h5>
+					    			<?php the_sub_field('slider_title') ?>
+					    		</h5>
+					    	<?php endif; ?>
+					    </li>
+					    <?php } ?>
+					  <?php endwhile; ?>
+					<?php endif; ?>
+				</ol>
+
+				<!-- Display Slides -->
+				<div class="carousel-inner" role="listbox">
+					<?php if (have_rows('flexible_slider')) :
+					$count = 0; ?>
+					    <?php // display slides
+					    while (have_rows('flexible_slider')) :
+					    	the_row();
+					    $count++; ?>
+					   
+					    <div class="carousel-item <?php if ($count == 1){ echo 'active'; } ?>">
+					    	<?php if( get_sub_field('slider_image') != '' ){ ?>
+					    		<img class="d-block img-fluid" src="<?php the_sub_field('slider_image') ?>" alt="Slide">
+					    	<?php } ?>
+  							<div class="carousel-caption d-none d-md-block">
+					    	<?php if( get_sub_field('slider_title') != '' ): ?>
+					    		<h1>
+					    			<?php the_sub_field('slider_title') ?>
+					    		</h1>
+					    	<?php endif; ?>
+					    	<hr>
+					    	<?php if( get_sub_field('slider_content') != '' ): ?>
+					    		<p>
+					    			<?php the_sub_field('slider_content') ?>
+					    		</p>
+					    	<?php endif; ?>
+					    	</div>
+					    </div>
+					  <?php endwhile; ?>
+					<?php endif; ?>
+				</div>
+
+				<!-- Slider Arrows -->
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		<?php endif; ?>
+
 	</header>
 
 	<div id="content" class="site-content">

@@ -57,7 +57,7 @@ ul {
 		background-color: $color-adopt;	
 	}
 	.section__post {
-		.title {
+		.title > a {
 			background-color: $color-adopt;
 		}
 	}
@@ -81,7 +81,6 @@ ul {
 
 // Section Posts Squares
 .section__posts {
-	padding: 20px 50px;
 	.section__posts__title {
 		text-align: center;
 		padding-bottom: 25px;
