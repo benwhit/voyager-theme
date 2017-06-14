@@ -17,6 +17,10 @@ hr {
 	background-color: $brand-primary;
 }
 
+a.btn {
+	font-family: $font-primary-light;
+	text-transform: lowercase;
+}
 a.btn:visited {
 	color: #FFF;
 }

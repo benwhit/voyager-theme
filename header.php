@@ -50,7 +50,6 @@
 		 </nav>
 
 		 <?php if ( is_front_page() || is_home() ) : ?>
-
 		 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
 		 		<!-- Count Slides, Display Indicators -->
@@ -91,22 +90,23 @@
 					    	the_row();
 					    $count++; ?>
 					   
-					    <div class="carousel-item <?php if ($count == 1){ echo 'active'; } ?>">
+					    <div class="carousel-item adopt <?php if ($count == 1){ echo 'active'; } ?>">
 					    	<?php if( get_sub_field('slider_image') != '' ){ ?>
-					    		<img class="d-block img-fluid" src="<?php the_sub_field('slider_image') ?>" alt="Slide">
+					    		<img class="d-block" src="<?php the_sub_field('slider_image') ?>" alt="Slide">
 					    	<?php } ?>
   							<div class="carousel-caption d-none d-md-block">
 					    	<?php if( get_sub_field('slider_title') != '' ): ?>
-					    		<h1>
+					    		<h1 class="title">
 					    			<?php the_sub_field('slider_title') ?>
 					    		</h1>
 					    	<?php endif; ?>
 					    	<hr>
 					    	<?php if( get_sub_field('slider_content') != '' ): ?>
-					    		<p>
+					    		<p class="topic">
 					    			<?php the_sub_field('slider_content') ?>
 					    		</p>
 					    	<?php endif; ?>
+					    	<a href="#" class="btn btn-primary">Learn More</a>
 					    	</div>
 					    </div>
 					  <?php endwhile; ?>
@@ -122,6 +122,7 @@
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="sr-only">Next</span>
 				</a>
+
 			</div>
 		<?php endif; ?>
 
