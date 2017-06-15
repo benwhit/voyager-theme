@@ -79,6 +79,9 @@ ul {
 		border-color: $color-adopt;
 		background-color: $color-adopt;	
 	}
+	.quote__icon {
+		border-right-color: $color-adopt;
+	}
 	.section__post {
 		.title > a {
 			background-color: $color-adopt;
@@ -94,6 +97,9 @@ ul {
 	.btn {
 		border-color: $color-programs;
 		background-color: $color-programs;	
+	}
+	.quote__icon {
+		border-right-color: $color-programs;
 	}
 	.section__post {
 		.title > a {
@@ -111,6 +117,9 @@ ul {
 		border-color: $color-involved;
 		background-color: $color-involved;	
 	}
+	.quote__icon {
+		border-right-color: $color-involved;
+	}
 	.section__post {
 		.title > a {
 			background-color: rgba(73, 211, 34, 0.7);
@@ -126,6 +135,9 @@ ul {
 	.btn {
 		border-color: $color-news;
 		background-color: $color-news;	
+	}
+	.quote__icon {
+		border-right-color: $color-news;
 	}
 	.section__post {
 		.title > a {
@@ -143,6 +155,9 @@ ul {
 		border-color: $color-about;
 		background-color: $color-about;	
 	}
+	.quote__icon {
+		border-right-color: $color-about;
+	}
 	.section__post {
 		.title > a {
 			background-color: rgba(255, 97, 0, 0.7);
@@ -156,6 +171,7 @@ ul {
 .section__posts {
 	padding-bottom: 150px;
 	.section__posts__title {
+		font-size: 3rem;
 		text-align: center;
 		padding-bottom: 25px;
 	}
@@ -183,5 +199,31 @@ ul {
 			color:#FFF;
 			text-transform: lowercase;
 		}
+	}
+}
+
+
+// Quote Blocks
+.quote {
+	padding-bottom: 20vh;
+	.quote__icon {
+		border-right-width: 2px;
+		border-right-style: solid;
+	}
+	.quote__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		text-align: center;
+		font-size: 15rem;
+		line-height: 3rem;
+		color: #ececec;
+		opacity: 0.5;
+	}
+	.quote__text {
+		padding: 2px 20px;
+		margin: 0;
 	}
 }

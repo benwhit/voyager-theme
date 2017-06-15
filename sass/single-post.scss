@@ -1,0 +1,55 @@
+.single-post {
+	.page__header {
+		background-image: url(../images/header-img.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		.page__title {
+			padding-top: 20vh;
+			line-height: 5rem;
+		} 
+	} 
+	.content-area {
+		background-color: #FFF;
+		.page__lead {
+			position: relative;
+			padding: 20px 0 0 10px;
+			z-index: 1;
+		}
+		.accent-left {
+			height: auto;
+			z-index: 0;
+		}
+		.hentry  {
+			padding-top: 5vh;
+		}
+		.section__posts {
+			padding-top: 10vh;
+		}
+	}
+}
+
+// Pets
+.pet__details {
+	padding-top: 20px;
+	text-align: center;
+	h5 {
+		padding-top: 5px;
+		font-weight: bold;
+		color: $color-adopt;
+	}
+	.btn {
+		float: left;
+		background-color: $color-adopt;
+	}
+	.pet__details--age,
+	.pet__details--size,
+	.pet__details--av {
+		font-size: 1.5rem;
+	}
+
+	.pet__details--age,
+	.pet__details--size {
+		border-right: 1px solid #ececec;
+	}
+}

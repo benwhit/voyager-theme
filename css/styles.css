@@ -9241,6 +9241,47 @@ article.about .page__lead__img {
       font-size: 1.5rem;
       font-weight: 900; }
 
+.single-post .page__header {
+  background-image: url(../images/header-img.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .single-post .page__header .page__title {
+    padding-top: 20vh;
+    line-height: 5rem; }
+
+.single-post .content-area {
+  background-color: #FFF; }
+  .single-post .content-area .page__lead {
+    position: relative;
+    padding: 20px 0 0 10px;
+    z-index: 1; }
+  .single-post .content-area .accent-left {
+    height: auto;
+    z-index: 0; }
+  .single-post .content-area .hentry {
+    padding-top: 5vh; }
+  .single-post .content-area .section__posts {
+    padding-top: 10vh; }
+
+.pet__details {
+  padding-top: 20px;
+  text-align: center; }
+  .pet__details h5 {
+    padding-top: 5px;
+    font-weight: bold;
+    color: #ff0055; }
+  .pet__details .btn {
+    float: left;
+    background-color: #ff0055; }
+  .pet__details .pet__details--age,
+  .pet__details .pet__details--size,
+  .pet__details .pet__details--av {
+    font-size: 1.5rem; }
+  .pet__details .pet__details--age,
+  .pet__details .pet__details--size {
+    border-right: 1px solid #ececec; }
+
 @font-face {
   font-family: "elliot";
   src: url("../fonts/ElliotSans-Regular.ttf"); }
@@ -9320,6 +9361,9 @@ ul {
   border-color: #ff0055;
   background-color: #ff0055; }
 
+.adopt .quote__icon {
+  border-right-color: #ff0055; }
+
 .adopt .section__post .title > a {
   background-color: #ff0055; }
 
@@ -9331,6 +9375,9 @@ ul {
 .programs .btn {
   border-color: #1690db;
   background-color: #1690db; }
+
+.programs .quote__icon {
+  border-right-color: #1690db; }
 
 .programs .section__post .title > a {
   background-color: rgba(22, 144, 219, 0.7); }
@@ -9344,6 +9391,9 @@ ul {
   border-color: #49d322;
   background-color: #49d322; }
 
+.involved .quote__icon {
+  border-right-color: #49d322; }
+
 .involved .section__post .title > a {
   background-color: rgba(73, 211, 34, 0.7); }
 
@@ -9355,6 +9405,9 @@ ul {
 .news .btn {
   border-color: #ff6100;
   background-color: #ff6100; }
+
+.news .quote__icon {
+  border-right-color: #ff6100; }
 
 .news .section__post .title > a {
   background-color: rgba(255, 97, 0, 0.7); }
@@ -9368,12 +9421,16 @@ ul {
   border-color: #641aad;
   background-color: #641aad; }
 
+.about .quote__icon {
+  border-right-color: #641aad; }
+
 .about .section__post .title > a {
   background-color: rgba(255, 97, 0, 0.7); }
 
 .section__posts {
   padding-bottom: 150px; }
   .section__posts .section__posts__title {
+    font-size: 3rem;
     text-align: center;
     padding-bottom: 25px; }
   .section__posts .section__post {
@@ -9398,3 +9455,23 @@ ul {
       padding: 0 20px;
       color: #FFF;
       text-transform: lowercase; }
+
+.quote {
+  padding-bottom: 20vh; }
+  .quote .quote__icon {
+    border-right-width: 2px;
+    border-right-style: solid; }
+  .quote .quote__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 15rem;
+    line-height: 3rem;
+    color: #ececec;
+    opacity: 0.5; }
+  .quote .quote__text {
+    padding: 2px 20px;
+    margin: 0; }
