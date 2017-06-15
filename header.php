@@ -85,10 +85,10 @@
 				<div class="carousel-inner" role="listbox">
 					<?php if (have_rows('flexible_slider')) :
 					$count = 0; ?>
-					    <?php // display slides
-					    while (have_rows('flexible_slider')) :
-					    	the_row();
-					    $count++; ?>
+				    <?php // display slides
+				    while (have_rows('flexible_slider')) :
+				    	the_row();
+				    	$count++; ?>
 					   
 					    <div class="carousel-item adopt <?php if ($count == 1){ echo 'active'; } ?>">
 					    	<?php if( get_sub_field('slider_image') != '' ){ ?>

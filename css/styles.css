@@ -9305,6 +9305,30 @@ ul {
 .programs .section__post .title > a {
   background-color: rgba(22, 144, 219, 0.7); }
 
+.involved .subtitle,
+.involved .topic {
+  color: #49d322; }
+
+.involved hr,
+.involved .btn {
+  border-color: #49d322;
+  background-color: #49d322; }
+
+.involved .section__post .title > a {
+  background-color: rgba(73, 211, 34, 0.7); }
+
+.news .subtitle,
+.news .topic {
+  color: #ff6100; }
+
+.news hr,
+.news .btn {
+  border-color: #ff6100;
+  background-color: #ff6100; }
+
+.news .section__post .title > a {
+  background-color: rgba(255, 97, 0, 0.7); }
+
 .section__posts .section__posts__title {
   text-align: center;
   padding-bottom: 25px; }

@@ -42,10 +42,10 @@ get_header();
 					<div class="container">
 						<div class="row">
 
-								<div class="<?php if ( get_sub_field('image_display') == 'left' ){ echo 'col-sm-12 col-lg-5'; } else { echo 'col-sm-6 col-lg-6 offset-lg-1 flex-last'; } ?>">
+								<div class="<?php if ( get_sub_field('image_display') == 'left' ){ echo 'col-sm-12 col-lg-5'; } else { echo 'col-sm-6 col-lg-5 offset-lg-1 flex-last'; } ?>">
 									<img class="page__lead" src="<?php echo get_sub_field('image'); ?>" alt="">
 								</div>
-								<div class="<?php if ( get_sub_field('image_display') == 'left' ){ echo 'col-sm-6 col-lg-6 offset-lg-1'; } else { echo 'col-sm-12 col-lg-5'; } ?>">
+								<div class="col-sm-6 <?php if ( get_sub_field('image_display') == 'left' ){ echo 'offset-lg-1'; } ?>">
 									<header>
 										<h4 class="subtitle">
 											<?php echo get_sub_field('subheader'); ?>
@@ -79,6 +79,7 @@ get_header();
 
 					<h2 class="section__posts__title">
 						<?php echo get_sub_field('posts_title') ?>
+						<br>
 						<hr>
 					</h2>
 					<div class="row">
