@@ -52,6 +52,19 @@ hr {
 }
 
 
+article.about {
+	.bg-image {
+    top: initial !important;
+    bottom: -25vh;
+	}
+	.accent-left {
+		height: auto;
+		width: auto;
+	}
+	.page__lead__img {
+		padding-bottom: 50px;
+	}
+}
 
 
 
@@ -61,21 +74,23 @@ hr {
 // original
 
 .content-area {
-	background-color: #fff;
-	.page__lead {
+	.page__lead__img {
 		width: 100%;
+		padding: 20px 10px;
 	}
 	.return {
 		margin: 0;
 		padding: 30px 20px;
 	}
 	article {
-		padding: 60px 0;
+		position: relative;
+		padding: 0 0 100px 0;
 		.bg-image {
 			position: absolute;
+			top: 10vh;
 			width: 100%;
-			z-index: 0;
-			background-repeat: none;
+			z-index: -1;
+			background-repeat: no-repeat;
 		}
 		.subtitle {
 			margin: 0;

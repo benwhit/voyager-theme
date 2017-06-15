@@ -40,6 +40,25 @@ ul {
 	}
 }
 
+// Image Accents
+.accent-left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 90%;
+	width: 90%;
+	z-index: -1;
+}
+.accent-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 90%;
+	width: 90%;
+	z-index: -1;
+}
+
+
 // Colors
 .color-adopt 	{ color: #ff0055; }
 .color-involved { color: #49d322; }
@@ -52,7 +71,7 @@ ul {
 // Category Section Colors
 .adopt {
 	.subtitle,
-	.topic {
+	.topic{
 		color: $color-adopt;
 	}
 	hr,
@@ -114,9 +133,28 @@ ul {
 		}
 	}
 }
+.about {
+	.subtitle,
+	.topic {
+		color: $color-about;
+	}
+	hr,
+	.btn {
+		border-color: $color-about;
+		background-color: $color-about;	
+	}
+	.section__post {
+		.title > a {
+			background-color: rgba(255, 97, 0, 0.7);
+		}
+	}
+}
+
+
 
 // Section Posts Squares
 .section__posts {
+	padding-bottom: 150px;
 	.section__posts__title {
 		text-align: center;
 		padding-bottom: 25px;
@@ -131,7 +169,6 @@ ul {
 			left: 0;
 			right: 0;
 			height: 100%;
-			width: 90%;
 			margin: auto;
 			background-size: cover;
 		}
@@ -140,7 +177,7 @@ ul {
 			line-height: 1.5rem;
 			position: absolute; 
 			bottom: 10px;
-			left: 5%;
+			left: 0;
 			right: 30%;
 			padding: 0 20px;
 			color:#FFF;
