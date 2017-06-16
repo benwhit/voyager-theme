@@ -11,6 +11,9 @@
 	} 
 	.content-area {
 		background-color: #FFF;
+		article {
+			padding: inherit;
+		}
 		.page__lead {
 			position: relative;
 			padding: 20px 0 0 10px;

@@ -20,7 +20,7 @@
 		<main id="main" class="site-main container" role="main">
 			<section>
 				<div class="row">
-					<div class="col-sm-12">
+					<div class="col-12">
 						<p class="return">
 							<i class="fa fa-angle-left"></i>
 							<i class="fa fa-angle-left"></i>
@@ -33,50 +33,52 @@
 			</section>
 			<section class="page-content">
 				<div class="row">
-					<div class="col-6">						
+					<div class="col-md-6 col-12">						
 						<img class="page__lead" src="<?php the_field('pet_image'); ?>" alt="">
 						<img class="accent-left" src="<?php echo get_home_url(); ?>/wp-content/themes/voyager-theme/images/accent-left.png" alt="" class="accent-left">
 					</div>
-					<article id="post-<?php the_ID(); ?>" <?php post_class('adopt col-5 offset-1'); ?>>
-						<header>
-							<h4 class="subtitle">
-								<?php the_field('content_subheader'); ?>
-							</h4>
-							<h1 class="title">
-								<?php the_field('content_title') ?>
-							</h1>
-							<hr>
-							<p class="topic">
-								<?php the_field('content_subtitle'); ?>
-							</p>
-						</header>
+					<div class="adopt col-md-5 offset-md-1 col-12 offset-0">						
+						<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
+							<header>
+								<h4 class="subtitle">
+									<?php the_field('content_subheader'); ?>
+								</h4>
+								<h1 class="title">
+									<?php the_field('content_title') ?>
+								</h1>
+								<hr>
+								<p class="topic">
+									<?php the_field('content_subtitle'); ?>
+								</p>
+							</header>
 
-						<div class="entry-content">
-							<?php
-							the_field('content_paragraph');
+							<div class="entry-content">
+								<?php
+								the_field('content_paragraph');
 
-							wp_link_pages( array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'voyager-theme' ),
-								'after'  => '</div>',
-								) );
-							?>
-						</div>
-					</article>
+								wp_link_pages( array(
+									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'voyager-theme' ),
+									'after'  => '</div>',
+									) );
+								?>
+							</div>
+						</article>
+					</div>
 				</div>
 				<div class="row pet__details">
-					<div class="col-2 pl-0 pet__details--age">
+					<div class="col-4 col-md-2 pl-0 pet__details--age">
 						<?php the_field('pet_age'); ?>
 						<h5>Age</h5>
 					</div>
-					<div class="col-2 pl-0 pet__details--size">
+					<div class="col-4 col-md-2 pl-0 pet__details--size">
 						<?php the_field('pet_size'); ?>
 						<h5>Size</h5>
 					</div>
-					<div class="col-2 pl-0 pet__details--av">
+					<div class="col-4 col-md-2 pl-0 pet__details--av">
 						<?php the_field('pet_availability'); ?>
 						<h5>Available</h5>
 					</div>
-					<div class="col-5 offset-1">
+					<div class="col-md-5 col-12 offset-1">
 						<a href="#" class="btn btn-primary">
 							adopt me
 						</a>

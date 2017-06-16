@@ -52,6 +52,7 @@ hr {
 }
 
 
+// About Page Template
 article.about {
 	.bg-image {
     top: initial !important;
@@ -77,6 +78,9 @@ article.about {
 	.page__lead__img {
 		width: 100%;
 		padding: 20px 10px;
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
 	}
 	.return {
 		margin: 0;

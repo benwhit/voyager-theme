@@ -7,6 +7,9 @@
 		margin: initial;
 		display: block;
 		z-index: 1;
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
 		li {
 				position: relative;
 				height: 20px;
@@ -60,7 +63,7 @@
 	.carousel-inner {
 		.carousel-item {
 			height: 700px;
-		   background-color: #ececec;
+		  background-color: #ececec;
 			img {
 				position: fixed;
 				top: 0;
@@ -78,11 +81,20 @@
 				top: 18vh;
 				left: 60vw;
 				text-align: left;
+				@include media-breakpoint-down(md) {
+					width: auto;
+					left: 10vw;
+					right: 10vw;
+					text-align: center;
+				}
 				.title {
 					font-size: 5rem;
 				}
 				.topic {
 					color: #FFF;
+					@include media-breakpoint-down(md) {
+						padding-right: 0;
+					}
 				}
 				.btn {
 					margin-top: 20px;

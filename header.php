@@ -94,7 +94,7 @@
 					    	<?php if( get_sub_field('slider_image') != '' ){ ?>
 					    		<img class="d-block" src="<?php the_sub_field('slider_image') ?>" alt="Slide">
 					    	<?php } ?>
-  							<div class="carousel-caption d-none d-md-block">
+  							<div class="carousel-caption d-md-block">
 					    	<?php if( get_sub_field('slider_title') != '' ): ?>
 					    		<h1 class="title">
 					    			<?php the_sub_field('slider_title') ?>
