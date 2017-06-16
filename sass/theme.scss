@@ -169,6 +169,7 @@ ul {
 
 // Section Posts Squares
 .section__posts {
+	padding: 50px 0;
 	.section__posts__title {
 		font-size: 3rem;
 		text-align: center;
@@ -204,7 +205,7 @@ ul {
 
 // Quote Blocks
 .quote {
-	padding: 20vh 0;
+	padding: 150px 0;
 	overflow: hidden;
 	.quote__icon {
 		border-right-width: 2px;

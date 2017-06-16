@@ -9136,7 +9136,7 @@ article.about .page__lead__img {
 
 .content-area article {
   position: relative;
-  padding: 0 0 100px 0; }
+  padding: 50px 0; }
   .content-area article .bg-image {
     position: absolute;
     top: 10vh;
@@ -9447,36 +9447,37 @@ ul {
 .about .section__post .title > a {
   background-color: rgba(255, 97, 0, 0.7); }
 
-.section__posts .section__posts__title {
-  font-size: 3rem;
-  text-align: center;
-  padding-bottom: 25px; }
-
-.section__posts .section__post {
-  height: 300px;
-  border-bottom: 25px solid #ececec; }
-  .section__posts .section__post .thumbnail {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    margin: auto;
-    background-size: cover; }
-  .section__posts .section__post .title > a {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 30%;
-    padding: 0 20px;
-    color: #FFF;
-    text-transform: lowercase; }
+.section__posts {
+  padding: 50px 0; }
+  .section__posts .section__posts__title {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 25px; }
+  .section__posts .section__post {
+    height: 300px;
+    border-bottom: 25px solid #ececec; }
+    .section__posts .section__post .thumbnail {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      margin: auto;
+      background-size: cover; }
+    .section__posts .section__post .title > a {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 30%;
+      padding: 0 20px;
+      color: #FFF;
+      text-transform: lowercase; }
 
 .quote {
-  padding: 20vh 0;
+  padding: 150px 0;
   overflow: hidden; }
   .quote .quote__icon {
     border-right-width: 2px;
