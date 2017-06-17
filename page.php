@@ -71,11 +71,15 @@ get_header(); ?>
 							if( get_row_layout() == 'category_section' )
 								get_template_part('partials/category-section');
 
-								// Posts Section
+							// Posts Section
 							if( get_row_layout() == 'posts_carousel' )
 								get_template_part('partials/posts-carousel');			
 
-								// Quote Layout
+							// Quote Layout
+							if (get_row_layout() == 'quote')
+								get_template_part('partials/quote');
+
+							// Donate Button
 							if (get_row_layout() == 'quote')
 								get_template_part('partials/quote');
 
