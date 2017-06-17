@@ -1,10 +1,19 @@
+/**	All Pages
+---------------------------------------*/
+
 .page__header {
 	position: relative;
-	z-index: -1;
 	height: 400px;
+	text-align: center;
+	background-image: url(../images/header-img.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: -1;
 	img {		
 		position: fixed;
 		top: 0;
+		left: 0;
 		width: 100%;
 		overflow: hidden;
 		z-index: -999;
@@ -19,15 +28,48 @@
 		text-align: center;
 		text-transform: lowercase;
 	}
-
 }
 
 .page-content {
 	padding: 25px 0 100px;
 }
 
+article {
+	position: relative;
+	padding: 50px 0;
+}
 
-// duplicate
+.widget-area {	
+	padding: 50px 0;
+}
+
+.return {
+	margin: 0;
+	padding: 20px 0;
+	a {
+		font-weight: 900;
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+		text-decoration: none;
+	}
+}
+
+.page__lead__img {
+	position: relative;
+	width: 100%;
+	padding: 20px 10px;
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
+}
+
+.bg-image {
+	position: absolute;
+	top: 10vh;
+	width: 100%;
+	z-index: 0;
+	background-repeat: no-repeat;
+}
 
 .subtitle {
 	margin: 0;
@@ -52,6 +94,26 @@ hr {
 }
 
 
+
+
+/**	Single Pages
+---------------------------------------*/
+.page {
+	.page-content {
+		padding-top: 0;
+		margin-top: 0;
+	}
+	.content-area {
+		background-color: #FFF;
+	}
+}
+
+
+
+/**	Specific Pages
+---------------------------------------*/
+
+
 // About Page Template
 article.about {
 	.bg-image {
@@ -64,58 +126,5 @@ article.about {
 	}
 	.page__lead__img {
 		padding-bottom: 50px;
-	}
-}
-
-
-
-
-
-
-// original
-
-.content-area {
-	.page__lead__img {
-		width: 100%;
-		padding: 20px 10px;
-		@include media-breakpoint-down(sm) {
-			display: none;
-		}
-	}
-	.return {
-		margin: 0;
-		padding: 30px 20px;
-	}
-	article {
-		position: relative;
-		padding: 50px 0;
-		.bg-image {
-			position: absolute;
-			top: 10vh;
-			width: 100%;
-			z-index: -1;
-			background-repeat: no-repeat;
-		}
-		.subtitle {
-			margin: 0;
-			font-family: $font-primary;
-			font-weight: 900;
-			font-size: 1rem;
-		}
-		.title {
-			font-size: 4rem;
-			line-height: 5rem;
-			font-weight: 100;
-		}
-		hr {
-			margin-top: 20px;
-			display: inline-block;
-		}
-		.topic {
-			text-transform: lowercase;
-			font-size: 1.7rem;
-			line-height: 2rem;
-    	padding-right: 80px;
-		}
 	}
 }

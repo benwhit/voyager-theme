@@ -22,7 +22,7 @@ get_header();
 			<?php
 			if( have_rows('flexible_content') ):
 				while ( have_rows('flexible_content') ) : the_row();
-
+			
 					// Category Section Layout
 					if( get_row_layout() == 'category_section' )
 						get_template_part('partials/category-section');

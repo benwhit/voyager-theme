@@ -11,21 +11,21 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header>
-		<h4 class="content__subtitle">
-			<?php the_field('content_subtitle'); ?>
+		<h4 class="subtitle">
+			<?php the_field('subheader'); ?>
 		</h4>
-		<h1 class="content__title">
-			<?php the_field('content_title') ?>
+		<h1 class="title">
+			<?php the_field('title') ?>
 		</h1>
 		<hr>
-		<p class="content__topic">
-			<?php the_field('content_topic'); ?>
+		<p class="topic">
+			<?php the_field('subtitle'); ?>
 		</p>
 	</header>
 
 	<div class="entry-content">
 		<?php
-			the_content();
+			the_field('content');
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'voyager-theme' ),
