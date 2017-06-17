@@ -4,12 +4,12 @@
 	<div class="container">
 		<div class="row">
 				<div class="<?php if ( get_sub_field('image_display') == 'left' ){ echo 'col-sm-12 col-lg-5'; } else { echo 'col-sm-6 col-lg-5 offset-lg-1 flex-last'; } ?>">
-					<img class="page__lead__img" src="<?php echo get_sub_field('image'); ?>" alt="">									
 					<?php if ( get_sub_field('image_display') == 'left' ){ ?>
 						<img class="accent-left" src="./wp-content/themes/voyager-theme/images/accent-left.png" alt="">
 					<?php } else { ?>
 						<img class="accent-right" src="./wp-content/themes/voyager-theme/images/accent-right.png" alt="">
 					<?php } ?>
+					<img class="page__lead__img" src="<?php echo get_sub_field('image'); ?>" alt="">									
 				</div>
 				<div class="col-sm-6 <?php if ( get_sub_field('image_display') == 'left' ){ echo 'offset-lg-1'; } ?>">
 					<header>

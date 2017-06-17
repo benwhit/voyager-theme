@@ -25,7 +25,6 @@ a.btn:visited {
 	color: #FFF;
 }
 
-
 ul {
 	margin: 0;
 	padding: 0;
@@ -47,7 +46,7 @@ ul {
 	left: 0;
 	height: 90%;
 	width: 90%;
-	z-index: -1;
+	z-index: 0;
 }
 .accent-right {
 	position: absolute;
@@ -55,7 +54,7 @@ ul {
 	right: 0;
 	height: 90%;
 	width: 90%;
-	z-index: -1;
+	z-index: 0;
 }
 
 
@@ -71,7 +70,8 @@ ul {
 // Category Section Colors
 .adopt {
 	.subtitle,
-	.topic{
+	.topic,
+	.return a{
 		color: $color-adopt;
 	}
 	hr,
@@ -90,7 +90,8 @@ ul {
 }
 .programs {
 	.subtitle,
-	.topic {
+	.topic,
+	.return a {
 		color: $color-programs;
 	}
 	hr,
@@ -109,7 +110,8 @@ ul {
 }
 .involved {
 	.subtitle,
-	.topic {
+	.topic,
+	.return a {
 		color: $color-involved;
 	}
 	hr,
@@ -128,7 +130,8 @@ ul {
 }
 .news {
 	.subtitle,
-	.topic {
+	.topic,
+	.return a {
 		color: $color-news;
 	}
 	hr,
@@ -147,7 +150,8 @@ ul {
 }
 .about {
 	.subtitle,
-	.topic {
+	.topic,
+	.return a {
 		color: $color-about;
 	}
 	hr,
