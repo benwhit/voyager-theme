@@ -20,7 +20,11 @@ gulp.task('sass', function () {
 
 // BrowserSync
 gulp.task('browser-sync', function() {
-    browserSync.init({
+    browserSync.init([
+    	"css/*.css", 
+    	"js/*.js", 
+    	"*.html", 
+    	"*.php"], {
         proxy: "pwc.dev"
     });
 });
