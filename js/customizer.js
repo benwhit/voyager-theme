@@ -1,3 +1,4 @@
+// requires: jquery-3.2.1.min.js
 /**
  * File customizer.js.
  *

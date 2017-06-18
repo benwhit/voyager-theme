@@ -12,7 +12,7 @@ if (is_page('adopt')) {
 	));
 } else {
 	$section_posts =  new WP_Query ( array(
-		'posts_per_page' 	=> 8,
+		'posts_per_page' 	=> 4,
 		'cat' 						=> get_sub_field('posts')
 	)); 
 } 
@@ -30,24 +30,27 @@ if (is_page('adopt')) {
 		<?php endif; ?>
 
 		<!-- Posts Carousel Loop -->
-		<div class="row">
+			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  			<div class="carousel-inner" role="listbox">
 			<?php if ( $section_posts->have_posts() ) : ?>
 				<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
 
 
-					<div class="col-lg-3 col-sm-6">								
-						<article class="section__post">								
-							<a href="" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');"></a>								
-							<h3 class="title">
-								<a href="<?php the_permalink(); ?>">
-									<?php the_title(); ?>
-								</a>
-							</h3>
-						</article>
-					</div>
+    			<div class="carousel-item">
+							<article class="section__post">								
+								<a href="" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');"></a>								
+								<h3 class="title">
+									<a href="<?php the_permalink(); ?>">
+										<?php the_title(); ?>
+									</a>
+								</h3>
+							</article>
+						</div>
+
 					<?php $post_count++; ?>
 				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 			<?php endif; ?>
-		</div>
+  </div>
+</div>
 	</div>

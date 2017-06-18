@@ -34,10 +34,10 @@ get_header();
 					// Quote Layout
 					if (get_row_layout() == 'quote')
 						get_template_part('partials/quote');
-					
+
 					// Donate Button
-					if (get_row_layout() == 'quote')
-						get_template_part('partials/quote');
+					if (get_row_layout() == 'donate')
+						get_template_part('partials/donate');
 
 				endwhile;
 			endif; 

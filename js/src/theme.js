@@ -1,5 +1,6 @@
-(function($) {
-	
+// requires: jquery-3.2.1.min.js
+
+(function($) {	
 	
 	$(window).on('load', function(event) {
 	    var scrollValue = $(window).scrollTop();		
