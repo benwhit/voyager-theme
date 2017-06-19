@@ -49,8 +49,8 @@ get_header();
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
-							<img class="page__lead__img" src="http://pwc.dev/wp-content/uploads/2017/06/contact.jpg" alt="">
 							<img class="accent-left" src="./wp-content/themes/voyager-theme/images/accent-left.png" alt="">	
+							<img class="page__lead__img" src="http://pwc.dev/wp-content/uploads/2017/06/contact.jpg" alt="">
 						</div>
 						<div class="col-sm-6">
 							<header>

@@ -18,12 +18,29 @@ hr {
 }
 
 a.btn {
+	position: relative;
+	padding: 8px 50px;
+	margin: auto;
 	font-family: $font-primary-light;
 	text-transform: lowercase;
-}
-a.btn:visited {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	letter-spacing: 2px;
+	font-weight: bold;
 	color: #FFF;
+	-webkit-box-shadow: 0px 15px 40px -15px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 15px 40px -15px rgba(0,0,0,0.75);
+	box-shadow: 0px 15px 40px -15px rgba(0,0,0,0.75);
+
 }
+
+a.btn:hover {
+	background: #FFF;
+	border-outline: none;
+	-webkit-box-shadow: 0px 15px 40px -18px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 15px 40px -18px rgba(0,0,0,0.75);
+	box-shadow: 0px 15px 40px -18px rgba(0,0,0,0.75);
+} 
 
 ul {
 	margin: 0;
@@ -77,7 +94,10 @@ ul {
 	hr,
 	.btn {
 		border-color: $color-adopt;
-		background-color: $color-adopt;	
+		background-color: $color-adopt;
+		&:hover {
+			color: $color-adopt;			
+		}	
 	}
 	.quote__icon {
 		border-right-color: $color-adopt;
@@ -97,7 +117,10 @@ ul {
 	hr,
 	.btn {
 		border-color: $color-programs;
-		background-color: $color-programs;	
+		background-color: $color-programs;
+		&:hover {
+			color: $color-programs;			
+		}	
 	}
 	.quote__icon {
 		border-right-color: $color-programs;
@@ -117,7 +140,10 @@ ul {
 	hr,
 	.btn {
 		border-color: $color-involved;
-		background-color: $color-involved;	
+		background-color: $color-involved;
+		&:hover {
+			color: $color-involved;			
+		}	
 	}
 	.quote__icon {
 		border-right-color: $color-involved;
@@ -137,7 +163,10 @@ ul {
 	hr,
 	.btn {
 		border-color: $color-news;
-		background-color: $color-news;	
+		background-color: $color-news;
+		&:hover {
+			color: $color-news;			
+		}	
 	}
 	.quote__icon {
 		border-right-color: $color-news;
@@ -157,7 +186,10 @@ ul {
 	hr,
 	.btn {
 		border-color: $color-about;
-		background-color: $color-about;	
+		background-color: $color-about;
+		&:hover {
+			color: $color-about;			
+		}	
 	}
 	.quote__icon {
 		border-right-color: $color-about;
@@ -250,10 +282,5 @@ ul {
     color: #ececec;
     opacity: 0.5;
     z-index: 0;
-	}
-	.donate__button {
-		position: relative;
-		padding: 5px 80px;
-		margin: auto;
 	}
 }
