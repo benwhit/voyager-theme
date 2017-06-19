@@ -45,9 +45,13 @@ get_header(); ?>
 					if( get_row_layout() == 'category_section' )
 						get_template_part('partials/category-section');
 
-					// Posts Section
+					// Posts Carousel
 					if( get_row_layout() == 'posts_carousel' )
-						get_template_part('partials/posts-carousel');			
+						get_template_part('partials/posts-carousel');
+
+					// Posts Block
+					if( get_row_layout() == 'posts_block' )
+						get_template_part('partials/posts-block');
 
 					// Quote Layout
 					if (get_row_layout() == 'quote')

@@ -1,15 +1,19 @@
-<!-- Posts Carousel Block -->
-<?php
+<?php 
+
+global $post_block_count;
+if ( empty($post_block_count) ) { $post_block_count = 0; }
 
 $section_posts =  new WP_Query ( array(
-	'posts_per_page' 	=> 4,
-	'cat' 						=> get_sub_field('posts')
+	'posts_per_page' 	=> 8,
+	'cat' 						=> get_sub_field('posts_category'),
+	'offset' 					=> $post_block_count
 ));
 
 ?>
 
+
 <div class="container section__posts <?php echo get_sub_field('category_color') ?>">		
-		<!-- Posts Carousel Title -->
+		<!-- Posts Block Title -->
 		<?php if (get_sub_field('posts_title')) : ?>
 			<h2 class="section__posts__title">
 				<?php echo get_sub_field('posts_title') ?>
@@ -18,7 +22,7 @@ $section_posts =  new WP_Query ( array(
 			</h2>
 		<?php endif; ?>
 
-		<!-- Posts Carousel Loop -->
+		<!-- Posts Block -->
 		<div class="row">
 			<?php if ( $section_posts->have_posts() ) : ?>
 				<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
