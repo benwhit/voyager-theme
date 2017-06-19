@@ -8,9 +8,9 @@
 			<div class="row">
 				<div class="col-3 col-md-1 quote__icon">
 					<?php if ( get_sub_field('category_color') == 'adopt' ) : ?>
-						<img class="" src="./wp-content/themes/voyager-theme/images/quote-adopt.png" alt="">
+						<img class="" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/quote-adopt.png" alt="">
 					<?php elseif ( get_sub_field('category_color') == 'programs') : ?>
-						<img class="" src="./wp-content/themes/voyager-theme/images/quote-programs.png" alt="">
+						<img class="" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/quote-programs.png" alt="">
 					<?php endif; ?>
 				</div>
 				<div class="col-9 col-md-11">									

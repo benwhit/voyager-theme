@@ -9,14 +9,14 @@
  get_header();  ?>
 
 	
-	<div class="page__header adopt" style="<?php if( get_field('field_name') ): ?>background-image: url(<?php the_field('header_image'); endif; ?>);">
+	<div class="page__header adopt" style="<?php if( get_field('field_name') ): ?>background-image: url(<?php the_field('header_image') ?>)<?php endif; ?>">
 		<h1 class="page__title">
 			<?php the_title(); ?>
 			<br>
 			<hr>	
 		</h1>
 	</div>
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area adopt">
 		<main id="main" class="site-main container" role="main">
 			<section>
 				<div class="row">
@@ -35,7 +35,7 @@
 				<div class="row">
 					<div class="col-md-6 col-12">						
 						<img class="page__lead" src="<?php the_field('pet_image'); ?>" alt="">
-						<img class="accent-left" src="<?php echo get_home_url(); ?>/wp-content/themes/voyager-theme/images/accent-left.png" alt="" class="accent-left">
+						<img class="accent-left" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/accent-left.png" alt="" class="accent-left">
 					</div>
 					<div class="adopt col-md-5 offset-md-1 col-12 offset-0">						
 						<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
@@ -115,41 +115,28 @@
 					</div>
 
 					<?php
-			if( have_rows('flexible_content') ):
-				while ( have_rows('flexible_content') ) : the_row(); 
-					if (get_row_layout() == 'quote') : ?>
+					if( have_rows('flexible_content') ):
+						while ( have_rows('flexible_content') ) : the_row();
 
-					<div class="quote container <?php echo get_sub_field('category_color') ?>">
-								<div class="row">
-									<div class="col-10 offset-1">
-										<h5 class="quote__bg">
-											success
-										</h5>
-										<div class="row">
-											<div class="col-sm-1 quote__icon">
-												<?php if ( get_sub_field('category_color') == 'adopt' ) : ?>
-													<img class="" src="<?php get_home_url() ?>/wp-content/themes/voyager-theme/images/quote-adopt.png" alt="">
-												<?php elseif ( get_sub_field('category_color') == 'programs') : ?>
-													<img class="" src="<?php get_home_url() ?>/wp-content/themes/voyager-theme/images/quote-programs.png" alt="">
-												<?php endif; ?>
-											</div>
-											<div class="col-sm-11">									
-												<h4 class="quote__text">
-													<?php echo get_sub_field('quote_text') ?>
-												</h4>							
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+						// Category Section Layout
+						if( get_row_layout() == 'category_section' )
+							get_template_part('partials/category-section');
 
+						// Posts Section
+						if( get_row_layout() == 'posts_carousel' )
+							get_template_part('partials/posts-carousel');			
 
-			<?php endif; ?>
+						// Quote Layout
+						if (get_row_layout() == 'quote')
+							get_template_part('partials/quote');
 
-			<?php
-			endwhile;
-			endif; 
-			?>
+						// Donate Button
+						if (get_row_layout() == 'donate')
+							get_template_part('partials/donate');
+
+					endwhile;
+					endif; 
+				?>
 
 			</section>			
 		</main>

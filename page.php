@@ -41,7 +41,7 @@ get_header(); ?>
 			<section class="page-content">
 				<div class="col-sm-12">
 				<?php if ( get_field('lead_image') ) : ?>
-					<img class="accent-left" src="./wp-content/themes/voyager-theme/images/accent-left.png" alt="">	
+					<img class="accent-left" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/accent-left.png" alt="">	
 					<img class="page__lead__img" src="<?php the_field('lead_image'); ?>" alt="">
 				<?php endif; ?>
 				</div>
@@ -80,8 +80,8 @@ get_header(); ?>
 								get_template_part('partials/quote');
 
 							// Donate Button
-							if (get_row_layout() == 'quote')
-								get_template_part('partials/quote');
+							if (get_row_layout() == 'donate')
+								get_template_part('partials/donate');
 
 						endwhile;
 						endif; 

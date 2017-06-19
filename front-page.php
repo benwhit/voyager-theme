@@ -45,12 +45,12 @@ get_header();
 
 
 			<article class="about">
-				<img src="http://pwc.dev/wp-content/uploads/2017/06/contact-bg.png" alt="" class="bg-image">
+				<img src="<?php echo get_site_url(); ?>/wp-content/uploads/2017/06/contact-bg.png" alt="" class="bg-image">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
-							<img class="accent-left" src="./wp-content/themes/voyager-theme/images/accent-left.png" alt="">	
-							<img class="page__lead__img" src="http://pwc.dev/wp-content/uploads/2017/06/contact.jpg" alt="">
+							<img class="accent-left" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/accent-left.png" alt="">	
+							<img class="page__lead__img" src="<?php echo get_site_url(); ?>/wp-content/uploads/2017/06/contact.jpg" alt="">
 						</div>
 						<div class="col-sm-6">
 							<header>
