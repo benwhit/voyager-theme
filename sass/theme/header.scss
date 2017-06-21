@@ -12,6 +12,18 @@
 		background: transparent;
 		padding: 0;
 		transition: background-color 0.5s;
+		.navbar__donate {
+			text-align: right;
+			margin-top: 30px;
+			font-family: $font-primary-light;
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+			z-index:99999;
+			a {
+				text-decoration: none;
+				color: #FFF;
+			}
+		}
 		.navbar-brand {
 			color: #FFF;
 			font-size: 3rem;
@@ -33,15 +45,37 @@
 			color:#000;
 			background-color: #FFF;
 			transition: background-color 0.5s;
-			a,
+			.navbar-brand,
+			.navbar__donate a,
 			span {
 				color: #000;
+			}
+			#trigger-overlay {
+				color: #000;
+				i {
+					color: #000;
+				}
 			}
 		}
 	}
 }
 
 /* Overlay style */
+
+#trigger-overlay {
+	font-family: $font-primary-light;
+	background: none;
+	border: none;
+	color: #FFF;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	margin-top: 30px;
+	padding: 0;
+	i {
+		font-size: 1.2rem;
+		color: #FFF;
+	}
+}
 .overlay {
 	position: fixed;
 	width: 100%;
@@ -51,19 +85,29 @@
 	background: #414042;
 	z-index: 999;
 	overflow-y: auto;
+	overflow-x: hidden;
+	.navbar__donate {
+		a {
+			color: $color-involved !important;
+		}
+		i {
+			font-size: 1.5rem;
+			color: #FFF;
+		}
+	}
 }
 
 /* Overlay closing cross */
 .overlay .overlay-close {
-	width: 80px;
-	height: 80px;
-	position: absolute;
-	right: 20px;
-	top: 20px;
+	float: right;
+	margin-top: 26px;
+	padding: 0;
 	border: none;
-	background: url(../images/cross.png) no-repeat center center;
-	text-indent: 200%;
-	color: transparent;
+	background: transparent;	
+	font-family: $font-primary-light;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	color: #FFF;
 	outline: none;
 	z-index: 100;
 }
@@ -72,13 +116,22 @@
 .overlay nav {
 	text-align: center;
 	position: relative;
-	top: 60%;
+	top: 50%;
 	height: 60%;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
+	@include media-breakpoint-down(sm) {
+		top: 35%;
+	}
 }
 
 .overlay {
+	.navbar-brand,
+	span,
+	.overlay-close,
+	.overlay-close i {
+		color: #FFF !important;
+	}
 	.overlay__title {
 		font-size: 2rem;
 		font-weight: bold;

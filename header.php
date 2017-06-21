@@ -23,35 +23,55 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'voyager-theme' ); ?></a>
 	<header id="masthead" class="site-header" role="banner">
-		<nav class="navbar navbar-toggleable-md sticky-top navbar-light bg-faded">
-		   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
-		     <span class="navbar-toggler-icon"></span>
-		   </button>
+		<nav class="navbar sticky-top navbar-inverse">
 		   <div class="container">
-	   			<a class="navbar-brand" href="#">Navbar</a>
-	   			<span>
-	   				no tail left behind.
-	   			</span>
-	   			<p><button id="trigger-overlay" type="button">Open Overlay</button></p>
+		   	<div class="row">
+		   		<div class="col-6 col-sm-8">		   			
+		   			<a class="navbar-brand" href="#">Navbar</a>
+		   			<span>
+		   				no tail left behind.
+		   			</span>
+		   		</div>
+		   		<div class="col-2 hidden-sm-down">
+		   			<p class="navbar__donate">
+		   				<a href="/donate">donate</a>
+		   			</p>
+		   		</div>
+		   		<div class="col-6 col-sm-2">
+		   			<p class="pull-right">	   				
+			   			<button id="trigger-overlay" type="button">
+			   				<i class="fa fa-bars"></i>
+			   				menu
+			   			</button>
+		   			</p>
+		   		</div>
+		   	</div>
 		   </div>
-		   <?php /*
-		   wp_nav_menu([
-		     'menu'            => 'top',
-		     'theme_location'  => 'top',
-		     'container'       => 'div',
-		     'container_id'    => 'bs4navbar',
-		     'container_class' => 'collapse navbar-collapse',
-		     'menu_id'         => false,
-		     'menu_class'      => 'navbar-nav mr-auto',
-		     'depth'           => 2,
-		     'fallback_cb'     => 'bs4navwalker::fallback',
-		     'walker'          => new bs4navwalker()
-		   ]);
-		   */ ?>
-		 </nav>
 		 <div class="overlay overlay-slidedown">
-			<button type="button" class="overlay-close">Close</button>
-			<nav>
+		 	<div class="container">
+		   	<div class="row">
+		   		<div class="col-6 col-sm-8">		   			
+		   			<a class="navbar-brand" href="#">Navbar</a>
+		   			<span>
+		   				no tail left behind.
+		   			</span>
+		   		</div>
+		   		<div class="col-2 hidden-sm-down">
+		   			<p class="navbar__donate">
+		   				<a href="/donate">donate</a>
+		   			</p>
+		   		</div>
+		   		<div class="col-6 col-sm-2">
+		   			<p class="pull-right">	   				
+			   			<button id="trigger-overlay" class="overlay-close" type="button">
+			   				<i class="fa fa-times"></i>
+			   				menu
+			   			</button>
+		   			</p>
+		   		</div>
+		   	</div>
+		 	</div>
+				<nav>
 				<div class="row">
 					<div class="col-md-4 col-lg-2 adopt">
 						<h4 class="overlay__title">adopt</h4>
@@ -134,6 +154,7 @@
 				</div>
 			</nav>
 		</div>
+		</nav>
 
 		 <?php if ( is_front_page() || is_home() ) : ?>
 		 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
