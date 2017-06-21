@@ -1,19 +1,24 @@
-// Config Files
-@import './theme-variables';
-@import './underscores-default/underscores';
+// Variables must be top to override other sass variables
+@import './variables';
+
+// Third Party SCSS
 @import './bootstrap/bootstrap';
 @import './font-awesome/font-awesome.scss';
 @import './owl-carousel/owl.carousel.scss';
 @import './owl-carousel/owl.theme.default.scss';
 
 // Template Files
-@import './header';
-@import './footer';
-@import './page';
-@import './widgets';
-@import './slider';
-@import './single-post';
-@import './posts-carousel';
+@import './underscores-default/underscores';
 
-// leave at the bottom
-@import './theme';
+// Theme Files
+@import './theme/header';
+@import './theme/footer';
+@import './theme/page';
+@import './theme/widgets';
+@import './theme/slider';
+@import './theme/single-post';
+@import './theme/posts-carousel';
+@import './theme/news-events';
+
+// Theme file must be last
+@import './theme/theme';

@@ -1,0 +1,46 @@
+// News Theme Colors
+.news {
+	.subheader,
+	.subtitle,
+	.return a {
+		color: $color-news;
+	}
+	hr,
+	.btn {
+		border-color: $color-news;
+		background-color: $color-news;
+		&:hover {
+			color: $color-news;			
+		}	
+	}
+	.quote__icon {
+		border-right-color: $color-news;
+	}
+	.section__post {
+		.title > a {
+			background-color: rgba(255, 97, 0, 0.7);
+		}
+	}
+	.owl-nav [class*=owl-]:hover {
+		border-color: $color-news;
+		i {
+			color: $color-news;
+		}
+	}
+}
+
+// Single Post
+.single-post {
+	.news {
+		.post {
+			.subheader,
+			.title,
+			.subtitle {
+				text-align: center;
+			}
+			.subtitle {
+				padding: 0;
+			}
+		}
+	}
+}

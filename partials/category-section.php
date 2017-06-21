@@ -18,9 +18,10 @@
 						</h4>
 						<h1 class="title">
 							<?php echo get_sub_field('title') ?>
+							<br>
+							<hr>
 						</h1>
 					</header>
-					<hr>
 					<p class="topic">
 						<?php echo get_sub_field('subtitle'); ?>
 					</p>

@@ -11,9 +11,15 @@
   src: url('../fonts/ElliotSans-Bold.ttf');
 }
 
+body {
+	background-color: red;
+}
+
 hr {
+	display: block;
 	width: 100px;
 	height: 10px;
+	margin: 20px auto;
 	background-color: $brand-primary;
 }
 
@@ -31,7 +37,6 @@ a.btn {
 	-webkit-box-shadow: 0px 15px 40px -15px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 15px 40px -15px rgba(0,0,0,0.75);
 	box-shadow: 0px 15px 40px -15px rgba(0,0,0,0.75);
-
 }
 
 a.btn:hover {
@@ -136,6 +141,12 @@ ul {
 			background-color: rgba(22,144,219,0.7);
 		}
 	}
+	.owl-nav [class*=owl-]:hover {
+		border-color: $color-programs;
+		i {
+			color: $color-programs;
+		}
+	}
 }
 .involved {
 	.subtitle,
@@ -159,27 +170,10 @@ ul {
 			background-color: rgba(73, 211, 34, 0.7);
 		}
 	}
-}
-.news {
-	.subtitle,
-	.topic,
-	.return a {
-		color: $color-news;
-	}
-	hr,
-	.btn {
-		border-color: $color-news;
-		background-color: $color-news;
-		&:hover {
-			color: $color-news;			
-		}	
-	}
-	.quote__icon {
-		border-right-color: $color-news;
-	}
-	.section__post {
-		.title > a {
-			background-color: rgba(255, 97, 0, 0.7);
+	.owl-nav [class*=owl-]:hover {
+		border-color: $color-involved;
+		i {
+			color: $color-involved;
 		}
 	}
 }
@@ -203,6 +197,12 @@ ul {
 	.section__post {
 		.title > a {
 			background-color: rgba(255, 97, 0, 0.7);
+		}
+	}
+	.owl-nav [class*=owl-]:hover {
+		border-color: $color-about;
+		i {
+			color: $color-about;
 		}
 	}
 }

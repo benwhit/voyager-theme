@@ -1,10 +1,17 @@
+.page-content {
+	padding-top: 0;
+}
+
 .single-post {
 		.page__title {
-			padding-top: 20vh;
+			padding-top: 15vh;
 			line-height: 5rem;
 		}
 	.content-area {
 		background-color: #FFF;
+		.bg-image {
+			top: 80vh;
+		}
 		article {
 			padding: inherit;
 		}
@@ -13,12 +20,11 @@
 			padding: 20px 0 0 10px;
 			z-index: 1;
 		}
-		.accent-left {
-			height: auto;
-			z-index: 0;
-		}
 		.hentry  {
 			padding-top: 5vh;
+			.title {
+				margin: 20px 0;
+			}
 		}
 		.section__posts {
 			padding-top: 10vh;

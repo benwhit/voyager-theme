@@ -20,10 +20,11 @@
 	}
 	.page__title {
 		margin: 0;
-		padding-top: 140px;
+		padding-top: 80px;
 		width: 100%;
 		color: #fff;
-		font-size: 7.5rem;
+		font-size: 6.5rem;
+		line-height: 7rem;
 		font-weight: 100;
 		text-align: center;
 		text-transform: lowercase;
@@ -71,7 +72,7 @@ article {
 	background-repeat: no-repeat;
 }
 
-.subtitle {
+.subheader {
 	margin: 0;
 	font-family: $font-primary;
 	font-weight: 900;
@@ -79,14 +80,15 @@ article {
 }
 .title {
 	font-size: 4rem;
-	line-height: 5rem;
+	line-height: 4rem;
 	font-weight: 100;
 }
 hr {
 	margin-top: 20px;
 	display: inline-block;
 }
-.topic {
+.topic,
+.subtitle {
 	text-transform: lowercase;
 	font-size: 1.7rem;
 	line-height: 2rem;
