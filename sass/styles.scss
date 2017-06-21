@@ -3,14 +3,17 @@
 @import './underscores-default/underscores';
 @import './bootstrap/bootstrap';
 @import './font-awesome/font-awesome.scss';
+@import './owl-carousel/owl.carousel.scss';
+@import './owl-carousel/owl.theme.default.scss';
 
 // Template Files
 @import './header';
 @import './footer';
 @import './page';
 @import './widgets';
-@import './carousel';
+@import './slider';
 @import './single-post';
+@import './posts-carousel';
 
 // leave at the bottom
 @import './theme';

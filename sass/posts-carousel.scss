@@ -1,0 +1,66 @@
+// Posts Carousel
+.section__posts {
+	padding: 50px 0;
+	.section__posts__title {
+		font-size: 3rem;
+		text-align: center;
+		padding-bottom: 25px;
+	}
+	.section__post {
+		height: 300px;
+		border-bottom: 25px solid #ececec;
+		.thumbnail {
+			position: absolute;
+			top:0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			margin: auto;
+			background-size: cover;
+		}
+		.title > a {
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+			position: absolute; 
+			bottom: 10px;
+			left: 0;
+			right: 30%;
+			padding: 0 20px;
+			color:#FFF;
+			text-transform: lowercase;
+		}
+	}
+	// Owl Carousel Overrides
+	.owl-nav {
+		position: absolute;
+		top: 45%;
+		width: 100%;
+		margin: auto;
+		[class*=owl-] {
+			height: 50px;
+			width: 50px;
+			margin: 0;
+			padding: 0;
+			font-size: 35px;
+			line-height: 35px;
+			border-radius: 50%;
+			background: #FFF;
+			border: 4px solid #414042;
+			&:hover {
+				background: #FFF;
+			}
+			i {
+				color: #414042;
+			}
+		}
+		.owl-prev {
+			position: absolute;
+			left: -75px;
+		}
+		.owl-next {
+			position: absolute;
+			right: -75px;
+		}
+	}
+}

@@ -3,7 +3,7 @@
 	<img class="bg-image" src="<?php echo get_sub_field('background_image'); ?>" alt="">
 	<div class="container">
 		<div class="row">
-				<div class="<?php if ( get_sub_field('image_display') == 'left' ){ echo 'col-sm-12 col-lg-5'; } else { echo 'col-sm-6 col-lg-5 offset-lg-1 flex-last'; } ?>">
+				<div class="<?php if ( get_sub_field('image_display') == 'left' ){ echo 'col-lg-5 col-sm-6'; } else { echo 'col-sm-6 col-lg-5 offset-lg-1 flex-last'; } ?>">
 					<?php if ( get_sub_field('image_display') == 'left' ){ ?>
 						<img class="accent-left" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/accent-left.png" alt="">
 					<?php } else { ?>
@@ -28,7 +28,9 @@
 						<?php echo get_sub_field('content'); ?>
 					</p>
 					<?php if( get_sub_field('button') ): ?>
-						<a href="#" class="btn btn-primary"><?php echo get_sub_field('button'); ?></a>
+						<a href="<?php echo get_sub_field('button_link'); ?>" class="btn btn-primary">
+							<?php echo get_sub_field('button'); ?>
+						</a>
 					<?php endif; ?>
 				</div>
 		</div>

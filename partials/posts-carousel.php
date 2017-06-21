@@ -2,7 +2,7 @@
 <?php
 
 $section_posts =  new WP_Query ( array(
-	'posts_per_page' 	=> 4,
+	'posts_per_page' 	=> 8,
 	'cat' 						=> get_sub_field('posts')
 ));
 
@@ -20,22 +20,24 @@ $section_posts =  new WP_Query ( array(
 
 		<!-- Posts Carousel Loop -->
 		<div class="row">
-			<?php if ( $section_posts->have_posts() ) : ?>
-				<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
+			<div class="col-12">				
+					<div class="owl-carousel post-carousel owl-theme">
+						<?php if ( $section_posts->have_posts() ) : ?>
+							<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
 
-					<div class="col-lg-3 col-sm-6">								
-						<article class="section__post">								
-							<a href="" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');"></a>								
-							<h3 class="title">
-								<a href="<?php the_permalink(); ?>">
-									<?php the_title(); ?>
-								</a>
-							</h3>
-						</article>
-					</div>
+									<div class="section__post item">								
+										<a href="" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');"></a>								
+										<h3 class="title">
+											<a href="<?php the_permalink(); ?>">
+												<?php the_title(); ?>
+											</a>
+										</h3>
+									</div>
 
-				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-			<?php endif; ?>
-  </div>
+							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
+						<?php endif; ?>
+			  </div>
+			</div>
+		</div>
 </div>

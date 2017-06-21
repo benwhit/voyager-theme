@@ -107,6 +107,12 @@ ul {
 			background-color: $color-adopt;
 		}
 	}
+	.owl-nav [class*=owl-]:hover {
+		border-color: $color-adopt;
+		i {
+			color: $color-adopt;
+		}
+	}
 }
 .programs {
 	.subtitle,
@@ -197,43 +203,6 @@ ul {
 	.section__post {
 		.title > a {
 			background-color: rgba(255, 97, 0, 0.7);
-		}
-	}
-}
-
-
-
-// Section Posts Squares
-.section__posts {
-	padding: 50px 0;
-	.section__posts__title {
-		font-size: 3rem;
-		text-align: center;
-		padding-bottom: 25px;
-	}
-	.section__post {
-		height: 300px;
-		border-bottom: 25px solid #ececec;
-		.thumbnail {
-			position: absolute;
-			top:0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			height: 100%;
-			margin: auto;
-			background-size: cover;
-		}
-		.title > a {
-			font-size: 1.5rem;
-			line-height: 1.5rem;
-			position: absolute; 
-			bottom: 10px;
-			left: 0;
-			right: 30%;
-			padding: 0 20px;
-			color:#FFF;
-			text-transform: lowercase;
 		}
 	}
 }
