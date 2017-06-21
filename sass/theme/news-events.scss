@@ -32,6 +32,29 @@
 	}
 }
 
+
+// Template Page 
+.page-template-page-news {
+	article {		
+		hr {
+			margin-left: 0 !important;
+		}
+	}
+	.button-group {
+		text-align: center;
+		padding-bottom: 50px;
+		.button {
+			background: none;
+			border: none;
+			font-family: $font-primary;
+			font-size: 1.2rem;
+			&.is-checked {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
 // Single Post
 .post-template-single-news {
 	.page__header {
@@ -49,4 +72,4 @@
 			}
 		}
 	}
-}
+} 

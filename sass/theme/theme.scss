@@ -23,6 +23,10 @@ hr {
 	background-color: $brand-primary;
 }
 
+button:focus {
+	outline: none;
+}
+
 a.btn {
 	position: relative;
 	padding: 8px 50px;
@@ -60,6 +64,14 @@ ul {
 		list-style: none;
 	}
 }
+
+.grid__item { 
+	width: 25%; 
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-bottom: 20px;
+}
+
 
 // Image Accents
 .accent-left {
