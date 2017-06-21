@@ -33,7 +33,10 @@
 }
 
 // Single Post
-.single-post {
+.post-template-single-news {
+	.page__header {
+		background-image: url('../images/news-events.jpg');
+	}
 	.news {
 		.post {
 			.subheader,

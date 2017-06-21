@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: News & Events
+ * Template Name: Volunteer
  * Template Post Type: post
  *
  * @package Voyager_Theme
@@ -9,20 +9,19 @@
  get_header();  ?>
 
 	
-	<div class="page__header news">
+	<div class="page__header involved">
 		<div class="container">			
 			<div class="row">
-				<div class="col-12">				
+				<div class="col-12">
 					<h1 class="page__title">
-						news & events
-						<br>
-						<hr>	
+						volunteer
 					</h1>
+					<hr>	
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="primary" class="content-area news">
+	<div id="primary" class="content-area involved">
 		<img class="bg-image" src="<?php echo the_field('page_background'); ?>" alt="">
 		<main id="main" class="site-main container" role="main">
 			<section>
@@ -33,12 +32,12 @@
 							<i class="fa fa-angle-left"></i>
 							<i class="fa fa-angle-left"></i>
 							return to
-							<a href="/news-events">news & events</a>
+							<a href="<?php echo get_site_url(); ?>">home</a>
 						</p>
 					</div>
 				</div>
 			</section>
-			<section class="page-content">
+			<section class="page-content involved">
 				<div class="row">
 					<div class="col-12">
 						<?php if ( get_field('lead_image') != '' ) : ?>
@@ -46,7 +45,7 @@
 							<img class="accent-left" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/accent-left.png" alt="" class="accent-left">
 						<?php endif; ?>
 					</div>
-					<div class="col-12 col-md-10 offset-md-1 news">
+					<div class="col-10 involved">
 						<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
 							<header>
 								<h4 class="subheader">
@@ -101,21 +100,21 @@
 
 				<!-- Posts Carousel Block -->
 				<?php
-					$section_posts =  new WP_Query ( array(
+					$involved =  new WP_Query ( array(
 						'posts_per_page' 	=> 8,
-						'cat' 						=> '6'
+						'cat' => '7'
 					));
 				?>
-				<div class="container section__posts news">
+				<div class="container section__posts involved">
 							<h2 class="section__posts__title">
-								recent updates...
+								ways you can help...
 							</h2>
 							<hr>
 						<div class="row">
 							<div class="col-12">				
 									<div class="owl-carousel post-carousel owl-theme">
-										<?php if ( $section_posts->have_posts() ) : ?>
-											<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
+										<?php if ( $involved->have_posts() ) : ?>
+											<?php while ( $involved->have_posts() ) : $involved->the_post(); ?>
 
 													<div class="section__post item">								
 														<a href="" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');"></a>								
@@ -132,6 +131,20 @@
 							  </div>
 							</div>
 						</div>
+				</div>
+
+			  <!-- Donate Block -->
+				<div class="donate container <?php echo get_sub_field('category_color') ?>">
+					<div class="row">
+						<div class="col-12">
+							<h5 class="donate__bg">
+								donate
+							</h5>						
+							<a href="" class="donate__button btn btn-primary">
+								donate now
+							</a>	
+						</div>
+					</div>
 				</div>
 
 			</section>			

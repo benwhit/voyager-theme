@@ -32,7 +32,7 @@
 							<i class="fa fa-angle-left"></i>
 							<i class="fa fa-angle-left"></i>
 							return to
-							<a href="/programs">programs</a>
+							<a href="<?php echo get_site_url(); ?>">home</a>
 						</p>
 					</div>
 				</div>
@@ -45,7 +45,7 @@
 							<img class="accent-left" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/accent-left.png" alt="" class="accent-left">
 						<?php endif; ?>
 					</div>
-					<div class="col-12 col-md-10 offset-md-1 programs">
+					<div class="col-12 col-md-10 programs">
 						<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
 							<header>
 								<h4 class="subheader">
@@ -106,13 +106,11 @@
 						'cat' => '5'
 					));
 				?>
-				<div class="container section__posts programs">
+				<div class="section__posts programs">
 							<h2 class="section__posts__title">
-								recent updates...
+								ongoing initiatives     
 							</h2>
-							<hr>
-						<div class="row">
-							<div class="col-12">				
+							<hr>			
 									<div class="owl-carousel post-carousel owl-theme">
 										<?php if ( $programs->have_posts() ) : ?>
 											<?php while ( $programs->have_posts() ) : $programs->the_post(); ?>
@@ -130,8 +128,6 @@
 											<?php wp_reset_postdata(); ?>
 										<?php endif; ?>
 							  </div>
-							</div>
-						</div>
 				</div>
 
 				 <!-- Quote Block -->

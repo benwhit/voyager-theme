@@ -8,14 +8,14 @@
  get_header();  ?>
 
 	
-	<div class="page__header adopt" style="<?php if( get_field('field_name') ): ?>background-image: url(<?php the_field('header_image') ?>)<?php endif; ?>">
+	<div class="page__header <?php echo the_field('category') ?>" style="<?php if( get_field('field_name') ): ?>background-image: url(<?php the_field('header_image') ?>)<?php endif; ?>">
 		<h1 class="page__title">
 			<?php the_title(); ?>
 			<br>
 			<hr>	
 		</h1>
 	</div>
-	<div id="primary" class="content-area adopt">
+	<div id="primary" class="content-area <?php echo the_field('category') ?>">
 		<main id="main" class="site-main container" role="main">
 			<section>
 				<div class="row">
@@ -38,7 +38,7 @@
 							<img class="accent-left" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/accent-left.png" alt="" class="accent-left">
 						<?php endif; ?>
 					</div>
-					<div class="col-12 col-md-10 adopt">						
+					<div class="col-12 col-md-10 <?php echo the_field('category') ?>">						
 						<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
 							<header>
 								<h4 class="subtitle">
