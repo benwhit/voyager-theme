@@ -53,7 +53,7 @@
 			<button type="button" class="overlay-close">Close</button>
 			<nav>
 				<div class="row">
-					<div class="col-4 col-md-2 adopt">
+					<div class="col-md-4 col-lg-2 adopt">
 						<h4 class="overlay__title">adopt</h4>
 						<?php 
 					   wp_nav_menu([
@@ -66,7 +66,7 @@
 					   ]); 
 					  ?>					
 					</div>
-					<div class="col-4 col-md-2 programs">
+					<div class="col-md-4 col-lg-2 programs">
 						<h4 class="overlay__title">programs</h4>						
 						<?php 
 					   wp_nav_menu([
@@ -79,7 +79,7 @@
 					   ]); 
 					  ?>					
 					</div>
-					<div class="col-4 col-md-2 get involved">
+					<div class="col-md-4 col-lg-2 get involved">
 						<h4 class="overlay__title">get involved</h4>						
 						<?php 
 					   wp_nav_menu([
@@ -92,7 +92,7 @@
 					   ]); 
 					  ?>					
 					</div>
-					<div class="col-4 col-md-2 news">
+					<div class="col-md-4 col-lg-2 news">
 						<h4 class="overlay__title">news & events</h4>						
 						<?php 
 					   wp_nav_menu([
@@ -105,7 +105,7 @@
 					   ]); 
 					  ?>					
 					</div>
-					<div class="col-4 col-md-2 about">
+					<div class="col-md-4 col-lg-2 about">
 						<h4 class="overlay__title">about us</h4>						
 						<?php 
 					   wp_nav_menu([
@@ -118,7 +118,7 @@
 					   ]); 
 					  ?>					
 					</div>
-					<div class="col-4 col-md-2 contact">
+					<div class="col-md-4 col-lg-2 contact">
 						<h4 class="overlay__title">contact us</h4>						
 						<?php 
 					   wp_nav_menu([
