@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: News & Events
+ * Template Name: Programs
  * Template Post Type: post
  *
  * @package Voyager_Theme
@@ -9,20 +9,19 @@
  get_header();  ?>
 
 	
-	<div class="page__header news" style="<?php if( get_field('field_name') ): ?>background-image: url(<?php the_field('header_image') ?>)<?php endif; ?>">
+	<div class="page__header programs" style="<?php if( get_field('field_name') ): ?>background-image: url(<?php the_field('header_image') ?>)<?php endif; ?>">
 		<div class="container">			
 			<div class="row">
-				<div class="col-12">				
+				<div class="col-12">
 					<h1 class="page__title">
 						<?php the_title(); ?>
-						<br>
-						<hr>	
 					</h1>
+					<hr>	
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="primary" class="content-area news">
+	<div id="primary" class="content-area programs">
 		<img class="bg-image" src="<?php echo the_field('page_background'); ?>" alt="">
 		<main id="main" class="site-main container" role="main">
 			<section>
@@ -33,12 +32,12 @@
 							<i class="fa fa-angle-left"></i>
 							<i class="fa fa-angle-left"></i>
 							return to
-							<a href="/news-events">news & events</a>
+							<a href="/programs">programs</a>
 						</p>
 					</div>
 				</div>
 			</section>
-			<section class="page-content">
+			<section class="page-content programs">
 				<div class="row">
 					<div class="col-12">
 						<?php if ( get_field('lead_image') != '' ) : ?>
@@ -46,7 +45,7 @@
 							<img class="accent-left" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/accent-left.png" alt="" class="accent-left">
 						<?php endif; ?>
 					</div>
-					<div class="col-12 col-md-10 offset-md-1 news">
+					<div class="col-12 col-md-10 offset-md-1 programs">
 						<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
 							<header>
 								<h4 class="subheader">
@@ -101,12 +100,13 @@
 
 				<!-- Posts Carousel Block -->
 				<?php
-					$section_posts =  new WP_Query ( array(
+					$programs =  new WP_Query ( array(
+						'post_type' => 'post',
 						'posts_per_page' 	=> 8,
-						'cat' 						=> '6'
+						'cat' => '5'
 					));
 				?>
-				<div class="container section__posts news">
+				<div class="container section__posts programs">
 							<h2 class="section__posts__title">
 								recent updates...
 							</h2>
@@ -114,8 +114,8 @@
 						<div class="row">
 							<div class="col-12">				
 									<div class="owl-carousel post-carousel owl-theme">
-										<?php if ( $section_posts->have_posts() ) : ?>
-											<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
+										<?php if ( $programs->have_posts() ) : ?>
+											<?php while ( $programs->have_posts() ) : $programs->the_post(); ?>
 
 													<div class="section__post item">								
 														<a href="" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');"></a>								
@@ -132,6 +132,27 @@
 							  </div>
 							</div>
 						</div>
+				</div>
+
+				 <!-- Quote Block -->
+				<div class="quote container">
+					<div class="row">
+						<div class="col-10 offset-1">
+							<h5 class="quote__bg">
+								success
+							</h5>
+							<div class="row">
+								<div class="col-3 col-md-1 quote__icon">
+										<img class="" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/quote-programs.png" alt="">
+								</div>
+								<div class="col-9 col-md-11">									
+									<h4 class="quote__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugiat similique error impedit ut fuga nisi voluptate veritatis nihil quas ipsam vel sunt alias tempora laboriosam quia ipsum ab assumenda.
+									</h4>							
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 			</section>			

@@ -5,6 +5,9 @@
 	.return a {
 		color: $color-news;
 	}
+	hr {
+		margin: 20px auto !important;
+	}
 	hr,
 	.btn {
 		border-color: $color-news;
