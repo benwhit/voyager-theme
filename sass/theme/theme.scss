@@ -103,6 +103,9 @@ ul {
 
 // Category Section Colors
 .adopt {
+	.overlay__title {
+		color: $color-adopt;
+	}
 	.subtitle,
 	.topic,
 	.return a{
@@ -133,6 +136,9 @@ ul {
 }
 
 .about {
+	.overlay__title {
+		color: $color-about;
+	}
 	.subtitle,
 	.topic,
 	.return a {

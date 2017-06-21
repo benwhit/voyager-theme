@@ -1,5 +1,8 @@
 // News Theme Colors
 .news {
+	.overlay__title {
+		color: $color-news;
+	}
 	.subheader,
 	.subtitle,
 	.return a {

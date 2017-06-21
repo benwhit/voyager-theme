@@ -126,6 +126,13 @@ hr {
 /**	Specific Pages
 ---------------------------------------*/
 
+// Home 
+article {
+	hr {
+		margin-left: 0 !important;
+	}
+}
+
 
 // About Page Template
 article.about {

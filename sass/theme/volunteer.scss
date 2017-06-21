@@ -1,5 +1,8 @@
 // Volunteer Colors
 .involved {
+	.overlay__title {
+		color: $color-involved;
+	}
 	.subtitle,
 	.topic,
 	.return a {

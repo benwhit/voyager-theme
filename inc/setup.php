@@ -36,7 +36,12 @@ function voyager_theme_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'top' => esc_html__( 'Primary', 'voyager-theme' ),
+		'adopt' 		=> esc_html__( 'Adopt', 'voyager-theme' ),
+		'programs' 	=> esc_html__( 'Programs', 'voyager-theme' ),
+		'involved'	=> esc_html__( 'Get Involved', 'voyager-theme' ),
+		'news' 			=> esc_html__( 'News & Events', 'voyager-theme' ),
+		'about' 		=> esc_html__( 'About Us', 'voyager-theme' ),
+		'contact' 	=> esc_html__( 'Contact Us', 'voyager-theme' )
 	) );
 
 	/*

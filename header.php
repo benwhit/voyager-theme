@@ -32,8 +32,9 @@
 	   			<span>
 	   				no tail left behind.
 	   			</span>
+	   			<p><button id="trigger-overlay" type="button">Open Overlay</button></p>
 		   </div>
-		   <?php
+		   <?php /*
 		   wp_nav_menu([
 		     'menu'            => 'top',
 		     'theme_location'  => 'top',
@@ -46,8 +47,93 @@
 		     'fallback_cb'     => 'bs4navwalker::fallback',
 		     'walker'          => new bs4navwalker()
 		   ]);
-		   ?>
+		   */ ?>
 		 </nav>
+		 <div class="overlay overlay-slidedown">
+			<button type="button" class="overlay-close">Close</button>
+			<nav>
+				<div class="row">
+					<div class="col-4 col-md-2 adopt">
+						<h4 class="overlay__title">adopt</h4>
+						<?php 
+					   wp_nav_menu([
+					     'menu'            => 'adopt',
+					     'theme_location'  => 'adopt',
+					     'menu_id'         => false,
+					     'depth'           => 2,
+					     'fallback_cb'     => 'bs4navwalker::fallback',
+					     'walker'          => new bs4navwalker()
+					   ]); 
+					  ?>					
+					</div>
+					<div class="col-4 col-md-2 programs">
+						<h4 class="overlay__title">programs</h4>						
+						<?php 
+					   wp_nav_menu([
+					     'menu'            => 'programs',
+					     'theme_location'  => 'programs',
+					     'menu_id'         => false,
+					     'depth'           => 2,
+					     'fallback_cb'     => 'bs4navwalker::fallback',
+					     'walker'          => new bs4navwalker()
+					   ]); 
+					  ?>					
+					</div>
+					<div class="col-4 col-md-2 get involved">
+						<h4 class="overlay__title">get involved</h4>						
+						<?php 
+					   wp_nav_menu([
+					     'menu'            => 'involved',
+					     'theme_location'  => 'involved',
+					     'menu_id'         => false,
+					     'depth'           => 2,
+					     'fallback_cb'     => 'bs4navwalker::fallback',
+					     'walker'          => new bs4navwalker()
+					   ]); 
+					  ?>					
+					</div>
+					<div class="col-4 col-md-2 news">
+						<h4 class="overlay__title">news & events</h4>						
+						<?php 
+					   wp_nav_menu([
+					     'menu'            => 'news',
+					     'theme_location'  => 'news',
+					     'menu_id'         => false,
+					     'depth'           => 2,
+					     'fallback_cb'     => 'bs4navwalker::fallback',
+					     'walker'          => new bs4navwalker()
+					   ]); 
+					  ?>					
+					</div>
+					<div class="col-4 col-md-2 about">
+						<h4 class="overlay__title">about us</h4>						
+						<?php 
+					   wp_nav_menu([
+					     'menu'            => 'about',
+					     'theme_location'  => 'about',
+					     'menu_id'         => false,
+					     'depth'           => 2,
+					     'fallback_cb'     => 'bs4navwalker::fallback',
+					     'walker'          => new bs4navwalker()
+					   ]); 
+					  ?>					
+					</div>
+					<div class="col-4 col-md-2 contact">
+						<h4 class="overlay__title">contact us</h4>						
+						<?php 
+					   wp_nav_menu([
+					     'menu'            => 'contact',
+					     'theme_location'  => 'contact',
+					     'menu_id'         => false,
+					     'depth'           => 2,
+					     'fallback_cb'     => 'bs4navwalker::fallback',
+					     'walker'          => new bs4navwalker()
+					   ]); 
+					  ?>					
+					</div>
+				</div>
+			</nav>
+		</div>
 
 		 <?php if ( is_front_page() || is_home() ) : ?>
 		 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
