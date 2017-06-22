@@ -26,11 +26,14 @@
 		<nav class="navbar sticky-top navbar-inverse">
 		   <div class="container">
 		   	<div class="row">
-		   		<div class="col-6 col-sm-8">		   			
-		   			<a class="navbar-brand" href="#">Navbar</a>
-		   			<span>
-		   				no tail left behind.
-		   			</span>
+		   		<div class="col-6 col-sm-8">
+		   			<p class="navbar-brand">	
+		   				<a href="<?php echo get_site_url(); ?>">PW Humane</a>
+		   				<br class="hidden-lg-up" />
+			   			<span class="navbar__tag">
+			   				no tail left behind.
+			   			</span>
+		   			</p>
 		   		</div>
 		   		<div class="col-2 hidden-sm-down">
 		   			<p class="navbar__donate">
@@ -50,11 +53,14 @@
 		 <div class="overlay overlay-slidedown">
 		 	<div class="container">
 		   	<div class="row">
-		   		<div class="col-6 col-sm-8">		   			
-		   			<a class="navbar-brand" href="#">Navbar</a>
-		   			<span>
-		   				no tail left behind.
-		   			</span>
+		   		<div class="col-6 col-sm-8">
+		   			<p class="navbar-brand">	
+		   				<a href="<?php echo get_site_url(); ?>">PW Humane</a>
+		   				<br class="hidden-lg-up" />
+			   			<span class="navbar__tag">
+			   				no tail left behind.
+			   			</span>
+		   			</p>
 		   		</div>
 		   		<div class="col-2 hidden-sm-down">
 		   			<p class="navbar__donate">

@@ -35,6 +35,11 @@
 		@include media-breakpoint-down(sm) {
 			padding-left: 15px;
 		}
+		.contact {
+			.overlay__title	{
+				color: #999;
+			}
+		}
 		.overlay__title {
 			margin-top: 20px;
 		}

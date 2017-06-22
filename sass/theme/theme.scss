@@ -76,6 +76,7 @@ a.btn:hover {
 
 
 // General Theme Classes
+
 .bg-image {
 	position: absolute;
 	top: 10vh;
@@ -128,11 +129,11 @@ a.btn:hover {
 
 
 // Image Accents
+
 .accent-left {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 90%;
 	width: 90%;
 	z-index: 0;
 }
@@ -140,7 +141,6 @@ a.btn:hover {
 	position: absolute;
 	top: 0;
 	right: 0;
-	height: 90%;
 	width: 90%;
 	z-index: 0;
 }
@@ -259,6 +259,7 @@ a.btn:hover {
 	}
 	.quote__link {
 		font-weight: 900;
+		text-transform: uppercase;
 		text-decoration: none;
 	}
 }

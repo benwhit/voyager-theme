@@ -31,7 +31,7 @@ get_header(); ?>
 							<i class="fa fa-angle-left"></i>
 							<i class="fa fa-angle-left"></i>
 							return to
-							<a href="/">home</a>
+							<a href="<?php echo get_site_url(); ?>">home</a>
 						</p>
 					</div>
 				</div>

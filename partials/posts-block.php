@@ -17,9 +17,8 @@
 		<?php if (get_sub_field('posts_title')) : ?>
 			<h2 class="section__posts__title">
 				<?php echo get_sub_field('posts_title') ?>
-				<br>
-				<hr>
 			</h2>
+			<hr>
 		<?php endif; ?>
 		<!-- Posts Block -->
 		<div class="container">			
