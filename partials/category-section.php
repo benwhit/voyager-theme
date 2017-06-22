@@ -13,7 +13,7 @@
 				</div>
 				<div class="col-sm-6 <?php if ( get_sub_field('image_display') == 'left' ){ echo 'offset-lg-1'; } ?>">
 					<header>
-						<h4 class="subtitle">
+						<h4 class="subheader">
 							<?php echo get_sub_field('subheader'); ?>
 						</h4>
 						<h1 class="title">
@@ -22,7 +22,7 @@
 							<hr>
 						</h1>
 					</header>
-					<p class="topic">
+					<p class="subtitle">
 						<?php echo get_sub_field('subtitle'); ?>
 					</p>
 					<p>
