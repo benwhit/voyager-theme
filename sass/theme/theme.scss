@@ -171,9 +171,15 @@ ul {
 .quote {
 	padding: 150px 0;
 	overflow: hidden;
+	@include media-breakpoint-down(sm) {
+		padding: 100px 0;
+	}
 	.quote__icon {
 		border-right-width: 2px;
 		border-right-style: solid;
+		@include media-breakpoint-down(sm) {
+			border: none;
+		}
 	}
 	.quote__bg {
     position: absolute;
@@ -185,7 +191,13 @@ ul {
     font-size: 15rem;
     line-height: 10rem;
     color: #ececec;
-    opacity: 0.5;
+    opacity: 0.5;    
+		@include media-breakpoint-down(sm) {
+			top: 0;
+			left: -50px;
+			font-size: 9rem;
+			line-height: 10rem;
+		}
 	}
 	.quote__text {
 		padding: 2px 20px;
@@ -198,6 +210,9 @@ ul {
 	padding: 150px 0;
 	overflow: hidden;
 	text-align: center;
+	@include media-breakpoint-down(sm) {
+		padding: 100px 0;
+	}
 	.donate__bg {
     position: absolute;
     top: -70px;
@@ -210,5 +225,22 @@ ul {
     color: #ececec;
     opacity: 0.5;
     z-index: 0;
+	}
+}
+
+// Font Page About Section
+.about--home {
+	.about--home__img {
+		.page__lead__img {
+			display: inline-block !important;
+			@include media-breakpoint-down(sm) {
+				padding-bottom: 0;
+			}
+		}
+	}
+	.about--home__col {		
+			@include media-breakpoint-down(sm) {
+				margin: 50px 0;
+			}
 	}
 }

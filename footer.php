@@ -20,28 +20,86 @@
 					<h1 class="footer__logo__title">Logo</h1>
 					<h5 class="footer__logo__subtitle">no tail left behind.</h5>
 				</div>
-				<div class="col-sm-7 footer__widgets">
-					<div class="row">
-						<div class="col-sm-4">
-							<?php dynamic_sidebar('footer-one'); ?>
-						</div>
-						<div class="col-sm-4">
-							<?php dynamic_sidebar('footer-two'); ?>
-						</div>
-						<div class="col-sm-4">
-							<?php dynamic_sidebar('footer-three'); ?>
-						</div>
+				<div class="col-sm-7 footer__menus">
+					<div class="row">						
+					<div class="col-6 col-lg-4 adopt">
+						<h4 class="overlay__title">adopt</h4>
+						<?php 
+					   wp_nav_menu([
+					     'menu'            => 'adopt',
+					     'theme_location'  => 'adopt',
+					     'menu_id'         => false,
+					     'depth'           => 2,
+					     'fallback_cb'     => 'bs4navwalker::fallback',
+					     'walker'          => new bs4navwalker()
+					   ]); 
+					  ?>					
 					</div>
-					<div class="row">
-						<div class="col-sm-4">
-							<?php dynamic_sidebar('footer-four'); ?>
-						</div>
-						<div class="col-sm-4">
-							<?php dynamic_sidebar('footer-five'); ?>
-						</div>
-						<div class="col-sm-4">
-							<?php dynamic_sidebar('footer-six'); ?>
-						</div>
+					<div class="col-6 col-lg-4 programs">
+						<h4 class="overlay__title">programs</h4>
+						<?php 
+					   wp_nav_menu([
+					     'menu'            => 'programs',
+					     'theme_location'  => 'programs',
+					     'menu_id'         => false,
+					     'depth'           => 2,
+					     'fallback_cb'     => 'bs4navwalker::fallback',
+					     'walker'          => new bs4navwalker()
+					   ]); 
+					  ?>					
+					</div>
+					<div class="col-6 col-lg-4 get involved">
+						<h4 class="overlay__title">get involved</h4>						
+						<?php 
+					   wp_nav_menu([
+					     'menu'            => 'involved',
+					     'theme_location'  => 'involved',
+					     'menu_id'         => false,
+					     'depth'           => 2,
+					     'fallback_cb'     => 'bs4navwalker::fallback',
+					     'walker'          => new bs4navwalker()
+					   ]); 
+					  ?>					
+					</div>
+					<div class="col-6 col-lg-4 news">
+						<h4 class="overlay__title">news & events</h4>						
+						<?php 
+					   wp_nav_menu([
+					     'menu'            => 'news',
+					     'theme_location'  => 'news',
+					     'menu_id'         => false,
+					     'depth'           => 2,
+					     'fallback_cb'     => 'bs4navwalker::fallback',
+					     'walker'          => new bs4navwalker()
+					   ]); 
+					  ?>					
+					</div>
+					<div class="col-6 col-lg-4 about">
+						<h4 class="overlay__title">about us</h4>						
+						<?php 
+					   wp_nav_menu([
+					     'menu'            => 'about',
+					     'theme_location'  => 'about',
+					     'menu_id'         => false,
+					     'depth'           => 2,
+					     'fallback_cb'     => 'bs4navwalker::fallback',
+					     'walker'          => new bs4navwalker()
+					   ]); 
+					  ?>					
+					</div>
+					<div class="col-6 col-lg-4 contact">
+						<h4 class="overlay__title">contact us</h4>						
+						<?php 
+					   wp_nav_menu([
+					     'menu'            => 'contact',
+					     'theme_location'  => 'contact',
+					     'menu_id'         => false,
+					     'depth'           => 2,
+					     'fallback_cb'     => 'bs4navwalker::fallback',
+					     'walker'          => new bs4navwalker()
+					   ]); 
+					  ?>					
+					</div>
 					</div>
 				</div>
 			</div>

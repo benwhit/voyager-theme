@@ -44,17 +44,17 @@ get_header();
 			?>
 
 
-			<article class="about">
+			<article class="about about--home">
 				<img src="<?php echo get_site_url(); ?>/wp-content/uploads/2017/06/contact-bg.png" alt="" class="bg-image">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12">
+						<div class="col-sm-12 about--home__img">
 							<img class="accent-left" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/accent-left.png" alt="">	
 							<img class="page__lead__img" src="<?php echo get_site_url(); ?>/wp-content/uploads/2017/06/contact.jpg" alt="">
 						</div>
-						<div class="col-sm-6">
+						<div class="col-12 col-sm-6 about--home__col">
 							<header>
-								<h4 class="subtitle">
+								<h4 class="subheader">
 									get to know our organization
 								</h4>
 								<h1 class="title">
@@ -62,7 +62,7 @@ get_header();
 								</h1>
 							</header>
 							<hr>
-							<p class="topic">
+							<p class="subtitle">
 								two lines of text that entices people to adopting a pet
 							</p>
 							<p>
@@ -70,9 +70,9 @@ get_header();
 							</p>
 							<a href="#" class="btn btn-primary">view all news</a>						
 						</div>
-						<div class="col-sm-6">
+						<div class="col-12 col-sm-6 about--home__col">
 							<header>
-								<h4 class="subtitle">
+								<h4 class="subheader">
 									we want to hear from you...
 								</h4>
 								<h1 class="title">
@@ -80,7 +80,7 @@ get_header();
 								</h1>
 							</header>
 							<hr>
-							<p class="topic">
+							<p class="subtitle">
 								we're standing by to assist you in your area of animal need!
 							</p>
 							<table>

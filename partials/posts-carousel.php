@@ -18,7 +18,7 @@
 	<!-- Posts Carousel Loop -->
 	<div class="container">			
 		<div class="row">
-			<div class="col-12 ">				
+			<div class="col-12">				
 				<div class="owl-carousel post-carousel owl-theme">
 					<?php if ( $section_posts->have_posts() ) : ?>
 						<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>

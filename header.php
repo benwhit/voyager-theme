@@ -87,7 +87,7 @@
 					  ?>					
 					</div>
 					<div class="col-md-4 col-lg-2 programs">
-						<h4 class="overlay__title">programs</h4>						
+						<h4 class="overlay__title">programs</h4>
 						<?php 
 					   wp_nav_menu([
 					     'menu'            => 'programs',

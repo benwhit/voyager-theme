@@ -2,6 +2,12 @@
 	position: relative;
 	padding: 100px 0;
 	background-color: #414042;
+	@include media-breakpoint-down(sm) {
+		padding: 20px 0;
+	}
+	.nav-link {
+		padding: 0;
+	}
 	.footer__logo {
 		padding: 50px 10px 0 0;
 		color: #FFF;
@@ -9,16 +15,26 @@
 		border-right: 1px solid #FFF;
 		.footer__logo__title {
 			font-family: $font-primary-bold;
+			margin: 0;
 			font-size: 8rem;
+			line-height: 8rem;
 			font-weight: 900;
 			text-transform: uppercase;
+			@include media-breakpoint-down(md) {
+				font-size: 5rem;
+				line-height: 5rem;
+			}
 		}
 		.footer__logo__subtitle {
 			font-size: 3rem;
+			margin-bottom: 60px;
 		}
 	}
 	.footer__widgets {
 		padding-left: 100px;
+		@include media-breakpoint-down(sm) {
+			padding-left: 15px;
+		}
 	}
 	li {
 		a {

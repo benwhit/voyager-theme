@@ -77,6 +77,12 @@
 		    text-align: center;
 		    margin: auto;
 			}
+			hr {
+				margin-left: 0;
+				@include media-breakpoint-down(md) {
+					margin-left: auto;
+				}
+			}
 			.carousel-caption {
 				position: absolute;
 				width: 500px;
@@ -91,6 +97,9 @@
 				}
 				.title {
 					font-size: 5rem;
+					@include media-breakpoint-down(sm) {
+						font-size: 4rem;
+					}
 				}
 				.topic {
 					color: #FFF;
