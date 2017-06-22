@@ -41,6 +41,9 @@
 article {
 	position: relative;
 	padding: 50px 0;
+	hr {
+		margin-left: 0 !important;
+	}
 }
 
 .widget-area {	
@@ -93,10 +96,7 @@ article {
 	line-height: 4rem;
 	font-weight: 100;
 }
-hr {
-	margin-top: 20px;
-	display: inline-block;
-}
+
 .topic,
 .subtitle {
 	text-transform: lowercase;
@@ -124,14 +124,6 @@ hr {
 
 /**	Specific Pages
 ---------------------------------------*/
-
-// Home 
-article {
-	hr {
-		margin-left: 0 !important;
-	}
-}
-
 
 // About Page Template
 article.about {

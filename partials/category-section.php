@@ -9,7 +9,15 @@
 					<?php } else { ?>
 						<img class="accent-right" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/accent-right.png" alt="">
 					<?php } ?>
-					<img class="page__lead__img" src="<?php echo get_sub_field('image'); ?>" alt="">									
+					<img class="page__lead__img" src="<?php echo get_sub_field('image'); ?>" alt="">
+					<p>
+						<a href="<?php if (get_sub_field('sublink_page')){ echo get_sub_field('sublink_page'); } ?>" class="sublink">
+							<i class="fa fa-plus"></i>
+							<?php if (get_sub_field('image_sublink_text')){ 
+								echo get_sub_field('image_sublink_text'); 
+							} ?>	
+						</a>
+					</p>
 				</div>
 				<div class="col-sm-6 <?php if ( get_sub_field('image_display') == 'left' ){ echo 'offset-lg-1'; } ?>">
 					<header>
@@ -18,9 +26,8 @@
 						</h4>
 						<h1 class="title">
 							<?php echo get_sub_field('title') ?>
-							<br>
-							<hr>
 						</h1>
+						<hr>
 					</header>
 					<p class="subtitle">
 						<?php echo get_sub_field('subtitle'); ?>

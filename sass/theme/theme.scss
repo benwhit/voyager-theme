@@ -11,6 +11,9 @@
   src: url('../fonts/ElliotSans-Bold.ttf');
 }
 
+
+// Elements
+
 hr {
 	display: block;
 	width: 100px;
@@ -61,14 +64,6 @@ ul {
 	}
 }
 
-.grid__item { 
-	width: 25%; 
-	padding-left: 15px;
-	padding-right: 15px;
-	margin-bottom: 20px;
-}
-
-
 // Image Accents
 .accent-left {
 	position: absolute;
@@ -88,15 +83,6 @@ ul {
 }
 
 
-// Colors
-.color-adopt 	{ color: #ff0055; }
-.color-involved { color: #49d322; }
-.color-about 	{ color: #641aad; }
-.color-programs { color: #1690db; }
-.color-news 	{ color: #ff6100; }
-.color-contact 	{ color: #bcbec0; }
-
-
 // Category Section Colors
 .adopt {
 	.overlay__title {
@@ -105,6 +91,7 @@ ul {
 	.subtitle,
 	.subheader,
 	.topic,
+	.sublink,
 	.return a{
 		color: $color-adopt;
 	}

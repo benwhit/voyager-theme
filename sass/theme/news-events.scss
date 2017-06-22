@@ -8,9 +8,6 @@
 	.return a {
 		color: $color-news;
 	}
-	hr {
-		margin: 20px auto !important;
-	}
 	hr,
 	.btn {
 		border-color: $color-news;
@@ -55,6 +52,12 @@
 				font-weight: bold;
 			}
 		}
+	}
+	.grid__item { 
+		width: 25%; 
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-bottom: 20px;
 	}
 }
 
