@@ -6,7 +6,7 @@ function voyager_theme_scripts() {
 
 	// Styles
 
-	wp_enqueue_style( 'voyager-theme-style', get_stylesheet_directory_uri() . '/css/styles.css' );
+	wp_enqueue_style( 'voyager-theme-style', get_template_directory_uri() . '/css/styles.css' );
 
 	// Scripts
 	
