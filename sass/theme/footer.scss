@@ -30,10 +30,13 @@
 			margin-bottom: 60px;
 		}
 	}
-	.footer__widgets {
+	.footer__menus {
 		padding-left: 100px;
 		@include media-breakpoint-down(sm) {
 			padding-left: 15px;
+		}
+		.overlay__title {
+			margin-top: 20px;
 		}
 	}
 	li {

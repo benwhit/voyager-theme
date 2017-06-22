@@ -1,10 +1,11 @@
 // Proram Colors
 .programs {
-	.overlay__title {
-		color: $color-programs;
-	}
+	.overlay__title,
 	.subtitle,
+	.subheader,
 	.topic,
+	.sublink,
+	.quote__link,
 	.return a {
 		color: $color-programs;
 	}

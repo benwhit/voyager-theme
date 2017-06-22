@@ -1,10 +1,11 @@
 // Volunteer Colors
 .involved {
-	.overlay__title {
-		color: $color-involved;
-	}
+	.overlay__title,
 	.subtitle,
+	.subheader,
 	.topic,
+	.sublink,
+	.quote__link,
 	.return a {
 		color: $color-involved;
 	}

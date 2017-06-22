@@ -12,8 +12,8 @@
 					<img class="page__lead__img" src="<?php echo get_sub_field('image'); ?>" alt="">
 					<p>
 						<a href="<?php if (get_sub_field('sublink_page')){ echo get_sub_field('sublink_page'); } ?>" class="sublink">
-							<i class="fa fa-plus"></i>
 							<?php if (get_sub_field('image_sublink_text')){ 
+								echo '<i class="fa fa-plus"></i>';
 								echo get_sub_field('image_sublink_text'); 
 							} ?>	
 						</a>

@@ -13,10 +13,11 @@
 						<img class="" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/quote-programs.png" alt="">
 					<?php endif; ?>
 				</div>
-				<div class="col-12 col-md-11">									
+				<div class="col-12 col-md-11">
 					<h4 class="quote__text">
 						<?php echo get_sub_field('quote_text') ?>
-					</h4>							
+						<a href="#" class="quote__link">[read more]</a>
+					</h4>
 				</div>
 			</div>
 		</div>

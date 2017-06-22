@@ -1,10 +1,11 @@
 // News Theme Colors
 .news {
-	.overlay__title {
-		color: $color-news;
-	}
-	.subheader,
+	.overlay__title,
 	.subtitle,
+	.subheader,
+	.topic,
+	.sublink,
+	.quote__link,
 	.return a {
 		color: $color-news;
 	}
