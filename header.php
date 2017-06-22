@@ -195,12 +195,8 @@
 				    <?php // display slides
 				    while (have_rows('flexible_slider')) :
 				    	the_row();
-				    	$count++; ?>
-					   
-					    <div class="carousel-item adopt <?php if ($count == 1){ echo 'active'; } ?>">
-					    	<?php if( get_sub_field('slider_image') != '' ){ ?>
-					    		<img class="d-block" src="<?php the_sub_field('slider_image') ?>" alt="Slide">
-					    	<?php } ?>
+				    	$count++; ?>					   
+					    <div class="carousel-item adopt <?php if ($count == 1){ echo 'active'; } ?>" style="background-image: url(<?php if( get_sub_field('slider_image') != '' ){ the_sub_field('slider_image'); } ?> );">
   							<div class="carousel-caption d-md-block">
 					    	<?php if( get_sub_field('slider_title') != '' ): ?>
 					    		<h1 class="title">
@@ -219,17 +215,6 @@
 					  <?php endwhile; ?>
 					<?php endif; ?>
 				</div>
-
-				<!-- Slider Arrows -->
-				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
-
 			</div>
 		<?php endif; ?>
 

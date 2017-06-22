@@ -35,7 +35,11 @@
 		position: absolute;
 		top: 45%;
 		width: 100%;
-		margin: auto;
+		margin: auto;		
+		@include media-breakpoint-down(sm) {
+			position: relative;
+			margin-top: 20px;
+		}
 		[class*=owl-] {
 			height: 50px;
 			width: 50px;
@@ -56,10 +60,20 @@
 		.owl-prev {
 			position: absolute;
 			left: -75px;
+			@include media-breakpoint-down(md) {
+				position: relative;
+				left: 0;
+				margin-right: 15px;
+			}
 		}
 		.owl-next {
 			position: absolute;
 			right: -75px;
+			@include media-breakpoint-down(md) {
+				position: relative;
+				right: 0;
+				margin-left: 15px;
+			}
 		}
 	}
 }
