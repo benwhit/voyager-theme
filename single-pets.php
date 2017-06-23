@@ -1,7 +1,7 @@
 <?php
 /*
- * Template Name: Pet
- * Template Post Type: post
+ * Template Name: Pets
+ * Template Post Type: post, page
  *
  * @package Voyager_Theme
  */
@@ -86,7 +86,7 @@
 				</div>
 				<div class="container section__posts adopt">
 						<?php $section_posts =  new WP_Query ( array(
-							'cat' => 'adoption',
+							'post_type' => 'pets',
 							'posts_per_page' => 4
 							)
 						); ?>

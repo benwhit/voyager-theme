@@ -1,7 +1,7 @@
 <?php
 /*
  * Template Name: Volunteer
- * Template Post Type: post
+ * Template Post Type: post, page
  *
  * @package Voyager_Theme
  */
@@ -101,8 +101,8 @@
 				<!-- Posts Carousel Block -->
 				<?php
 					$involved =  new WP_Query ( array(
-						'posts_per_page' 	=> 8,
-						'cat' => '7'
+						'post_type' => 'volunteer',
+						'posts_per_page' 	=> 8
 					));
 				?>
 				<div class="container section__posts involved">

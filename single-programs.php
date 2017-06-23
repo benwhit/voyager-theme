@@ -1,7 +1,7 @@
 <?php
 /*
  * Template Name: Programs
- * Template Post Type: post
+ * Template Post Type: post, page
  *
  * @package Voyager_Theme
  */
@@ -101,9 +101,8 @@
 				<!-- Posts Carousel Block -->
 				<?php
 					$programs =  new WP_Query ( array(
-						'post_type' => 'post',
-						'posts_per_page' 	=> 8,
-						'cat' => '5'
+						'post_type' => 'programs',
+						'posts_per_page' 	=> 8
 					));
 				?>
 				<div class="section__posts programs">
