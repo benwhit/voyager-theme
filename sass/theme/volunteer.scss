@@ -10,7 +10,8 @@
 		color: $color-involved;
 	}
 	hr,
-	.btn {
+	.btn,
+	.learn-more {
 		border-color: $color-involved;
 		background-color: $color-involved;
 		&:hover {
@@ -35,9 +36,16 @@
 
 
 // Single Post
-.post-template-single-involved {
+.single-volunteer {
 	.page__header {
 		background-image: url('../images/volunteer.jpg');
+	}
+	.accent-left {
+		height: auto;
+		width: auto;
+	}
+	.bg-image {
+		top: 90vh;
 	}
 	.news {
 		.post {

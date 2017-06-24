@@ -10,7 +10,8 @@
 		color: $color-news;
 	}
 	hr,
-	.btn {
+	.btn,
+	.learn-more {
 		border-color: $color-news;
 		background-color: $color-news;
 		&:hover {
@@ -61,6 +62,10 @@
 			position: relative;
 			margin: 0 10px;
 		}
+		.learn-more {
+			margin: 0 10px;
+			width: calc(100% - 20px);
+		}
 	}
 }
 
@@ -68,8 +73,15 @@
 .post-template-single-news {
 	.page__header {
 		background-image: url('../images/news-events.jpg');
+		.page__title {
+			max-width: 1170px;
+			margin: 0 auto;
+		}
 	}
 	.news {
+		hr {
+			margin: 20px auto !important;
+		}
 		.post {
 			.subheader,
 			.title,

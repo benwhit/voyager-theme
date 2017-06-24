@@ -6,21 +6,23 @@
  * @package Voyager_Theme
  */
 
- get_header();  ?>
+ get_header();  
 
-<div class="page__header programs" style="<?php if( get_field('field_name') ): ?>background-image: url(<?php the_field('header_image') ?>)<?php endif; ?>">
-	<div class="container">			
-		<div class="row">
-			<div class="col-12">
-				<h1 class="page__title">
-					<?php the_title(); ?>
-				</h1>
-				<hr>	
-			</div>
-		</div>
-	</div>
-</div>
-<div id="primary" class="content-area programs">
+	$programs =  new WP_Query ( array(
+		'post_type' => 'programs',
+		'posts_per_page' 	=> 8
+	));
+
+?>
+
+<div class="page__header programs" style="<?php if (get_field('header_image')) { ?>
+			background-image: url(<?php the_field('header_image') ?>);" <?php } ?>">
+	<h1 class="page__title">
+		<?php the_title(); ?>
+	</h1>
+	<hr>	
+</div>		
+	<div id="primary" class="content-area programs">
 	<img class="bg-image" src="<?php echo the_field('page_background'); ?>" alt="">
 	<main id="main" class="site-main container" role="main">
 		<section>
@@ -58,10 +60,8 @@
 								<?php the_field('subtitle'); ?>
 							</p>
 						</header>
-
 						<div class="entry-content">
-							<?php
-							the_field('content');
+							<?php the_field('content');
 
 							wp_link_pages( array(
 								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'voyager-theme' ),
@@ -72,63 +72,31 @@
 					</article>
 				</div>
 			</div>
-
-				<?php
-				if( have_rows('flexible_content') ):
-					while ( have_rows('flexible_content') ) : the_row();
-
-					// Category Section Layout
-					if( get_row_layout() == 'category_section' )
-						get_template_part('partials/category-section');
-
-					// Posts Section
-					if( get_row_layout() == 'posts_carousel' )
-						get_template_part('partials/posts-carousel');			
-
-					// Quote Layout
-					if (get_row_layout() == 'quote')
-						get_template_part('partials/quote');
-
-					// Donate Button
-					if (get_row_layout() == 'donate')
-						get_template_part('partials/donate');
-
-				endwhile;
-				endif; 
-			?>
-
-			<!-- Posts Carousel Block -->
-			<?php
-				$programs =  new WP_Query ( array(
-					'post_type' => 'programs',
-					'posts_per_page' 	=> 8
-				));
-			?>
 			<div class="section__posts programs">
-						<h2 class="section__posts__title">
-							ongoing initiatives     
-						</h2>
-						<hr>			
-								<div class="owl-carousel post-carousel owl-theme">
-									<?php if ( $programs->have_posts() ) : ?>
-										<?php while ( $programs->have_posts() ) : $programs->the_post(); ?>
-
-												<div class="section__post item">								
-													<a href="" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');"></a>								
-													<h3 class="title">
-														<a href="<?php the_permalink(); ?>">
-															<?php the_title(); ?>
-														</a>
-													</h3>
-												</div>
-
-										<?php endwhile; ?>
-										<?php wp_reset_postdata(); ?>
-									<?php endif; ?>
-						  </div>
+				<h2 class="section__posts__title">
+					ongoing initiatives     
+				</h2>
+				<hr>			
+				<div class="owl-carousel post-carousel owl-theme">
+					<?php if ( $programs->have_posts() ) : ?>
+						<?php while ( $programs->have_posts() ) : $programs->the_post(); ?>
+								<div class="item">
+									<div class="section__post">
+										<a href="<?php the_permalink(); ?>" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');">
+											<h3 class="title">
+													<span>
+														<?php the_title(); ?>
+													</span>
+											</h3>
+										</a>
+									</div>
+									<a href="<?php the_permalink(); ?>" class="learn-more">learn more</a>
+								</div>
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+		  	</div>
 			</div>
-
-			 <!-- Quote Block -->
 			<div class="quote container">
 				<div class="row">
 					<div class="col-10 offset-1">

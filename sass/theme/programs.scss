@@ -35,9 +35,12 @@
 }
 
 // Single Post
-.post-template-single-programs {
+.single-programs {
 	.page__header {
 		background-image: url('../images/programs.jpg');
+	}
+	.bg-image {
+		top: 90vh;
 	}
 	.news {
 		.post {

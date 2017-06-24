@@ -136,6 +136,7 @@ get_header();
 											</h3>
 										</a>
 									</div>
+									<a href="<?php the_permalink(); ?>" class="learn-more">learn more</a>
 								</div>
 							<?php endwhile; ?>
 							<?php wp_reset_postdata(); ?>
@@ -153,6 +154,7 @@ get_header();
 											</h3>
 										</a>
 									</div>
+									<a href="<?php the_permalink(); ?>" class="learn-more">learn more</a>
 								</div>
 							<?php endwhile; ?>
 							<?php wp_reset_postdata(); ?>
@@ -170,6 +172,7 @@ get_header();
 											</h3>
 										</a>
 									</div>
+									<a href="<?php the_permalink(); ?>" class="learn-more">learn more</a>
 								</div>
 							<?php endwhile; ?>
 							<?php wp_reset_postdata(); ?>
@@ -187,6 +190,7 @@ get_header();
 											</h3>
 										</a>
 									</div>
+									<a href="<?php the_permalink(); ?>" class="learn-more">learn more</a>
 								</div>
 							<?php endwhile; ?>
 							<?php wp_reset_postdata(); ?>

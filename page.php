@@ -14,12 +14,11 @@
 
 get_header(); ?>
 <div class="page__header <?php echo the_field('category') ?>" style="<?php if (get_field('header_image')) { ?>
-			background-image: url(<?php the_field('header_image') ?>);" <?php } ?>>
+			background-image: url(<?php the_field('header_image') ?>);" <?php } ?>">
 	<h1 class="page__title">
 		<?php the_title(); ?>
-		<br>
-		<hr>	
 	</h1>
+	<hr>	
 </div>		
 	<div id="primary" class="content-area <?php echo the_field('category') ?>">
 		<main id="main" class="site-main" role="main">

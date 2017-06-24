@@ -76,16 +76,12 @@ add_filter('acf/fields/flexible_content/layout_title', 'my_layout_title', 10, 4)
 /*   Add ACF Options Page 			                            */
 /***********************************************************/
 if( function_exists('acf_add_options_page') ) {
-
 	acf_add_options_page();
-	
 }
 
 if( function_exists('acf_add_options_sub_page') ) {
-
 	acf_add_options_sub_page('Social');
-	acf_add_options_sub_page('Sponsors');
-	
+	acf_add_options_sub_page('Sponsors');	
 }
 
 

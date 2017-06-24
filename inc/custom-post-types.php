@@ -62,7 +62,7 @@ function volunteer() {
 	$labels = array(
 		'name'                  => _x( 'Volunteer', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => _x( 'Volunteer', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Volunteer', 'text_domain' ),
+		'menu_name'             => __( 'Get Involved', 'text_domain' ),
 		'name_admin_bar'        => __( 'Volunteer', 'text_domain' ),
 		'archives'              => __( 'Volunteer Archives', 'text_domain' ),
 		'attributes'            => __( 'Volunteer Attributes', 'text_domain' ),

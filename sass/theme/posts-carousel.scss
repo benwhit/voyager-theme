@@ -6,15 +6,6 @@
 		font-size: 3rem;
 		text-align: center;
 	}
-	.item {
-		&:hover {
-			.learn-more {
-				top: -25px;
-				opacity: 1;
-				transition: 0.4s top ease-in-out;
-			}
-		}
-	}
 	.section__post {
 		height: 300px;
 		border-bottom: 25px solid #ececec;
@@ -30,14 +21,6 @@
 			margin: auto;
 			background-size: cover;
 			z-index: 1;
-			&:hover {
-				.title {
-					left: -100%;
-					padding-left: 0;
-					padding-right: 0;
-					transition: 0.4s all ease-in-out;
-				}
-			}
 			.title {
 				position: absolute;
 				bottom: 0;
@@ -55,22 +38,6 @@
 				}
 			}
 		}
-	}
-	.learn-more {
-		position: relative;
-		display: inline-block;
-		width: 100%;
-		top: -65px;
-		text-align: center;
-		font-family: $font-primary-light;
-		letter-spacing: 1px;
-		font-size: 1.2rem;
-		line-height: 1.5rem;
-		padding: 5px 0;
-		color:#FFF !important;
-		text-decoration: none;
-		z-index: 0;
-		transition: 0.4s top ease-in-out;
 	}
 	// Owl Carousel Overrides
 	.owl-nav {
