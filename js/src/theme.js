@@ -48,7 +48,10 @@
   	// options
 	  itemSelector: '.grid__item',
 	  layoutMode: 'fitRows',
-	  filter: '.category-one'
+	  filter: '.category-one',
+	  masonry: {
+	    gutter: 20
+	  }
 	});
 
 	// filter functions

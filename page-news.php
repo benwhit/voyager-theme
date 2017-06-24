@@ -1,16 +1,15 @@
 <?php
 /**
  * Template Name: News & Events
+ * Template Post Type: page
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package Voyager_Theme
  */
 
-get_header(); ?>
+get_header(); 
 
-
-<?php
 	$cat_one_title = get_term( get_field('category_one') );
 	$category_one =  new WP_Query ( array(
 		'posts_per_page' 	=> 8,
@@ -31,7 +30,8 @@ get_header(); ?>
 		'posts_per_page' 	=> 8,
 		'cat' 						=> get_field('category_four')
 	));
-	?>
+
+?>
 
 	<div class="page__header news" style="<?php if (get_field('header_image')) { ?>
 			background-image: url(<?php the_field('header_image') ?>); <?php } ?>">
@@ -73,7 +73,6 @@ get_header(); ?>
 									<?php the_field('subtitle'); ?>
 								</p>
 							</header>
-
 							<div class="entry-content">
 								<?php
 								the_field('content');
@@ -93,111 +92,107 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 				</div>
-
-		<div class="container section__posts <?php echo get_sub_field('category_color') ?>">		
-			<h2 class="section__posts__title">
-				recent updates
-			</h2>
-			<hr>
-			<div id="filters" class="button-group">
-				  <button class="button is-checked" data-filter="*">
-						view all
-				  </button>
-				<?php if (get_field('category_one')) : ?>
-				  <button class="button is-checked" data-filter=".category-one">
-						<?php echo $cat_one_title->name ?>
-				  </button>
-				<?php endif; ?>
-				<?php if (get_field('category_two')) : ?>
-				  <button class="button" data-filter=".category-two">
-				  	<?php echo $cat_two_title->name ?>
-				  </button>
-				<?php endif; ?>
-				<?php if (get_field('category_three')) : ?>
-				  <button class="button" data-filter=".category-three">
-				  	<?php echo $cat_three_title->name ?>
-				  </button>
-				<?php endif; ?>
-				<?php if ( get_field('category_four') ) : ?>
-				  <button class="button" data-filter=".category-four">
-				  	<?php echo $cat_four_title->name ?>
-				  </button>
-				<?php endif; ?>
-			</div>
-			<div class="grid">
-
-			<!-- Category One -->
-			<?php if ( $category_one->have_posts() ) : ?>
-				<?php while ( $category_one->have_posts() ) : $category_one->the_post(); ?>
-					<div class="grid__item category-one">
-						<article class="section__post">								
-							<a href="" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');"></a>								
-							<h3 class="title">
-								<a href="<?php the_permalink(); ?>">
-									<?php the_title(); ?>
-								</a>
-							</h3>
-						</article>
+				<div class="container section__posts <?php echo get_sub_field('category_color') ?>">		
+					<h2 class="section__posts__title">
+						recent updates
+					</h2>
+					<hr>
+					<div id="filters" class="button-group">
+						  <button class="button is-checked" data-filter="*">
+								view all
+						  </button>
+						<?php if (get_field('category_one')) : ?>
+						  <button class="button is-checked" data-filter=".category-one">
+								<?php echo $cat_one_title->name ?>
+						  </button>
+						<?php endif; ?>
+						<?php if (get_field('category_two')) : ?>
+						  <button class="button" data-filter=".category-two">
+						  	<?php echo $cat_two_title->name ?>
+						  </button>
+						<?php endif; ?>
+						<?php if (get_field('category_three')) : ?>
+						  <button class="button" data-filter=".category-three">
+						  	<?php echo $cat_three_title->name ?>
+						  </button>
+						<?php endif; ?>
+						<?php if ( get_field('category_four') ) : ?>
+						  <button class="button" data-filter=".category-four">
+						  	<?php echo $cat_four_title->name ?>
+						  </button>
+						<?php endif; ?>
 					</div>
-				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-			<?php endif; ?>
-
-
-			<!-- Category Two -->
-			<?php if ( $category_two->have_posts() ) : ?>
-				<?php while ( $category_two->have_posts() ) : $category_two->the_post(); ?>
-					<div class="grid__item category-two">
-						<article class="section__post">								
-							<a href="" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');"></a>								
-							<h3 class="title">
-								<a href="<?php the_permalink(); ?>">
-									<?php the_title(); ?>
-								</a>
-							</h3>
-						</article>
-					</div>
-				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-			<?php endif; ?>
-
-			<!-- Category Three -->
-			<?php if ( $category_three->have_posts() ) : ?>
-				<?php while ( $category_three->have_posts() ) : $category_three->the_post(); ?>
-					<div class="grid__item category-three">
-						<article class="section__post">								
-							<a href="" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');"></a>								
-							<h3 class="title">
-								<a href="<?php the_permalink(); ?>">
-									<?php the_title(); ?>
-								</a>
-							</h3>
-						</article>
-					</div>
-				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-			<?php endif; ?>
-
-			<!-- Category Four -->
-			<?php if ( $category_four->have_posts() ) : ?>
-				<?php while ( $category_four->have_posts() ) : $category_four->the_post(); ?>
-					<div class="grid__item category-four">
-						<article class="section__post">								
-							<a href="" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');"></a>								
-							<h3 class="title">
-								<a href="<?php the_permalink(); ?>">
-									<?php the_title(); ?>
-								</a>
-							</h3>
-						</article>
-					</div>
-				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-			<?php endif; ?>
-
-  </div>
-</div>
-
+					<div class="grid">
+						<!-- Category One -->
+						<?php if ( $category_one->have_posts() ) : ?>
+							<?php while ( $category_one->have_posts() ) : $category_one->the_post(); ?>
+								<div class="grid__item category-one">						
+									<div class="section__post">
+										<a href="<?php the_permalink(); ?>" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');">
+											<h3 class="title">
+												<span>
+													<?php the_title(); ?>
+												</span>
+											</h3>
+										</a>
+									</div>
+								</div>
+							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
+						<?php endif; ?>
+						<!-- Category Two -->
+						<?php if ( $category_two->have_posts() ) : ?>
+							<?php while ( $category_two->have_posts() ) : $category_two->the_post(); ?>
+								<div class="grid__item category-two">						
+									<div class="section__post">
+										<a href="<?php the_permalink(); ?>" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');">
+											<h3 class="title">
+												<span>
+													<?php the_title(); ?>
+												</span>
+											</h3>
+										</a>
+									</div>
+								</div>
+							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
+						<?php endif; ?>
+						<!-- Category Three -->
+						<?php if ( $category_three->have_posts() ) : ?>
+							<?php while ( $category_three->have_posts() ) : $category_three->the_post(); ?>
+								<div class="grid__item category-three">						
+									<div class="section__post">
+										<a href="<?php the_permalink(); ?>" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');">
+											<h3 class="title">
+												<span>
+													<?php the_title(); ?>
+												</span>
+											</h3>
+										</a>
+									</div>
+								</div>
+							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
+						<?php endif; ?>
+						<!-- Category Four -->
+						<?php if ( $category_four->have_posts() ) : ?>
+							<?php while ( $category_four->have_posts() ) : $category_four->the_post(); ?>
+								<div class="grid__item category-four">
+									<div class="section__post">
+										<a href="<?php the_permalink(); ?>" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');">
+											<h3 class="title">
+												<span>
+													<?php the_title(); ?>
+												</span>
+											</h3>
+										</a>
+									</div>
+								</div>
+							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
+						<?php endif; ?>
+				  </div>
+				</div>
 			</section>			
 		</main>
 	</div>

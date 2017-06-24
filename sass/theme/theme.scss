@@ -153,39 +153,7 @@ a.btn:hover {
 
 
 // Category Section Colors
-.adopt {
-	.overlay__title,
-	.subtitle,
-	.subheader,
-	.topic,
-	.sublink,
-	.quote__link,
-	.return a {
-		color: $color-adopt;
-	}
-	hr,
-	.btn {
-		border-color: $color-adopt;
-		background-color: $color-adopt;
-		&:hover {
-			color: $color-adopt;			
-		}	
-	}
-	.quote__icon {
-		border-right-color: $color-adopt;
-	}
-	.section__post {
-		.title > a {
-			background-color: $color-adopt;
-		}
-	}
-	.owl-nav [class*=owl-]:hover {
-		border-color: $color-adopt;
-		i {
-			color: $color-adopt;
-		}
-	}
-}
+
 
 .about {
 	.overlay__title,

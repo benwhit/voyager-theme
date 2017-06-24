@@ -1,27 +1,20 @@
 <?php
 /*
  * Template Name: Volunteer
- * Template Post Type: post, page
+ * Template Post Type: post
  *
  * @package Voyager_Theme
  */
 
  get_header();  ?>
-
-	
-	<div class="page__header involved">
-		<div class="container">			
-			<div class="row">
-				<div class="col-12">
-					<h1 class="page__title">
-						volunteer
-					</h1>
-					<hr>	
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="primary" class="content-area involved">
+<div class="page__header <?php echo the_field('category') ?>" style="<?php if (get_field('header_image')) { ?>
+			background-image: url(<?php the_field('header_image') ?>);" <?php } ?>>
+	<h1 class="page__title">
+		<?php the_title(); ?>
+	</h1>
+	<hr>	
+</div>		
+	<div id="primary" class="content-area <?php echo the_field('category') ?>">
 		<img class="bg-image" src="<?php echo the_field('page_background'); ?>" alt="">
 		<main id="main" class="site-main container" role="main">
 			<section>

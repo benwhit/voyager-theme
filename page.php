@@ -13,80 +13,57 @@
  */
 
 get_header(); ?>
-	<div class="page__header  <?php echo the_field('category') ?>">
-		<img src="<?php the_field('header_image'); ?>" alt="">
-		<h1 class="page__title"><?php the_title(); ?></h1>
+<div class="page__header <?php echo the_field('category') ?>" style="<?php if (get_field('header_image')) { ?>
+			background-image: url(<?php the_field('header_image') ?>);" <?php } ?>>
+	<h1 class="page__title">
+		<?php the_title(); ?>
+		<br>
 		<hr>	
-	</div>
+	</h1>
+</div>		
 	<div id="primary" class="content-area <?php echo the_field('category') ?>">
-
-
-		<main id="main" class="site-main container" role="main">
-			<?php if ( get_field('page_background') ) : ?>
-				<img class="bg-image" src="<?php the_field('page_background'); ?>" alt="" />	
-			<?php endif; ?>
-			<section>
+		<main id="main" class="site-main" role="main">
+			<section class="container">
 				<div class="row">
-					<div class="col-12">
+					<div class="col-sm-12">
 						<p class="return">
 							<i class="fa fa-angle-left"></i>
 							<i class="fa fa-angle-left"></i>
 							<i class="fa fa-angle-left"></i>
 							return to
-							<a href="/">home</a>
+							<a href="<?php echo get_site_url(); ?>">home</a>
 						</p>
 					</div>
 				</div>
 			</section>
 			<section class="page-content">
-				<div class="col-sm-12">
-				<?php if ( get_field('lead_image') ) : ?>
-					<img class="accent-left" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/accent-left.png" alt="">	
-					<img class="page__lead__img" src="<?php the_field('lead_image'); ?>" alt="">
-				<?php endif; ?>
-				</div>
-				<div class="row">
-					<div class="col-sm-7 pl-5">
+				<?php
+				if( have_rows('flexible_content') ):
+					while ( have_rows('flexible_content') ) : the_row();
 
-						<!-- Content Loop -->
-						<?php
-						while ( have_posts() ) : the_post();
-							get_template_part( 'template-parts/content', 'page' );
-							if ( comments_open() || get_comments_number() ) :
-								comments_template();
-							endif;
-						endwhile;
-						?>
-					</div>
-					<aside class="offset-sm-2 col-sm-3">
-						<?php get_sidebar(); ?>
-					</aside>
-					<div class="col-12">						
-						<!-- Flexible Content -->
-						<?php
-						if( have_rows('flexible_content') ):
-							while ( have_rows('flexible_content') ) : the_row();
+					// Category Section Layout
+					if( get_row_layout() == 'category_section' )
+						get_template_part('partials/category-section');
 
-							// Category Section Layout
-							if( get_row_layout() == 'category_section' )
-								get_template_part('partials/category-section');
+					// Posts Carousel
+					if( get_row_layout() == 'posts_carousel' )
+						get_template_part('partials/posts-carousel');
 
-							// Posts Section
-							if( get_row_layout() == 'posts_carousel' )
-								get_template_part('partials/posts-carousel');			
+					// Posts Block
+					if( get_row_layout() == 'posts_block' )
+						get_template_part('partials/posts-block');
 
-							// Quote Layout
-							if (get_row_layout() == 'quote')
-								get_template_part('partials/quote');
+					// Quote Layout
+					if (get_row_layout() == 'quote')
+						get_template_part('partials/quote');
 
-							// Donate Button
-							if (get_row_layout() == 'donate')
-								get_template_part('partials/donate');
+					// Donate Button
+					if (get_row_layout() == 'donate')
+						get_template_part('partials/donate');
 
-						endwhile;
-						endif; 
-						?>
-					</div>
+				endwhile;
+				endif; 
+				?>
 			</section>			
 		</main>
 	</div>

@@ -10,7 +10,8 @@
 		color: $color-programs;
 	}
 	hr,
-	.btn {
+	.btn,
+	.learn-more  {
 		border-color: $color-programs;
 		background-color: $color-programs;
 		&:hover {
@@ -21,8 +22,8 @@
 		border-right-color: $color-programs;
 	}
 	.section__post {
-		.title > a {
-			background-color: rgba(22,144,219,0.7);
+		.title {
+			background-color: rgba(22, 144, 219, 0.9);
 		}
 	}
 	.owl-nav [class*=owl-]:hover {

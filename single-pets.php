@@ -1,7 +1,7 @@
 <?php
 /*
  * Template Name: Pets
- * Template Post Type: post, page
+ * Template Post Type: post
  *
  * @package Voyager_Theme
  */
@@ -84,33 +84,40 @@
 						</a>
 					</div>
 				</div>
-				<div class="container section__posts adopt">
-						<?php $section_posts =  new WP_Query ( array(
-							'post_type' => 'pets',
-							'posts_per_page' => 4
-							)
-						); ?>
+				<!-- Pets Carousel -->
+				<?php $section_posts =  new WP_Query ( array(
+					'post_type' => 'pets',
+					'posts_per_page' => 4
+					)
+				); ?>
+				<div class="section__posts adopt">
 						<h2 class="section__posts__title">
 							available pets
 							<br>
 							<hr>
 						</h2>
-						<div class="row">
-							<?php if ( $section_posts->have_posts() ) : ?>
-								<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
-									<div class="col-lg-3 col-sm-6">								
-										<article class="section__post">								
-											<a href="" class="thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');"></a>								
-											<h3 class="title">
-												<a href="<?php the_permalink(); ?>">
-													<?php the_title(); ?>
-												</a>
-											</h3>
-										</article>
+						<!-- Posts Carousel Loop -->
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<div class="owl-carousel post-carousel owl-theme">
+										<?php if ( $section_posts->have_posts() ) : ?>
+											<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
+												<div class="section__post item" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>');">
+													<a href="<?php the_permalink(); ?>" class="thumbnail" title="<?php the_title_attribute(); ?>">
+														<h3 class="title">
+																<span>
+																	<?php the_title(); ?>
+																</span>
+														</h3>
+													</a>
+												</div>
+											<?php endwhile; ?>
+											<?php wp_reset_postdata(); ?>
+										<?php endif; ?>
 									</div>
-								<?php endwhile; ?>
-								<?php wp_reset_postdata(); ?>
-							<?php endif; ?>
+								</div>
+							</div>
 						</div>
 					</div>
 

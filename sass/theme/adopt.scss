@@ -1,0 +1,36 @@
+// Category Colors
+.adopt {
+	.overlay__title,
+	.subtitle,
+	.subheader,
+	.topic,
+	.sublink,
+	.quote__link,
+	.return a {
+		color: $color-adopt;
+	}
+	hr,
+	.btn,
+	.learn-more {
+		border-color: $color-adopt;
+		background-color: $color-adopt;
+		&:hover {
+			color: $color-adopt;			
+		}	
+	}
+	.quote__icon {
+		border-right-color: $color-adopt;
+	}
+	.section__post {
+		position: relative;
+		.title {
+			background-color: rgba(255, 0, 85, 0.9);
+		}
+	}
+	.owl-nav [class*=owl-]:hover {
+		border-color: $color-adopt;
+		i {
+			color: $color-adopt;
+		}
+	}
+}
