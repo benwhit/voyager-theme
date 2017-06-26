@@ -26,7 +26,7 @@ gulp.task('browser-sync', function() {
     	"*.html", 
     	"*.php",
     	"**/*.php"], {
-        proxy: "pwc.dev"
+        proxy: "voyager.dev"
     });
 });
 

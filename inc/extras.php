@@ -1,7 +1,6 @@
 <?php
 /**
  * Custom functions that act independently of the theme templates
- *
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package Voyager_Theme
@@ -9,7 +8,6 @@
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
- *
  * Priority 0 to make it available to lower priority callbacks.
  *
  * @global int $content_width
@@ -81,9 +79,18 @@ if( function_exists('acf_add_options_page') ) {
 
 if( function_exists('acf_add_options_sub_page') ) {
 	acf_add_options_sub_page('Social');
-	acf_add_options_sub_page('Sponsors');	
+	acf_add_options_sub_page('Sponsors');
 }
 
+function has_acf() {	
+	include_once(ABSPATH.'wp-admin/includes/plugin.php');
+	if ( is_plugin_active( 'advanced-custom-fields/acf.php' || 'advanced-custom-fields-pro/acf.php' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+add_action( 'admin_init', 'has_acf' );
 
 
 /*************************************************************/

@@ -10,28 +10,35 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
-		<h4 class="subtitle">
-			<?php the_field('subheader'); ?>
-		</h4>
-		<h1 class="title">
-			<?php the_field('title') ?>
-		</h1>
-		<hr>
-		<p class="topic">
-			<?php the_field('subtitle'); ?>
-		</p>
-	</header>
+	<?php if ( has_acf() ) : ?>
+		<header>
+			<h4 class="subtitle">
+				<?php the_field('subheader'); ?>
+			</h4>
+			<h1 class="title">
+				<?php the_field('title') ?>
+			</h1>
+			<hr>
+			<p class="topic">
+				<?php the_field('subtitle'); ?>
+			</p>
+		</header>
+	<?php else : ?>
+		<header class="entry-header">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</header>
+	<?php endif; ?>
 
 	<div class="entry-content">
-		<?php
+		<?php if ( has_acf() ) :
 			the_field('content');
-
+		else :
+			the_content();
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'voyager-theme' ),
 				'after'  => '</div>',
 			) );
-		?>
+		endif; ?>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
