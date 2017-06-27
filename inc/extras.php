@@ -93,7 +93,7 @@ function has_acf() {
 		return false;
 	}
 }
-add_action( 'admin_init', 'has_acf' );
+add_action( 'wp_head', 'has_acf' );
 
 
 /*************************************************************/

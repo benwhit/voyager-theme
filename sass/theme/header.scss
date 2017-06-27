@@ -1,11 +1,13 @@
-.site-header {
+header.site-header {
+	position: relative;
+	z-index: 99;
 	.navbar {
 		position: fixed;
 		top: 0;
 		width: 100%;
 		background-color: $brand-primary;
 		z-index: 1;
-		transition: background-color 0.4s, color 0.8s;
+		transition: background-color 0.4s;
 		.navbar-brand {
 			font-weight: bold;
 			a {
@@ -19,6 +21,18 @@
 		&.stuck {
 			background-color: $brand-secondary;
 		}
+	}
+	.dropdown-menu {
+		position: relative !important;
+		background: none;
+		border: none;
+    top: 0;
+    left: 0;
+    float: inherit;
+    min-width: 10rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 	}
 }
 

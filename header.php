@@ -29,7 +29,7 @@
             </span>
           </div>
           <div class="col-6 col-sm-4">
-            <button id="trigger-overlay" class="pull-right" type="button">
+            <button id="trigger-overlay" class="pull-right overlay-close" type="button">
               <i class="fa fa-bars"></i>
               menu
             </button>
@@ -40,11 +40,12 @@
         <nav class="container">
           <div class="row">
             <div class="col-12 col-sm-8 offset-sm-2">
-              <h4 class="overlay__title"></h4>
+              <h4 class="overlay__title">Menu</h4>
               <?php
               wp_nav_menu([
                'menu'            => 'top',
                'theme_location'  => 'top',
+               'container_class' => 'flex-column',
                'menu_id'         => false,
                'depth'           => 2,
                'fallback_cb'     => 'bs4navwalker::fallback',
@@ -57,7 +58,7 @@
        </div>
      </nav>
 
-     <?php if ( !has_acf() ) : ?>
+     <?php if ( ! has_acf() ) : ?>
       <!-- ACF Slider -->
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <!-- count slides, display indicators for each slide -->

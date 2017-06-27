@@ -38,7 +38,7 @@ function example_post_type() {
 		'labels'                => $labels,
 		'supports'              => array( 'thumbnail' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
-		'hierarchical'          => true,
+		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
