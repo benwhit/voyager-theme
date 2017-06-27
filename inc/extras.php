@@ -50,9 +50,9 @@ add_action( 'wp_head', 'voyager_theme_pingback_header' );
 
 
 /*************************************************************/
-/*   Friendly Block Titles                                  */
+/*   ACF Friendly Block Titles                                  */
 /***********************************************************/
- 
+
 function my_layout_title($title, $field, $layout, $i) {
 	if($value = get_sub_field('layout_title')) {
 		return $value;
@@ -79,10 +79,13 @@ if( function_exists('acf_add_options_page') ) {
 
 if( function_exists('acf_add_options_sub_page') ) {
 	acf_add_options_sub_page('Social');
-	acf_add_options_sub_page('Sponsors');
 }
 
-function has_acf() {	
+
+/*************************************************************/
+/*   ACF Plugin Function Check                              */
+/***********************************************************/
+function has_acf() {
 	include_once(ABSPATH.'wp-admin/includes/plugin.php');
 	if ( is_plugin_active( 'advanced-custom-fields/acf.php' || 'advanced-custom-fields-pro/acf.php' ) ) {
 		return true;
@@ -101,9 +104,9 @@ function disable_emojis() {
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
-remove_action( 'admin_print_styles', 'print_emoji_styles' ); 
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
 remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-remove_filter( 'comment_text_rss', 'wp_staticize_emoji' ); 
+remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
@@ -112,8 +115,8 @@ add_action( 'init', 'disable_emojis' );
 
 /**
 * Filter function used to remove the tinymce emoji plugin.
-* 
-* @param array $plugins 
+*
+* @param array $plugins
 * @return array Difference betwen the two arrays
 */
 function disable_emojis_tinymce( $plugins ) {

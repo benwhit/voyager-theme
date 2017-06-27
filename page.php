@@ -18,8 +18,8 @@ get_header(); ?>
 	<h1 class="page__title">
 		<?php the_title(); ?>
 	</h1>
-	<hr>	
-</div>		
+	<hr>
+</div>
 	<div id="primary" class="content-area <?php echo the_field('category') ?>">
 		<main id="main" class="site-main" role="main">
 			<section class="container">
@@ -36,34 +36,37 @@ get_header(); ?>
 				</div>
 			</section>
 			<section class="page-content">
+
 				<?php
-				if( have_rows('flexible_content') ):
-					while ( have_rows('flexible_content') ) : the_row();
+					if ( has_acf() ) :
+						if( have_rows('flexible_content') ):
+							while ( have_rows('flexible_content') ) : the_row();
 
-					// Category Section Layout
-					if( get_row_layout() == 'category_section' )
-						get_template_part('partials/category-section');
+							// Category Section Layout
+							if( get_row_layout() == 'category_section' )
+								get_template_part('partials/category-section');
 
-					// Posts Carousel
-					if( get_row_layout() == 'posts_carousel' )
-						get_template_part('partials/posts-carousel');
+							// Posts Carousel
+							if( get_row_layout() == 'posts_carousel' )
+								get_template_part('partials/posts-carousel');
 
-					// Posts Block
-					if( get_row_layout() == 'posts_block' )
-						get_template_part('partials/posts-block');
+							// Posts Block
+							if( get_row_layout() == 'posts_block' )
+								get_template_part('partials/posts-block');
 
-					// Quote Layout
-					if (get_row_layout() == 'quote')
-						get_template_part('partials/quote');
+							// Quote Layout
+							if (get_row_layout() == 'quote')
+								get_template_part('partials/quote');
 
-					// Donate Button
-					if (get_row_layout() == 'donate')
-						get_template_part('partials/donate');
+							// Donate Button
+							if (get_row_layout() == 'donate')
+								get_template_part('partials/donate');
 
-				endwhile;
-				endif; 
+						endwhile;
+						endif;
+					endif;
 				?>
-			</section>			
+			</section>
 		</main>
 	</div>
 

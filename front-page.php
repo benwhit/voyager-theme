@@ -12,7 +12,7 @@ get_header();
   <main id="main" class="site-main row" role="main">
     <section class="page-content col-12">
       <?php
-      if ( has_acf() ):
+      if ( ! has_acf() ):
         if( have_rows('flexible_content') ):
           while ( have_rows('flexible_content') ) : the_row();
             // Category Section Layout

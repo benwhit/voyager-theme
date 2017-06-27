@@ -26,16 +26,11 @@
               <a href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
               <br>
               <span class="navbar__tag">
-                <?php echo get_bloginfo('name'); ?>
+                <?php echo get_bloginfo('description'); ?>
               </span>
             </p>
           </div>
-          <div class="col-2 hidden-sm-down">
-            <p class="navbar__donate">
-              <a href="/donate">donate</a>
-            </p>
-          </div>
-          <div class="col-6 col-sm-2">
+          <div class="col-6 col-sm-4">
             <p class="pull-right">
               <button id="trigger-overlay" type="button">
                 <i class="fa fa-bars"></i>
@@ -50,19 +45,16 @@
           <div class="row">
             <div class="col-6 col-sm-8">
               <p class="navbar-brand">
-                <a href="<?php echo get_site_url(); ?>">PW Humane</a>
-                <br class="hidden-lg-up" />
+                <a href="<?php echo get_site_url(); ?>">
+                  <?php echo get_bloginfo('name'); ?>
+                </a>
+                <br>
                 <span class="navbar__tag">
-                  no tail left behind.
+                  <?php echo get_bloginfo('description'); ?>
                 </span>
               </p>
             </div>
-            <div class="col-2 hidden-sm-down">
-              <p class="navbar__donate">
-                <a href="/donate">donate</a>
-              </p>
-            </div>
-            <div class="col-6 col-sm-2">
+            <div class="col-6 col-sm-4">
               <p class="pull-right">
                 <button id="trigger-overlay" class="overlay-close" type="button">
                   <i class="fa fa-times"></i>
@@ -72,79 +64,14 @@
             </div>
           </div>
         </div>
-        <nav>
+        <nav class="container">
           <div class="row">
-            <div class="col-md-4 col-lg-2 adopt">
-              <h4 class="overlay__title">adopt</h4>
+            <div class="col-12 col-sm-8 offset-sm-2">
+              <h4 class="overlay__title"></h4>
               <?php
               wp_nav_menu([
-               'menu'            => 'adopt',
-               'theme_location'  => 'adopt',
-               'menu_id'         => false,
-               'depth'           => 2,
-               'fallback_cb'     => 'bs4navwalker::fallback',
-               'walker'          => new bs4navwalker()
-               ]);
-               ?>
-             </div>
-             <div class="col-md-4 col-lg-2 programs">
-              <h4 class="overlay__title">programs</h4>
-              <?php
-              wp_nav_menu([
-               'menu'            => 'programs',
-               'theme_location'  => 'programs',
-               'menu_id'         => false,
-               'depth'           => 2,
-               'fallback_cb'     => 'bs4navwalker::fallback',
-               'walker'          => new bs4navwalker()
-               ]);
-               ?>
-             </div>
-             <div class="col-md-4 col-lg-2 get involved">
-              <h4 class="overlay__title">get involved</h4>
-              <?php
-              wp_nav_menu([
-               'menu'            => 'involved',
-               'theme_location'  => 'involved',
-               'menu_id'         => false,
-               'depth'           => 2,
-               'fallback_cb'     => 'bs4navwalker::fallback',
-               'walker'          => new bs4navwalker()
-               ]);
-               ?>
-             </div>
-             <div class="col-md-4 col-lg-2 news">
-              <h4 class="overlay__title">news & events</h4>
-              <?php
-              wp_nav_menu([
-               'menu'            => 'news',
-               'theme_location'  => 'news',
-               'menu_id'         => false,
-               'depth'           => 2,
-               'fallback_cb'     => 'bs4navwalker::fallback',
-               'walker'          => new bs4navwalker()
-               ]);
-               ?>
-             </div>
-             <div class="col-md-4 col-lg-2 about">
-              <h4 class="overlay__title">about us</h4>
-              <?php
-              wp_nav_menu([
-               'menu'            => 'about',
-               'theme_location'  => 'about',
-               'menu_id'         => false,
-               'depth'           => 2,
-               'fallback_cb'     => 'bs4navwalker::fallback',
-               'walker'          => new bs4navwalker()
-               ]);
-               ?>
-             </div>
-             <div class="col-md-4 col-lg-2 contact">
-              <h4 class="overlay__title">contact us</h4>
-              <?php
-              wp_nav_menu([
-               'menu'            => 'contact',
-               'theme_location'  => 'contact',
+               'menu'            => 'top',
+               'theme_location'  => 'top',
                'menu_id'         => false,
                'depth'           => 2,
                'fallback_cb'     => 'bs4navwalker::fallback',
@@ -157,7 +84,7 @@
        </div>
      </nav>
 
-     <?php if ( has_acf() ) : ?>
+     <?php if ( !has_acf() ) : ?>
       <!-- ACF Slider -->
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <!-- count slides, display indicators for each slide -->

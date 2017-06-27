@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( has_acf() ) : ?>
+	<?php if ( !has_acf() ) : ?>
 		<header>
 			<h4 class="subtitle">
 				<?php the_field('subheader'); ?>
@@ -30,7 +30,7 @@
 	<?php endif; ?>
 
 	<div class="entry-content">
-		<?php if ( has_acf() ) :
+		<?php if ( !has_acf() ) :
 			the_field('content');
 		else :
 			the_content();
