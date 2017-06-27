@@ -30,7 +30,6 @@ get_header();
           endwhile;
         endif; ?>
       <?php else : ?>
-        <h1>Check</h1>
       <?php while ( have_posts() ) : the_post();
         get_template_part( 'template-parts/content', 'page' );
         if ( comments_open() || get_comments_number() ) :

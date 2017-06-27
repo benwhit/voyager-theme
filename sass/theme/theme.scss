@@ -11,29 +11,6 @@ button:focus {
 	outline: none;
 }
 
-ul {
-	margin: 0;
-	padding: 0;
-	li {
-		margin: 0;
-		padding: 0;
-		font-family: $font-primary;
-		font-weight: 900;
-		font-size: 1rem;
-		padding-bottom: 5px;
-		list-style: none;
-	}
-}
-
-article {
-	position: relative;
-	padding: 50px 0;
-	hr {
-		margin-left: 0 !important;
-	}
-}
-
-
 // Buttons
 a.btn {
 	position: relative;
@@ -58,7 +35,6 @@ a.btn:hover {
 	-moz-box-shadow: 0px 15px 40px -18px rgba(0,0,0,0.75);
 	box-shadow: 0px 15px 40px -18px rgba(0,0,0,0.75);
 }
-
 
 // General Theme Classes
 .bg-image {
@@ -125,7 +101,6 @@ a.btn:hover {
 	z-index: 0;
 	transition: 0.4s top ease-in-out;
 }
-
 
 // Image Accents
 .accent-left {
@@ -213,25 +188,7 @@ a.btn:hover {
 	}
 }
 
-// Font Page About Section
-.about--home {
-	.about--home__img {
-		.page__lead__img {
-			display: inline-block !important;
-			@include media-breakpoint-down(sm) {
-				padding-bottom: 0;
-			}
-		}
-	}
-	.about--home__col {
-			@include media-breakpoint-down(sm) {
-				margin: 50px 0;
-			}
-	}
-}
-
 // Hover Effects
-
 .grid__item,
 .item {
 	&:hover {

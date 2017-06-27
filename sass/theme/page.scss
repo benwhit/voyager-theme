@@ -1,36 +1,26 @@
 /**	All Pages
 ---------------------------------------*/
-.page__header {
-	position: relative;
-	height: 400px;
-	text-align: center;
-	background-image: url(../images/header-img.png);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	z-index: 1;
-	& hr {
-		margin-left: auto;
-		margin-right: auto;
-	}
-	img {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		overflow: hidden;
-		z-index: -999;
-	}
-	.page__title {
+.site-content {
+	padding: 80px 0;
+	.page__header {
 		position: relative;
-		padding: 120px 20px 0;
-		font-size: 6.5rem;
-		font-weight: 100;
+		text-align: center;
+		background-image: url();
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: 1;
+		& hr {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.page__title {
+			position: relative;
+	    font-size: 5.5rem;
+	    line-height: 5.5rem;
+			font-weight: 100;
+		}
 	}
-}
-
-.page-content {
-	padding: 25px 0 100px;
 }
 
 .return {
@@ -56,39 +46,5 @@
 	padding: 20px 10px;
 	@include media-breakpoint-down(sm) {
 		display: none;
-	}
-}
-
-
-
-/**	Single Pages
----------------------------------------*/
-.page {
-	.page-content {
-		padding-top: 0;
-		margin-top: 0;
-	}
-	.content-area {
-		background-color: #FFF;
-	}
-}
-
-
-
-/**	Specific Pages
----------------------------------------*/
-
-// About Page Template
-article.about {
-	.bg-image {
-    top: initial !important;
-    bottom: -25vh;
-	}
-	.accent-left {
-		height: auto;
-		width: auto;
-	}
-	.page__lead__img {
-		padding-bottom: 50px;
 	}
 }

@@ -8,8 +8,12 @@ header.site-header {
 		background-color: $brand-primary;
 		z-index: 1;
 		transition: background-color 0.4s;
+		&.stuck {
+			background-color: $brand-secondary;
+		}
 		.navbar-brand {
 			font-weight: bold;
+			padding: 0;
 			a {
 				color: #FFF;
 				text-decoration: none;
@@ -18,8 +22,12 @@ header.site-header {
 		.navbar__tag {
 			color: #FFF;
 		}
-		&.stuck {
-			background-color: $brand-secondary;
+		.menu {
+			margin: 0;
+			padding: 0;
+			li {
+				list-style: none;
+			}
 		}
 	}
 	.dropdown-menu {
@@ -42,10 +50,11 @@ header.site-header {
 	background: none;
 	border: none;
 	color: #FFF;
+	font-family: $font-primary;
 	font-size: 1.5rem;
+	z-index: 99;
 	i {
-		font-size: 1.2rem;
-		color: #FFF;
+		vertical-align: middle;
 	}
 }
 
@@ -59,83 +68,37 @@ header.site-header {
 	z-index: -1;
 	overflow-y: auto;
 	overflow-x: hidden;
-}
-
-/* Overlay closing cross */
-.overlay .overlay-close {
-	float: right;
-	margin-top: 26px;
-	padding: 0;
-	border: none;
-	background: transparent;
-	font-family: $font-primary;
-	font-size: 1.5rem;
-	line-height: 1.5rem;
-	color: #FFF;
-	outline: none;
-	z-index: 99;
-}
-
-/* Menu style */
-.overlay nav {
-	text-align: center;
-	position: relative;
-	top: 50%;
-	height: 60%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-	@include media-breakpoint-down(sm) {
-		top: 35%;
-	}
-}
-
-.overlay {
-	.navbar-brand a,
-	span,
-	.overlay-close,
-	.overlay-close i,
-	.navbar__tag {
-		color: #FFF !important;
-	}
-	.overlay__title {
-		font-size: 2rem;
-		font-weight: bold;
-	}
-	.contact {
-		.overlay__title {
-			color: #efefef;
-		}
-	}
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0 auto 50px;
-		display: inline-block;
-		height: 100%;
+	nav {
+		text-align: center;
 		position: relative;
-		li {
+		top: 50%;
+		height: 70%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		@include media-breakpoint-down(sm) {
+			top: 35%;
+		}
+		.overlay__title {
+			font-size: 2rem;
+			font-weight: bold;
+		}
+		a {
+			font-size: 1.5rem;
+			font-weight: 300;
 			display: block;
-			-webkit-backface-visibility: hidden;
-			backface-visibility: hidden;
-			a {
-				font-size: 1.5rem;
-				font-weight: 300;
-				display: block;
-				color: #fff;
-				-webkit-transition: color 0.2s;
-				transition: color 0.2s;
-				@include media-breakpoint-down(sm) {
-					font-size: 1rem;
-				}
-				&:hover,
-				&:focus {
-					color: #e3fcb1;
-				}
+			color: #fff;
+			transition: color 0.2s;
+			@include media-breakpoint-down(sm) {
+				font-size: 1rem;
+			}
+			&:hover,
+			&:focus {
+				color: #4169e1;
+				background-color: #ececec;
 			}
 		}
 	}
 }
-
 
 /* Effects */
 .overlay-slidedown {
