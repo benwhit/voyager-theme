@@ -37,6 +37,14 @@ a.btn:hover {
 }
 
 // General Theme Classes
+.menu {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style: none;
+	}
+}
+
 .bg-image {
 	position: absolute;
 	top: 25vh;

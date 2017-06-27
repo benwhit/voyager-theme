@@ -1,33 +1,16 @@
 .site-footer {
-	position: relative;
-	padding: 100px 0;
-	background-color: #414042;
-	@include media-breakpoint-down(sm) {
-		padding: 20px 0;
-	}
+	padding: 80px 0;
+	background-color: $brand-primary;
 	.nav-link {
 		padding: 0;
 	}
-	.footer__logo {
-		padding: 50px 10px 0 0;
+	.footer__brand {
+		padding: 50px 10px;
 		color: #FFF;
 		text-align: center;
 		border-right: 1px solid #FFF;
-		.footer__logo__title {
-			font-family: $font-primary;
-			margin: 0;
-			font-size: 8rem;
-			line-height: 8rem;
-			font-weight: 900;
-			text-transform: uppercase;
-			@include media-breakpoint-down(md) {
-				font-size: 5rem;
-				line-height: 5rem;
-			}
-		}
-		.footer__logo__subtitle {
-			font-size: 3rem;
-			margin-bottom: 60px;
+		span {
+			font-weight: 100;
 		}
 	}
 	.footer__menus {
@@ -35,16 +18,9 @@
 		@include media-breakpoint-down(sm) {
 			padding-left: 15px;
 		}
-		.contact {
-			.overlay__title	{
-				color: #999;
-			}
-		}
-		.overlay__title {
-			margin-top: 20px;
-		}
 	}
-	li {
+	.menu {
+		margin-top: 20px;
 		a {
 			color: #FFF;
 		}
