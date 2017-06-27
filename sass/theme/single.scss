@@ -32,28 +32,3 @@
 		}
 	}
 }
-
-// Pets
-.pet__details {
-	padding-top: 20px;
-	text-align: center;
-	h5 {
-		padding-top: 5px;
-		font-weight: bold;
-		color: $color-adopt;
-	}
-	.btn {
-		float: left;
-		background-color: $color-adopt;
-	}
-	.pet__details--age,
-	.pet__details--size,
-	.pet__details--av {
-		font-size: 1.5rem;
-	}
-
-	.pet__details--age,
-	.pet__details--size {
-		border-right: 1px solid #ececec;
-	}
-}

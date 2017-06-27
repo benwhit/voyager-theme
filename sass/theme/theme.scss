@@ -1,19 +1,4 @@
-@font-face {
-  font-family: "elliot";
-  src: url('../fonts/ElliotSans-Regular.ttf');
-}
-@font-face {
-  font-family: "elliot-light";
-  src: url('../fonts/ElliotSans-Light.ttf');
-}
-@font-face {
-  font-family: "elliot-bold";
-  src: url('../fonts/ElliotSans-Bold.ttf');
-}
-
-
 // HTML Elements
-
 hr {
 	display: block;
 	width: 100px;
@@ -29,7 +14,7 @@ button:focus {
 ul {
 	margin: 0;
 	padding: 0;
-	li {		
+	li {
 		margin: 0;
 		padding: 0;
 		font-family: $font-primary;
@@ -54,7 +39,7 @@ a.btn {
 	position: relative;
 	padding: 8px 50px;
 	margin: auto;
-	font-family: $font-primary-light;
+	font-family: $font-primary;
 	text-transform: lowercase;
 	font-size: 1.5rem;
 	line-height: 1.5rem;
@@ -72,11 +57,10 @@ a.btn:hover {
 	-webkit-box-shadow: 0px 15px 40px -18px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 15px 40px -18px rgba(0,0,0,0.75);
 	box-shadow: 0px 15px 40px -18px rgba(0,0,0,0.75);
-} 
+}
 
 
 // General Theme Classes
-
 .bg-image {
 	position: absolute;
 	top: 25vh;
@@ -112,7 +96,7 @@ a.btn:hover {
 	margin-left: 10px;
 	padding-bottom: 2px;
 	letter-spacing: 1px;
-	border-bottom-style: solid;	
+	border-bottom-style: solid;
 	@include media-breakpoint-down(sm) {
 		display: none;
 	}
@@ -131,7 +115,7 @@ a.btn:hover {
 	width: 100%;
 	top: -65px;
 	text-align: center;
-	font-family: $font-primary-light;
+	font-family: $font-primary;
 	letter-spacing: 1px;
 	font-size: 1.2rem;
 	line-height: 1.5rem;
@@ -144,7 +128,6 @@ a.btn:hover {
 
 
 // Image Accents
-
 .accent-left {
 	position: absolute;
 	top: 0;
@@ -158,49 +141,11 @@ a.btn:hover {
 	z-index: 0;
 }
 .accent-left,
-.accent-right {	
+.accent-right {
 	@include media-breakpoint-down(sm) {
 		display: none;
 	}
 }
-
-
-// Category Section Colors
-
-
-.about {
-	.overlay__title,
-	.subtitle,
-	.subheader,
-	.topic,
-	.quote__link,
-	.return a {
-		color: $color-about;
-	}
-	hr,
-	.btn {
-		border-color: $color-about;
-		background-color: $color-about;
-		&:hover {
-			color: $color-about;			
-		}	
-	}
-	.quote__icon {
-		border-right-color: $color-about;
-	}
-	.section__post {
-		.title > a {
-			background-color: rgba(255, 97, 0, 0.7);
-		}
-	}
-	.owl-nav [class*=owl-]:hover {
-		border-color: $color-about;
-		i {
-			color: $color-about;
-		}
-	}
-}
-
 
 // Quote Blocks
 .quote {
@@ -226,7 +171,7 @@ a.btn:hover {
     font-size: 15rem;
     line-height: 10rem;
     color: #ececec;
-    opacity: 0.5;    
+    opacity: 0.5;
 		@include media-breakpoint-down(sm) {
 			top: 0;
 			left: -50px;
@@ -278,7 +223,7 @@ a.btn:hover {
 			}
 		}
 	}
-	.about--home__col {		
+	.about--home__col {
 			@include media-breakpoint-down(sm) {
 				margin: 50px 0;
 			}

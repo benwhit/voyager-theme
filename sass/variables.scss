@@ -1,24 +1,14 @@
 // Theme Variables
-$font-primary: 'elliot';
-$font-primary-light: 'elliot-light';
-$font-primary-bold: 'elliot-bold';
-
-
-// Colors
-$color-adopt 			: #ff0055; //rgb(255, 0, 85)
-$color-programs		: #1690db; //rgb(22, 144, 219)
-$color-involved		: #49d322; //rgb(73, 211, 34)
-$color-about 			: #641aad;
-$color-news 			: #ff6100; //rgb(255, 97, 0)
-$color-contact 		: #bcbec0;
+$font-primary: 'Proxima Nova';
+$brand-secondary: #1a237e;
 
 // Bootstrap overrides
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
-$brand-primary: #8800ff;
-$headings-font-family: $font-primary-light;
+$brand-primary: #F05;
+$headings-font-family: $font-primary;
 
 // Buttons
 $btn-primary-color:      #FFF;

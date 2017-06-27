@@ -22,48 +22,21 @@
        <div class="container">
         <div class="row">
           <div class="col-6 col-sm-8">
-            <p class="navbar-brand">
-              <a href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
-              <br>
-              <span class="navbar__tag">
-                <?php echo get_bloginfo('description'); ?>
-              </span>
-            </p>
+            <a class="navbar-brand" href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
+            <br>
+            <span class="navbar__tag">
+              <?php echo get_bloginfo('description'); ?>
+            </span>
           </div>
           <div class="col-6 col-sm-4">
-            <p class="pull-right">
-              <button id="trigger-overlay" type="button">
-                <i class="fa fa-bars"></i>
-                menu
-              </button>
-            </p>
+            <button id="trigger-overlay" class="pull-right" type="button">
+              <i class="fa fa-bars"></i>
+              menu
+            </button>
           </div>
         </div>
       </div>
       <div class="overlay overlay-slidedown">
-        <div class="container">
-          <div class="row">
-            <div class="col-6 col-sm-8">
-              <p class="navbar-brand">
-                <a href="<?php echo get_site_url(); ?>">
-                  <?php echo get_bloginfo('name'); ?>
-                </a>
-                <br>
-                <span class="navbar__tag">
-                  <?php echo get_bloginfo('description'); ?>
-                </span>
-              </p>
-            </div>
-            <div class="col-6 col-sm-4">
-              <p class="pull-right">
-                <button id="trigger-overlay" class="overlay-close" type="button">
-                  <i class="fa fa-times"></i>
-                  menu
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
         <nav class="container">
           <div class="row">
             <div class="col-12 col-sm-8 offset-sm-2">

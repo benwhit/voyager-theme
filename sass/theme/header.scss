@@ -1,114 +1,50 @@
 .site-header {
-	.nav-link {
-		padding: 0;
-	}
 	.navbar {
 		position: fixed;
-		z-index: 999;
 		top: 0;
 		width: 100%;
-		overflow: hidden;
-		background: transparent;
-		padding: 0;
-		transition: background-color 0.5s;
-		.navbar__donate {
-			text-align: right;
-			margin-top: 30px;
-			font-family: $font-primary-light;
-			font-size: 1.5rem;
-			line-height: 1.5rem;
-			z-index:99999;
+		background-color: $brand-primary;
+		z-index: 1;
+		transition: background-color 0.4s, color 0.8s;
+		.navbar-brand {
+			font-weight: bold;
 			a {
-				text-decoration: none;
 				color: #FFF;
+				text-decoration: none;
 			}
 		}
-		.navbar-brand {
-			margin-top: 20px;
-			margin-bottom: 0;
-			font-size: 3rem;
-			line-height: 2rem;
-			font-weight: 900;
-			text-transform: uppercase;
-			padding-right: 10px;
-			@include media-breakpoint-down(sm) {
-				font-size: 2rem;
-				line-height: 1.5rem;
-			}
-			a {
-				color: #FFF;
-				text-decoration: none;
-			}
-			.navbar__tag {
-				display: inline-block;
-				font-family: $font-primary-light;
-				color: #ececec;
-				font-size: 1.5rem;
-				vertical-align: middle;
-				text-transform: lowercase;
-				letter-spacing: 2px;
-				opacity: 0.8;
-				@include media-breakpoint-down(sm) {
-					font-size: 1rem;
-					line-height: 1rem;
-				}
-			}
+		.navbar__tag {
+			color: #FFF;
 		}
 		&.stuck {
-			color:#000;
-			background-color: #FFF;
-			transition: background-color 0.5s;
-			.navbar-brand a,
-			.navbar__donate a,
-			.navbar__tag,
-			span {
-				color: #000;
-			}
-			#trigger-overlay {
-				color: #000;
-				i {
-					color: #000;
-				}
-			}
+			background-color: $brand-secondary;
 		}
 	}
 }
 
-/* Overlay style */
+/* Overlay Menu */
 
 #trigger-overlay {
-	font-family: $font-primary-light;
 	background: none;
 	border: none;
 	color: #FFF;
 	font-size: 1.5rem;
-	line-height: 1.5rem;
-	margin-top: 30px;
-	padding: 0;
 	i {
 		font-size: 1.2rem;
 		color: #FFF;
 	}
 }
+
 .overlay {
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: #414042;
-	z-index: 9999999;
+	background: $brand-primary;
+	z-index: -1;
 	overflow-y: auto;
 	overflow-x: hidden;
-	.navbar__donate {
-		a {
-			color: $color-involved !important;
-		}
-		i {
-			font-size: 1.5rem;
-			color: #FFF;
-		}
-	}
 }
 
 /* Overlay closing cross */
@@ -117,13 +53,13 @@
 	margin-top: 26px;
 	padding: 0;
 	border: none;
-	background: transparent;	
-	font-family: $font-primary-light;
+	background: transparent;
+	font-family: $font-primary;
 	font-size: 1.5rem;
 	line-height: 1.5rem;
 	color: #FFF;
 	outline: none;
-	z-index: 100;
+	z-index: 99;
 }
 
 /* Menu style */
