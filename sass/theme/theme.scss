@@ -1,217 +1,29 @@
-// HTML Elements
-hr {
-	display: block;
-	width: 100px;
-	height: 10px;
-	margin: 20px auto;
-	background-color: $brand-primary;
-}
+/*--------------------------------------------------------------
+# Core - Theme Styles / Overall Theme
+--------------------------------------------------------------*/
+@import "core";
 
-button:focus {
-	outline: none;
-}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+@import "footer" ;
 
-// Buttons
-a.btn {
-	position: relative;
-	padding: 8px 50px;
-	margin: auto;
-	font-family: $font-primary;
-	text-transform: lowercase;
-	font-size: 1.5rem;
-	line-height: 1.5rem;
-	letter-spacing: 2px;
-	font-weight: bold;
-	color: #FFF;
-	-webkit-box-shadow: 0px 15px 40px -15px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 15px 40px -15px rgba(0,0,0,0.75);
-	box-shadow: 0px 15px 40px -15px rgba(0,0,0,0.75);
-}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+@import "header";
 
-a.btn:hover {
-	background: #FFF;
-	border-outline: none;
-	-webkit-box-shadow: 0px 15px 40px -18px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 15px 40px -18px rgba(0,0,0,0.75);
-	box-shadow: 0px 15px 40px -18px rgba(0,0,0,0.75);
-}
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import "page-news-events";
 
-// General Theme Classes
-.menu {
-	margin: 0;
-	padding: 0;
-	li {
-		list-style: none;
-	}
-}
+/*--------------------------------------------------------------
+# Slider
+--------------------------------------------------------------*/
+@import "slider";
 
-.bg-image {
-	position: absolute;
-	top: 25vh;
-	width: 100%;
-	z-index: 0;
-	background-repeat: no-repeat;
-}
-
-.subheader {
-	margin: 0;
-	font-family: $font-primary;
-	font-weight: 900;
-	font-size: 1rem;
-}
-
-.title {
-	margin: 10px 0;
-	font-size: 4rem;
-	line-height: 4rem;
-	font-weight: 100;
-}
-
-.topic,
-.subtitle {
-	text-transform: lowercase;
-	font-size: 1.7rem;
-	line-height: 2rem;
-	padding-right: 80px;
-}
-
-.sublink {
-	font-weight: bold;
-	margin-left: 10px;
-	padding-bottom: 2px;
-	letter-spacing: 1px;
-	border-bottom-style: solid;
-	@include media-breakpoint-down(sm) {
-		display: none;
-	}
-	&:hover {
-		text-decoration: none;
-		color: #000;
-	}
-	i {
-		padding-right: 10px;
-	}
-}
-
-.learn-more {
-	position: relative;
-	display: inline-block;
-	width: 100%;
-	top: -65px;
-	text-align: center;
-	font-family: $font-primary;
-	letter-spacing: 1px;
-	font-size: 1.2rem;
-	line-height: 1.5rem;
-	padding: 5px 0;
-	color:#FFF !important;
-	text-decoration: none;
-	z-index: 0;
-	transition: 0.4s top ease-in-out;
-}
-
-// Image Accents
-.accent-left {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 0;
-}
-.accent-right {
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 0;
-}
-.accent-left,
-.accent-right {
-	@include media-breakpoint-down(sm) {
-		display: none;
-	}
-}
-
-// Quote Blocks
-.quote {
-	padding: 150px 0;
-	overflow: hidden;
-	@include media-breakpoint-down(sm) {
-		padding: 100px 0;
-	}
-	.quote__icon {
-		border-right-width: 2px;
-		border-right-style: solid;
-		@include media-breakpoint-down(sm) {
-			border: none;
-		}
-	}
-	.quote__bg {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 15rem;
-    line-height: 10rem;
-    color: #ececec;
-    opacity: 0.5;
-		@include media-breakpoint-down(sm) {
-			top: 0;
-			left: -50px;
-			font-size: 9rem;
-			line-height: 10rem;
-		}
-	}
-	.quote__text {
-		padding: 2px 20px;
-		margin: 0;
-	}
-	.quote__link {
-		font-weight: 900;
-		text-transform: uppercase;
-		text-decoration: none;
-	}
-}
-
-// Quote Blocks
-.donate {
-	padding: 150px 0;
-	overflow: hidden;
-	text-align: center;
-	@include media-breakpoint-down(sm) {
-		padding: 100px 0;
-	}
-	.donate__bg {
-    position: absolute;
-    top: -70px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 15rem;
-    line-height: 10rem;
-    color: #ececec;
-    opacity: 0.5;
-    z-index: 0;
-	}
-}
-
-// Hover Effects
-.grid__item,
-.item {
-	&:hover {
-		.section__post {
-			.title {
-				left: -100%;
-				padding-left: 0;
-				padding-right: 0;
-				transition: 0.4s all ease-in-out;
-			}
-		}
-		.learn-more {
-			top: -25px;
-			opacity: 1;
-			transition: 0.4s top ease-in-out;
-		}
-	}
-}
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "widgets";

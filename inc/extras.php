@@ -87,7 +87,7 @@ if( function_exists('acf_add_options_sub_page') ) {
 /***********************************************************/
 function has_acf() {
 	include_once(ABSPATH.'wp-admin/includes/plugin.php');
-	if ( is_plugin_active( 'advanced-custom-fields/acf.php' || 'advanced-custom-fields-pro/acf.php' ) ) {
+	if ( !is_plugin_active( 'advanced-custom-fields/acf.php' || 'advanced-custom-fields-pro/acf.php' ) ) {
 		return true;
 	} else {
 		return false;

@@ -21,45 +21,38 @@
       <nav class="navbar sticky-top navbar-inverse">
         <div class="container">
           <div class="row">
-            <div class="col-6 col-sm-8">
+            <div class="col-8">
               <a class="navbar-brand" href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
               <br>
               <span class="navbar__tag">
                 <?php echo get_bloginfo('description'); ?>
               </span>
             </div>
-            <div class="col-6 col-sm-4">
+            <div class="col-4">
               <button id="trigger-overlay" class="pull-right overlay-close" type="button">
                 <i class="fa fa-bars"></i>
-                menu
               </button>
             </div>
           </div>
         </div>
         <div class="overlay overlay-slidedown">
-          <nav class="container">
-            <div class="row">
-              <div class="col-12 col-sm-8 offset-sm-2">
-                <h4 class="overlay__title">Menu</h4>
-                <?php
-                wp_nav_menu([
-                  'menu'            => 'top',
-                  'theme_location'  => 'top',
-                  'container_class' => 'flex-column',
-                  'menu_id'         => false,
-                  'depth'           => 2,
-                  'fallback_cb'     => 'bs4navwalker::fallback',
-                  'walker'          => new bs4navwalker()
-                  ]);
-                  ?>
-                </div>
-              </div>
+          <nav>
+            <h4 class="overlay__title">Menu</h4>
+            <?php
+            wp_nav_menu([
+              'menu'            => 'top',
+              'theme_location'  => 'top',
+              'container_class' => 'flex-column',
+              'menu_id'         => false,
+              'depth'           => 2,
+              'fallback_cb'     => 'bs4navwalker::fallback',
+              'walker'          => new bs4navwalker()
+              ]);
+              ?>
             </nav>
           </div>
-          </nav>
+        </nav>
         <?php if ( ! has_acf() ) {
           get_template_part('partials/slider');
         } ?>
       </header>
-
-      <div id="content" class="site-content">

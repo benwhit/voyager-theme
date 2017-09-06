@@ -5,11 +5,11 @@ header.site-header {
 		position: fixed;
 		top: 0;
 		width: 100%;
-		background-color: $brand-primary;
+		background-color: $c-primary;
 		z-index: 1;
 		transition: background-color 0.4s;
 		&.stuck {
-			background-color: $brand-secondary;
+			background-color: $c-secondary;
 		}
 		.navbar-brand {
 			font-weight: bold;
@@ -38,12 +38,11 @@ header.site-header {
 }
 
 /* Overlay Menu */
-
 #trigger-overlay {
 	background: none;
 	border: none;
 	color: #FFF;
-	font-family: $font-primary;
+	font-family: $f-primary;
 	font-size: 1.5rem;
 	z-index: 99;
 	i {
@@ -57,7 +56,8 @@ header.site-header {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: $brand-primary;
+	background: $c-primary;
+	color:#FFF;
 	z-index: -1;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -74,6 +74,7 @@ header.site-header {
 		.overlay__title {
 			font-size: 2rem;
 			font-weight: bold;
+			text-align :center;
 		}
 		a {
 			font-size: 1.5rem;

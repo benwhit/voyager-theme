@@ -11,39 +11,40 @@ var browserSync = require('browser-sync');
 
 // Compile SASS files
 gulp.task('sass', function () {
-    gulp.src('sass/styles.scss')
-    	.pipe(plumber())
-        .pipe(sass({includePaths: ['scss']}))
-				.pipe(cleanCSS())
-        .pipe(gulp.dest('css'))
+	gulp.src('sass/styles.scss')
+	.pipe(plumber())
+	.pipe(sass({includePaths: ['scss']}))
+	.pipe(cleanCSS())
+	.pipe(gulp.dest('css'))
 });
 
 // BrowserSync
 gulp.task('browser-sync', function() {
-    browserSync.init([
-    	"css/*.css", 
-    	"js/*.js", 
-    	"*.html", 
-    	"*.php",
-    	"**/*.php"], {
-        proxy: "voyager.dev"
-    });
+	browserSync.init([
+		"css/*.css",
+		"js/*.js",
+		"*.html",
+		"*.php",
+		"**/*.php"], {
+		proxy: "cornerstone.dev", // change to local server url
+		port: 3010 // change to unused port
+	});
 });
 
 // Javascript
 gulp.task('js', function(){
-   gulp.src('js/src/*.js')
-    	.pipe(plumber())
-				.pipe(deporder())
-				.pipe(concat('script.js'))
-				.pipe(uglify())
-				.pipe(gulp.dest('js/'))
+	gulp.src('js/src/*.js')
+	.pipe(plumber())
+	.pipe(deporder())
+	.pipe(concat('script.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest('js/'))
 });
 
 
 // Gulp Default Task
 gulp.task('default', ['sass', 'js', 'browser-sync'], function () {
-    gulp.watch("sass/*.scss", ['sass']);
-    gulp.watch("sass/**/*.scss", ['sass']);
-    gulp.watch("js/src/*.js", ['js']);
+	gulp.watch("sass/*.scss", ['sass']);
+	gulp.watch("sass/**/*.scss", ['sass']);
+	gulp.watch("js/src/*.js", ['js']);
 });

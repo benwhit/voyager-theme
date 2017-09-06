@@ -1,15 +1,55 @@
-// Theme Variables
-$font-primary: 'Proxima Nova';
-$brand-secondary: #1a237e;
+/*--------------------------------------------------------------
+# Theme Variables
+--------------------------------------------------------------*/
+$f-primary: 'Arial';
+$f-secondary: 'Times New Roman';
 
-// Bootstrap overrides
-//
+// Colors
+$c-primary: #FF0055;
+$c-secondary: #FF0066;
+$c-news: $c-primary;
+
+/*--------------------------------------------------------------
+# Bootstrap Overrides
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
+--------------------------------------------------------------*/
 
-$brand-primary: #F05;
-$headings-font-family: $font-primary;
+// Colors
+$brand-primary: $c-primary;
 
 // Buttons
-$btn-primary-color:      #FFF;
-$border-radius:          0rem;
+$btn-font-weight: 400;
+$btn-primary-color: $c-primary;
+$border-radius: 		0rem;
+
+// Options
+$enable-rounded: 		false;
+
+// Fonts
+$font-family-base: $f-primary;
+
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.25rem;
+$font-size-h6: 1rem;
+
+$headings-font-family: $f-secondary;
+$headings-font-weight:   700;
+$headings-line-height:   1.1;
+$headings-color:         inherit;
+
+
+// Buttons
+$btn-padding-x:                  1rem;
+$btn-padding-y:                  .5rem;
+
+$btn-primary-color:              #FFF;
+$btn-primary-bg:                 $c-primary;
+$btn-primary-border:             $btn-primary-bg;
+
+$btn-secondary-bg:               $c-secondary;
+$btn-secondary-color:            #FFF;
+$btn-secondary-border:           $c-secondary;

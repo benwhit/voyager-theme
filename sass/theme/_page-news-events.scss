@@ -7,19 +7,19 @@
 	.sublink,
 	.quote__link,
 	.return a {
-		color: $color-news;
+		color: $c-news;
 	}
 	hr,
 	.btn,
 	.learn-more {
-		border-color: $color-news;
-		background-color: $color-news;
+		border-color: $c-news;
+		background-color: $c-news;
 		&:hover {
-			color: $color-news;			
-		}	
+			color: $c-news;
+		}
 	}
 	.quote__icon {
-		border-right-color: $color-news;
+		border-right-color: $c-news;
 	}
 	.section__post {
 		.title {
@@ -27,15 +27,15 @@
 		}
 	}
 	.owl-nav [class*=owl-]:hover {
-		border-color: $color-news;
+		border-color: $c-news;
 		i {
-			color: $color-news;
+			color: $c-news;
 		}
 	}
 }
 
 
-// Template Page 
+// Template Page
 .page-template-page-news {
 	article {
 		hr {
@@ -48,7 +48,7 @@
 		.button {
 			background: none;
 			border: none;
-			font-family: $font-primary;
+			font-family: $f-primary;
 			font-size: 1.2rem;
 			&.is-checked {
 				font-weight: bold;
@@ -93,4 +93,4 @@
 			}
 		}
 	}
-} 
+}

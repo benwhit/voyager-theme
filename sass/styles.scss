@@ -1,23 +1,19 @@
-// Variables must be top to override other sass variables
+/*--------------------------------------------------------------
+# Variables - First to override third-party variables
+--------------------------------------------------------------*/
 @import './variables';
 
-// Third Party SCSS
-@import './bootstrap/bootstrap';
-@import './font-awesome/font-awesome.scss';
-@import './owl-carousel/owl.carousel.scss';
-@import './owl-carousel/owl.theme.default.scss';
+/*--------------------------------------------------------------
+# Third-Party SCSS
+--------------------------------------------------------------*/
+@import './src/bootstrap/bootstrap';
+@import './src/font-awesome/font-awesome.scss';
+@import './src/owl-carousel/owl.carousel.scss';
+@import './src/owl-carousel/owl.theme.default.scss';
+@import './src/underscores';
+@import './src/fullpage';
 
-// Template Files
-@import './underscores-default/underscores';
-
-// Theme Files
-@import './theme/header';
-@import './theme/footer';
-@import './theme/page';
-@import './theme/widgets';
-@import './theme/slider';
-@import './theme/single';
-@import './theme/posts-carousel';
-
-// Theme file must be last
+/*--------------------------------------------------------------
+# Theme - Do not move from bottom
+--------------------------------------------------------------*/
 @import './theme/theme';
