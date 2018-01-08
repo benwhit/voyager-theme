@@ -26,8 +26,8 @@ gulp.task('browser-sync', function() {
 		"*.html",
 		"*.php",
 		"**/*.php"], {
-		proxy: "cornerstone.dev", // change to local server url
-		port: 3010 // change to unused port
+		proxy: "local.test", // change to local server url
+		port: 3000
 	});
 });
 
