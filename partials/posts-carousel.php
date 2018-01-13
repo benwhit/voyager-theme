@@ -5,7 +5,7 @@
 		'cat'							=> get_sub_field('posts_category')
 	));
 ?>
-<div class="section__posts <?php echo get_sub_field('category_color') ?>">
+<div class="section__posts">
 	<!-- Posts Carousel Title -->
 	<?php if (get_sub_field('posts_title')) : ?>
 		<h2 class="section__posts__title">

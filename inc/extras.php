@@ -50,66 +50,19 @@ add_action( 'wp_head', 'voyager_theme_pingback_header' );
 
 
 /*************************************************************/
-/*   ACF Friendly Block Titles                                  */
-/***********************************************************/
-
-function my_layout_title($title, $field, $layout, $i) {
-	if($value = get_sub_field('layout_title')) {
-		return $value;
-	} else {
-		foreach($layout['sub_fields'] as $sub) {
-			if($sub['name'] == 'layout_title') {
-				$key = $sub['key'];
-				if(array_key_exists($i, $field['value']) && $value = $field['value'][$i][$key])
-					return $value;
-			}
-		}
-	}
-	return $title;
-}
-add_filter('acf/fields/flexible_content/layout_title', 'my_layout_title', 10, 4);
-
-
-/*************************************************************/
-/*   Add ACF Options Page 			                            */
-/***********************************************************/
-if( function_exists('acf_add_options_page') ) {
-	acf_add_options_page();
-}
-
-if( function_exists('acf_add_options_sub_page') ) {
-	acf_add_options_sub_page('Social');
-}
-
-
-/*************************************************************/
-/*   ACF Plugin Function Check                              */
-/***********************************************************/
-function has_acf() {
-	include_once(ABSPATH.'wp-admin/includes/plugin.php');
-	if ( !is_plugin_active( 'advanced-custom-fields/acf.php' || 'advanced-custom-fields-pro/acf.php' ) ) {
-		return true;
-	} else {
-		return false;
-	}
-}
-add_action( 'wp_head', 'has_acf' );
-
-
-/*************************************************************/
 /* 	Disable the emoji's			                           			*/
 /***********************************************************/
 
 function disable_emojis() {
-remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-remove_action( 'wp_print_styles', 'print_emoji_styles' );
-remove_action( 'admin_print_styles', 'print_emoji_styles' );
-remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
-add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+	add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
 }
 add_action( 'init', 'disable_emojis' );
 
@@ -120,11 +73,11 @@ add_action( 'init', 'disable_emojis' );
 * @return array Difference betwen the two arrays
 */
 function disable_emojis_tinymce( $plugins ) {
-if ( is_array( $plugins ) ) {
-return array_diff( $plugins, array( 'wpemoji' ) );
-} else {
-return array();
-}
+	if ( is_array( $plugins ) ) {
+		return array_diff( $plugins, array( 'wpemoji' ) );
+	} else {
+		return array();
+	}
 }
 
 /**
@@ -135,17 +88,17 @@ return array();
 * @return array Difference betwen the two arrays.
 */
 function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
-if ( 'dns-prefetch' == $relation_type ) {
-/** This filter is documented in wp-includes/formatting.php */
-$emoji_svg_url = apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/' );
+	if ( 'dns-prefetch' == $relation_type ) {
+		/** This filter is documented in wp-includes/formatting.php */
+		$emoji_svg_url = apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/' );
 
-$urls = array_diff( $urls, array( $emoji_svg_url ) );
-}
+		$urls = array_diff( $urls, array( $emoji_svg_url ) );
+	}
 
-return $urls;
+	return $urls;
 }
 
 function my_deregister_scripts(){
-  wp_deregister_script( 'wp-embed' );
+	wp_deregister_script( 'wp-embed' );
 }
 add_action( 'wp_footer', 'my_deregister_scripts' );

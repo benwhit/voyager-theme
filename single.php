@@ -8,71 +8,33 @@
 get_header(); ?>
 
 
-<div class="page__header <?php echo the_field('category') ?>" style="<?php if( get_field('field_name') ): ?>background-image: url(<?php the_field('header_image') ?>)<?php endif; ?>">
+<div class="page__header">
 	<h1 class="page__title">
 		<?php the_title(); ?>
 		<br>
 		<hr>
 	</h1>
 </div>
-<div id="primary" class="content-area <?php echo the_field('category') ?>">
-	<main id="main" class="site-main container" role="main">
-		<section class="page-content">
-			<div class="row">
-				<div class="col-12">
-					<?php if ( get_field('lead_image') != '' ) : ?>
-						<img class="page__lead" src="<?php the_field('lead_image'); ?>" alt="">
-						<img class="accent-left" src="<?php echo get_site_url(); ?>/wp-content/themes/voyager-theme/images/accent-left.png" alt="" class="accent-left">
-					<?php endif; ?>
-				</div>
-				<div class="col-12 col-md-10 <?php echo the_field('category') ?>">
-					<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
-						<header>
-							<h4 class="subtitle">
-								<?php the_field('subheader'); ?>
-							</h4>
-							<h1 class="title">
-								<?php the_field('title') ?>
-							</h1>
-							<hr>
-							<p class="topic">
-								<?php the_field('subtitle'); ?>
-							</p>
-						</header>
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
 
-						<div class="entry-content">
-							<?php
-							the_field('content');
+		<?php
+		while ( have_posts() ) : the_post();
 
-							wp_link_pages( array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'voyager-theme' ),
-								'after'  => '</div>',
-								) );
-								?>
-							</div>
-						</article>
-					</div>
-				</div>
+			get_template_part( 'template-parts/content', get_post_type() );
 
-				<?php
-				if( have_rows('flexible_content') ):
-					while ( have_rows('flexible_content') ) : the_row();
+			the_post_navigation();
 
-						// Category Section Layout
-				if( get_row_layout() == 'category_section' )
-					get_template_part('partials/category-section');
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
 
-						// Posts Section
-				if( get_row_layout() == 'posts_carousel' )
-					get_template_part('partials/posts-carousel');
+		endwhile; // End of the loop.
+		?>
 
-				endwhile;
-				endif;
-				?>
+	</main>
+</div>
 
-			</section>
-		</main>
-	</div>
-
-	<?php
-	get_footer();
+<?php
+get_footer();

@@ -16,7 +16,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area container-fluid">
 		<main id="main" class="site-main row" role="main">
-			<setion class="col-sm-8">
+			<setion class="col-12 col-md-8">
 				<?php
 				if ( have_posts() ) :
 					if ( is_home() && ! is_front_page() ) : ?>
@@ -26,19 +26,18 @@ get_header(); ?>
 					<?php
 					endif;
 					while ( have_posts() ) : the_post();
-						get_template_part( 'template-parts/content', get_post_format() );
+						get_template_part( 'partials/content', get_post_format() );
 					endwhile;
 					the_posts_navigation();
 				else :
-					get_template_part( 'template-parts/content', 'none' );
+					get_template_part( 'partials/content', 'none' );
 				endif; ?>
 			</setion>
-			<aside class="col-sm-4">
+			<aside class="col-12 col-md-4">
 				<?php get_sidebar(); ?>
 			</aside>
 		</main>
 	</div>
 
 <?php
-
 get_footer();
