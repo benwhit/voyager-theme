@@ -1,14 +1,13 @@
 // requires: jquery-3.2.1.min.js
+(function($) {
 
-(function($) {	
-	
+	// Sticky Navbar
 	$(window).on('load', function(event) {
-	    var scrollValue = $(window).scrollTop();		
+	    var scrollValue = $(window).scrollTop();
 	    if (scrollValue > 70) {
 	         $('.navbar').addClass('stuck');
 	    }
 	});
-
 	$(window).on('scroll', function(event) {
 		var scrollValue = $(window).scrollTop();
 	    if (scrollValue > 70) {
@@ -18,6 +17,17 @@
 	    }
 	});
 
+	// Overlay Menu
+	$(".navbar__button a").click(function(){
+	   $(".overlay").toggleClass('open');
+	   $(this).toggleClass('js-menu-open').toggleClass('js-menu-close');
+	});
+
+	$('.overlay').on('click', function(){
+	    $(".overlay").removeClass('open');
+	    $(".navbar__button a").toggleClass('js-menu-open').toggleClass('js-menu-close');
+	    open = false;
+	});
 
 	// Posts Carousel
 	$('.post-carousel').owlCarousel({
@@ -41,38 +51,6 @@
       }
 	  },
 	  navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"]
-	});
-
-	// News Template Filtering
-	var $grid = $('.grid').isotope({
-  	// options
-	  itemSelector: '.grid__item',
-	  layoutMode: 'fitRows',
-	  filter: '.category-one',
-	  masonry: {
-	    gutter: 20
-	  }
-	});
-
-	// filter functions
-	var filterFns = {
-	};
-
-	// bind filter button click
-	$('#filters').on( 'click', 'button', function() {
-	  var filterValue = $( this ).attr('data-filter');
-	  // use filterFn if matches value
-	  filterValue = filterValue;
-	  $grid.isotope({ filter: filterValue });
-	});
-
-	// change is-checked class on buttons
-	$('.button-group').each( function( i, buttonGroup ) {
-	  var $buttonGroup = $( buttonGroup );
-	  $buttonGroup.on( 'click', 'button', function() {
-	    $buttonGroup.find('.is-checked').removeClass('is-checked');
-	    $( this ).addClass('is-checked');
-	  });
 	});
 
 }(jQuery));

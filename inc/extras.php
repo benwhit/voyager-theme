@@ -6,6 +6,12 @@
  * @package Voyager_Theme
  */
 
+//declare WC support
+function voyager_theme_wc_support() {
+  add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'voyager_theme_wc_support' );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  * Priority 0 to make it available to lower priority callbacks.

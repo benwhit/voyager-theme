@@ -26,7 +26,7 @@ gulp.task('browser-sync', function() {
 		"*.html",
 		"*.php",
 		"**/*.php"], {
-		proxy: "local.test", // change to local server url
+		proxy: "actioncarpet.test", // change to local server url
 		port: 3000
 	});
 });

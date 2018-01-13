@@ -20,22 +20,11 @@
 
     <header id="masthead" class="site-header" role="banner">
       <nav class="navbar sticky-top navbar-inverse">
-        <div class="container">
-          <div class="row">
-            <div class="col-8">
-              <a class="navbar-brand" href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
-              <br>
-              <span class="navbar__tag">
-                <?php echo get_bloginfo('description'); ?>
-              </span>
-            </div>
-            <div class="col-4">
-              <button id="trigger-overlay" class="pull-right overlay-close" type="button">
-                <i class="fa fa-bars"></i>
-              </button>
-            </div>
-          </div>
-        </div>
+          <a class="navbar__brand" href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
+          <button class="navbar__button" type="button">
+            <a href="#" class="js-menu-open"></a>
+          </button>
+        </nav>
         <div class="overlay overlay-slidedown">
           <nav>
             <h4 class="overlay__title">Menu</h4>
@@ -52,8 +41,7 @@
               ?>
             </nav>
           </div>
-        </nav>
-        <?php if ( ! has_acf() ) {
-          get_template_part('partials/slider');
+        <?php if ( is_front_page() || is_home() ) {
+          // get_template_part('partials/acf-slider');
         } ?>
       </header>
