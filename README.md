@@ -1,6 +1,6 @@
 # Voyager Marketing WordPress Theme :rocket:
-A starting theme for all of Voyager Marketing's WordPress projects.
-Gulp + Bootstrap + WordPress :zap:
+A starting theme for Voyager Marketing's WordPress projects. <br />
+Gulp + Bootstrap + WordPress
 
 ## Overview
 Minimal boilerplate, structure and styling to start any type of website project.
@@ -11,7 +11,7 @@ Basic Features & Other Libraries:
 - [Owl Carousel 2](http://owlcarousel2.github.io/OwlCarousel2/)
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 - Gulp Build Process
-- Single Theme Stylesheet & Javascript File (Minified)
+- Single Theme Stylesheet & Javascript files (minified)
 - WooCommerce Support
 - Translation Support
 
@@ -21,9 +21,9 @@ Basic Features & Other Libraries:
 - Update your Gulpfile `[line 29: proxy: 'local.test']`
 
 ### Usage
-- `$ gulp watch` Build & Watch with Browser-Sync
-- `$ gulp sass` Build SASS files
-- `$ gulp js` Build JS files
+- `$ gulp watch` build & Watch with Browser-Sync
+- `$ gulp sass` build SASS files
+- `$ gulp js` build JS files
 
 ## Licenses & Credits
 - Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
