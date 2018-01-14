@@ -7,16 +7,7 @@ var plumber = require('gulp-plumber');
 var deporder = require('gulp-deporder');
 var cleanCSS = require('gulp-clean-css');
 var browserSync = require('browser-sync');
-
-
-// Compile SASS files
-gulp.task('sass', function () {
-	gulp.src('sass/styles.scss')
-	.pipe(plumber())
-	.pipe(sass({includePaths: ['scss']}))
-	.pipe(cleanCSS())
-	.pipe(gulp.dest('css'))
-});
+var imagemin = require('gulp-imagemin');
 
 // BrowserSync
 gulp.task('browser-sync', function() {
@@ -31,6 +22,15 @@ gulp.task('browser-sync', function() {
 	});
 });
 
+// Compile SASS files
+gulp.task('sass', function () {
+	gulp.src('sass/styles.scss')
+	.pipe(plumber())
+	.pipe(sass({includePaths: ['scss']}))
+	.pipe(cleanCSS())
+	.pipe(gulp.dest('css'))
+});
+
 // Javascript
 gulp.task('js', function(){
 	gulp.src('js/src/*.js')
@@ -41,10 +41,18 @@ gulp.task('js', function(){
 	.pipe(gulp.dest('js/'))
 });
 
+// Imagemin
+gulp.task('imagemin', () =>
+    gulp.src('img/src/**')
+    .pipe(imagemin())
+    .pipe(gulp.dest('img/'))
+);
+
 
 // Gulp Default Task
-gulp.task('default', ['sass', 'js', 'browser-sync'], function () {
+gulp.task('default', ['sass', 'js', 'imagemin', 'browser-sync'], function () {
 	gulp.watch("sass/*.scss", ['sass']);
 	gulp.watch("sass/**/*.scss", ['sass']);
 	gulp.watch("js/src/*.js", ['js']);
+	gulp.watch('./img/**', ['imagemin'])
 });

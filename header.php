@@ -20,10 +20,12 @@
 
     <header id="masthead" class="site-header" role="banner">
       <nav class="navbar sticky-top navbar-inverse">
+        <div class="container">
           <a class="navbar__brand" href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
           <button class="navbar__button" type="button">
             <a href="#" class="js-menu-open"></a>
           </button>
+        </div>
         </nav>
         <div class="overlay overlay-slidedown">
           <nav>
