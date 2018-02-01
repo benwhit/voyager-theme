@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+# Variables - First to override third-party variables
+--------------------------------------------------------------*/
+@import './variables';
+
+/*--------------------------------------------------------------
+# Third-Party SCSS
+--------------------------------------------------------------*/
+@import './src/bootstrap/bootstrap';
+@import './src/font-awesome/font-awesome.scss';
+@import './src/owl-carousel/owl.carousel.scss';
+@import './src/owl-carousel/owl.theme.default.scss';
+@import './src/underscores';
+
+/*--------------------------------------------------------------
+# Theme - Do not move from bottom
+--------------------------------------------------------------*/
+@import './theme/theme';

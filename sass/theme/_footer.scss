@@ -1,0 +1,17 @@
+.site-footer {
+	padding: 80px 0;
+	background-color: $brand-primary;
+	color: #FFF;
+	.footer__menus {
+		padding-left: 100px;
+		@include media-breakpoint-down(sm) {
+			padding-left: 15px;
+		}
+	}
+	.menu {
+		margin-top: 20px;
+		a {
+			color: #FFF;
+		}
+	}
+}
