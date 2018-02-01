@@ -13,3 +13,7 @@ dist-product
 npm-debug.log
 
 images
+
+css
+
+js/script.js
