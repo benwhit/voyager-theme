@@ -1,3 +1,3 @@
 === Voyager Theme ===
 
-Voyager Marketing WordPress Theme
+Voyager WordPress Theme
