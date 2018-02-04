@@ -12,20 +12,20 @@ get_header();
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <section class="page-content">
-            <?php
-              while ( have_posts() ) : the_post();
-                get_template_part( 'partials/content', 'page' );
-                if ( comments_open() || get_comments_number() ) :
-                  comments_template();
-                endif;
-              endwhile;
-            ?>
-          </section>
-        </div>
+        <section id="content" class="page-content">
+          <?php
+          while ( have_posts() ) : the_post();
+            get_template_part( 'partials/content', 'page' );
+            if ( comments_open() || get_comments_number() ) :
+              comments_template();
+            endif;
+          endwhile;
+          ?>
+        </section>
       </div>
     </div>
-  </main>
+  </div>
+</main>
 </div>
 
 <?php

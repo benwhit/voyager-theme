@@ -1,4 +1,3 @@
-// requires: jquery-3.2.1.min.js
 (function($) {
 
 	// Sticky Navbar
@@ -18,15 +17,9 @@
 	});
 
 	// Overlay Menu
-	$(".navbar__button a").click(function(){
+	$(".navbar__button").click(function(){
 	   $(".overlay").toggleClass('open');
-	   $(this).toggleClass('js-menu-open').toggleClass('js-menu-close');
-	});
-
-	$('.overlay').on('click', function(){
-	    $(".overlay").removeClass('open');
-	    $(".navbar__button a").toggleClass('js-menu-open').toggleClass('js-menu-close');
-	    open = false;
+	   $(this).toggleClass('js-menu-close');
 	});
 
 	// Posts Carousel

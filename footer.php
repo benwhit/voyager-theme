@@ -13,9 +13,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-6">
-				<h3 class="footer__brand">
+				<a href="/" class="footer__brand">
 					<?php echo get_bloginfo('title'); ?>
-				</h3>
+				</a>
 			</div>
 			<div class="col-6 footer__menus">
 				<?php

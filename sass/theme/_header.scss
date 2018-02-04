@@ -1,47 +1,31 @@
 header.site-header {
-	position: relative;
-	z-index: 99;
 	.navbar {
 		position: fixed;
 		top: 0;
 		width: 100%;
 		background-color: $c-primary;
-		z-index: 9;
-		transition: background-color 0.4s;
-		&.stuck {
-			background-color: $c-secondary;
-		}
-		&__brand {
+		z-index: 99;
+		a {
 			color: #FFF;
 			text-decoration: none;
 		}
-		&__button {
-			background: none;
-			border: none;
-		}
-		.js-menu-open:after {
-			color:#FFF;
+		.navbar__button:after {
 			content:"\f0c9";
-			font-family:"FontAwesome";
+			color:#FFF;
+			font-family:"Font Awesome 5 Free";
 			transition-property:all .2s linear 0s;
 			-moz-transition:all .2s linear 0s;
 			-webkit-transition:all .2s linear 0s;
 			-o-transition:all .2s linear 0s;
-		}
-		.js-menu-open:hover:after {
-			color:#FFF;
 		}
 		.js-menu-close:after {
 			color:#FFF;
 			content:"\f00d";
-			font-family:"FontAwesome";
+			font-family:"Font Awesome 5 Free";
 			transition-property:all .2s linear 0s;
 			-moz-transition:all .2s linear 0s;
 			-webkit-transition:all .2s linear 0s;
 			-o-transition:all .2s linear 0s;
-		}
-		.js-menu-close:hover:after {
-			color: #000;
 		}
 	}
 }
@@ -52,35 +36,24 @@ header.site-header {
 	top:0;
 	height:100%;
 	width:100%;
-	background:#ececec;
-	overflow:auto;
+	background:$c-primary;
+	overflow:hidden;
 	z-index:1;
 	nav {
 		text-align: center;
 		position: relative;
 		top: 50%;
-		height: 70%;
+		height: 50%;
 		-webkit-transform: translateY(-50%);
 		transform: translateY(-50%);
 		@include media-breakpoint-down(sm) {
 			top: 35%;
 		}
-		.overlay__title {
-			color: $c-primary;
-		}
 		a {
-			font-size: 1.5rem;
-			font-weight: 300;
-			display: block;
 			color: #fff;
-			transition: color 0.2s;
-			@include media-breakpoint-down(sm) {
-				font-size: 1rem;
-			}
 			&:hover,
 			&:focus {
-				color: #4169e1;
-				background-color: #ececec;
+				color: $c-secondary;
 			}
 		}
 	}
