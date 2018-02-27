@@ -17,14 +17,14 @@ gulp.task('browser-sync', function() {
 		"*.html",
 		"*.php",
 		"**/*.php"], {
-		proxy: "example.test", // change to local server url
+		proxy: "local.wordpress.test", // change to local server url
 		port: 3000
 	});
 });
 
 // Compile SASS files
 gulp.task('sass', function () {
-	gulp.src('sass/styles.scss')
+	gulp.src('sass/voyager.scss')
 	.pipe(plumber())
 	.pipe(sass({includePaths: ['scss']}))
 	.pipe(cleanCSS())
