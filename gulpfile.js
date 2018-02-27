@@ -17,7 +17,7 @@ gulp.task('browser-sync', function() {
 		"*.html",
 		"*.php",
 		"**/*.php"], {
-		proxy: "oldeskool.test", // change to local server url
+		proxy: "example.test", // change to local server url
 		port: 3000
 	});
 });
@@ -43,9 +43,9 @@ gulp.task('js', function(){
 
 // Imagemin
 gulp.task('imagemin', () =>
-    gulp.src('img/src/**')
+    gulp.src('images/src/**')
     .pipe(imagemin())
-    .pipe(gulp.dest('img/'))
+    .pipe(gulp.dest('images/'))
 );
 
 
