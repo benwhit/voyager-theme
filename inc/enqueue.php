@@ -4,7 +4,7 @@
  */
 function voyager_theme_scripts() {
 
-	wp_enqueue_style( 'voyager-style', get_template_directory_uri() . '/css/styles.css', array(), null );
+	wp_enqueue_style( 'voyager-style', get_template_directory_uri() . '/css/voyager.css');
 	wp_enqueue_script( 'voyager-script', get_template_directory_uri() . '/js/script.js', array('jquery'), null, true );
 	wp_enqueue_script( 'popper', 'https://unpkg.com/popper.js@1.12.9/dist/umd/popper.js', array(), null, true );
 
