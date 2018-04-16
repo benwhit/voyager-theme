@@ -67,7 +67,7 @@ gulp.task('sass', function () {
 
 // Javascript
 gulp.task('js', function(){
-	gulp.src(['js/src/*.js', 'js/theme/*.js', '!js/src/customizer.js'])
+	gulp.src(['js/src/*.js', 'js/theme/*.js', '!js/theme/customizer.js'])
 	.pipe(plumber())
   .pipe(jscs())
   .pipe(jscs.reporter())
