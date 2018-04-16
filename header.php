@@ -1,9 +1,7 @@
 <?php
 /**
-* The header for our theme
-* This is the template that displays all of the <head> section and everything up until <div id="content">
+* Default Header
 *
-* @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
 * @package Voyager_Theme
 */
 ?><!DOCTYPE html>
@@ -11,6 +9,7 @@
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="Description" content="<?php echo get_bloginfo('description'); ?>">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <?php wp_head(); ?>
 </head>
@@ -21,7 +20,7 @@
       <nav class="navbar sticky-top navbar-inverse">
         <div class="container">
           <a class="navbar__brand" href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
-          <a class="navbar__button" href="#" class="js-menu-open"></a>
+          <a class="navbar__button" href="#" class="js-menu-open" title="Open Menu Button"></a>
         </div>
       </nav>
       <div class="overlay overlay-slidedown">

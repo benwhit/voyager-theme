@@ -6,7 +6,23 @@
  * @package Voyager_Theme
  */
 
-//declare WC support
+
+function my_deregister_scripts(){
+	wp_deregister_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'my_deregister_scripts' );
+
+
+// Move Scripts to the Footer
+function voyager_footer_enqueue_scripts() {
+    remove_action('wp_head', 'wp_print_scripts');
+    remove_action('wp_head', 'wp_print_head_scripts', 9);
+    remove_action('wp_head', 'wp_enqueue_scripts', 1);
+}
+add_action('wp_enqueue_scripts', 'voyager_footer_enqueue_scripts');
+
+
+// Declare WC support
 function voyager_theme_wc_support() {
   add_theme_support( 'woocommerce' );
 }
@@ -55,9 +71,9 @@ function voyager_theme_pingback_header() {
 add_action( 'wp_head', 'voyager_theme_pingback_header' );
 
 
-/*************************************************************/
-/* 	Disable the emoji's			                           			*/
-/***********************************************************/
+/**
+* 	Disable the emoji's
+*/
 
 function disable_emojis() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -103,8 +119,3 @@ function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 
 	return $urls;
 }
-
-function my_deregister_scripts(){
-	wp_deregister_script( 'wp-embed' );
-}
-add_action( 'wp_footer', 'my_deregister_scripts' );

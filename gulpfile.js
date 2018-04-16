@@ -15,6 +15,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var notify = require("gulp-notify");
 var rename = require("gulp-rename");
 var sassLint = require('gulp-sass-lint');
+var jscs = require('gulp-jscs');
 
 // BrowserSync
 gulp.task('browser-sync', function() {
@@ -25,7 +26,7 @@ gulp.task('browser-sync', function() {
 
     // `true` Automatically open the browser with BrowserSync live server.
     // `false` Stop the browser from automatically opening.
-    open: true,
+    open: false,
 
     // Inject CSS changes.
     // Commnet it to reload browser for every CSS change.
@@ -51,11 +52,11 @@ gulp.task('sass', function () {
    	} ) )
   .on('error', console.error.bind(console))
 	.pipe(gcmq())
-  .pipe(cssBase64())
   .pipe(autoprefixer({
       browsers: ['last 2 versions', 'ie 10'],
       cascade: false
   }))
+  .pipe(cssBase64())
   .pipe(sassLint())
 	.pipe(gulp.dest('css'))
   .pipe( rename( { suffix: '.min' } ) )
@@ -66,8 +67,10 @@ gulp.task('sass', function () {
 
 // Javascript
 gulp.task('js', function(){
-	gulp.src('js/src/*.js')
+	gulp.src(['js/src/*.js', 'js/theme/*.js', '!js/src/customizer.js'])
 	.pipe(plumber())
+  .pipe(jscs())
+  .pipe(jscs.reporter())
 	.pipe(deporder())
 	.pipe(concat('script.js'))
   .pipe( rename( { suffix: '.min' } ) )
@@ -88,6 +91,6 @@ gulp.task('imagemin', () =>
 gulp.task('default', ['sass', 'js', 'imagemin', 'browser-sync'], function () {
 	gulp.watch( './**/*.php', reload );
 	gulp.watch("./**/*.scss", ['sass']);
-	gulp.watch("js/src/*.js", ['js']);
+	gulp.watch(['js/src/*.js', 'js/theme/*.js'], ['js']);
 	gulp.watch('./img/**', ['imagemin'])
 });
