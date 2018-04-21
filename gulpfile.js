@@ -19,64 +19,65 @@ var jscs = require('gulp-jscs');
 
 // BrowserSync
 gulp.task('browser-sync', function() {
-	browserSync.init({
+  browserSync.init({
 
     // Project URL.
-		proxy: "local.wordpress.test", // change to local server url
+    proxy: "local.test", // change to local server url
 
     // `true` Automatically open the browser with BrowserSync live server.
     // `false` Stop the browser from automatically opening.
-    open: false,
+    open: true,
 
     // Inject CSS changes.
     // Commnet it to reload browser for every CSS change.
     injectChanges: true,
 
     // Use a specific port (instead of the one auto-detected by Browsersync).
-		port: 3000
-	});
+    port: 3000
+  });
 });
 
 // Compile SASS files
 gulp.task('sass', function () {
-	gulp.src('sass/voyager.scss')
-	.pipe(plumber())
-	.pipe( sass( {
-			includePaths: ['scss'],
+  gulp.src('sass/voyager.scss')
+  .pipe(plumber())
+  .pipe( sass( {
+      includePaths: ['scss'],
       errLogToConsole: true,
       outputStyle: 'compact',
       // outputStyle: 'compressed',
       // outputStyle: 'nested',
       // outputStyle: 'expanded',
       precision: 10
-   	} ) )
+    } ) )
   .on('error', console.error.bind(console))
-	.pipe(gcmq())
+  .pipe(gcmq())
   .pipe(autoprefixer({
       browsers: ['last 2 versions', 'ie 10'],
       cascade: false
   }))
   .pipe(cssBase64())
   .pipe(sassLint())
-	.pipe(gulp.dest('css'))
+  .pipe(gulp.dest('css'))
   .pipe( rename( { suffix: '.min' } ) )
-	.pipe(cleanCSS())
-	.pipe(gulp.dest('css'))
-	.pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
+  .pipe(cleanCSS())
+  .pipe(gulp.dest('css'))
+  .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
+  .pipe(browserSync.stream());
 });
 
 // Javascript
 gulp.task('js', function(){
-	gulp.src(['js/src/*.js', 'js/theme/*.js', '!js/theme/customizer.js'])
-	.pipe(plumber())
+  gulp.src(['js/src/*.js', 'js/theme/*.js', '!js/theme/customizer.js'])
+  .pipe(plumber())
   .pipe(jscs())
   .pipe(jscs.reporter())
-	.pipe(deporder())
-	.pipe(concat('script.js'))
+  .pipe(deporder())
+  .pipe(concat('script.js'))
   .pipe( rename( { suffix: '.min' } ) )
-	.pipe(uglify())
-	.pipe(gulp.dest('js/'))
-	.pipe( notify( { message: 'TASK: "js" Completed! 🚀', onLast: true } ) )
+  .pipe(uglify())
+  .pipe(gulp.dest('js/'))
+  .pipe( notify( { message: 'TASK: "js" Completed! 🚀', onLast: true } ) )
 });
 
 // Imagemin
@@ -89,8 +90,9 @@ gulp.task('imagemin', () =>
 
 // Gulp Default Task
 gulp.task('default', ['sass', 'js', 'imagemin', 'browser-sync'], function () {
-	gulp.watch( './**/*.php', reload );
-	gulp.watch("./**/*.scss", ['sass']);
-	gulp.watch(['js/src/*.js', 'js/theme/*.js'], ['js']);
-	gulp.watch('./img/**', ['imagemin'])
+  gulp.watch( './**/*.php', reload );
+  gulp.watch( './js/*.js', reload );
+  gulp.watch(['js/src/*.js', 'js/theme/*.js'], ['js']);
+  gulp.watch(["./**/*.scss", "./sass/**/*.scss"], ['sass']);
+  gulp.watch('./img/**', ['imagemin'])
 });
