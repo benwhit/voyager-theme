@@ -1,0 +1,41 @@
+.c-instafeed {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+	@include media-breakpoint-down(sm) {
+		flex-wrap: wrap;
+	}
+	a {
+		position: absolute;
+	}
+	img {
+		min-width: 225px;
+		max-width: 225px;
+		margin: 0 -35px;
+		height: auto;
+		@include media-breakpoint-down(sm) {
+			max-width: calc( 50% - 20px );
+			min-width: calc( 50% - 20px );
+			margin: 10px;
+		}
+		&:nth-of-type(even) {
+			padding-top: 150px;
+			@include media-breakpoint-down(sm) {
+				padding: 0;
+			}
+		}
+		&:first-of-type {
+			position: relative;
+			z-index: 1;
+		}
+		&:nth-of-type(3) {
+			position: relative;
+			z-index: -1;
+		}
+		&:nth-of-type(4) {
+			position: relative;
+			z-index: -2;
+		}
+	}
+}

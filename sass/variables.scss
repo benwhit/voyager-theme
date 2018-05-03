@@ -7,7 +7,7 @@ $f-secondary: 'Times New Roman';
 // Colors
 $c-primary: #FF0055;
 $c-secondary: #FF0066;
-$c-news: $c-primary;
+
 
 /*--------------------------------------------------------------
 # Bootstrap Overrides
@@ -15,41 +15,176 @@ $c-news: $c-primary;
 // without modifying source files.
 --------------------------------------------------------------*/
 
-// Colors
-$brand-primary: $c-primary;
+//
+// Color system
+//
+// $primary:       $c-primary;
+// $body-color:                $c-gray;
 
-// Buttons
-$btn-font-weight: 400;
-$btn-primary-color: $c-primary;
-$border-radius: 		0rem;
-
-// Options
-$enable-rounded: 		false;
-
-// Fonts
-$font-family-base: $f-primary;
-
-$font-size-h1: 2.5rem;
-$font-size-h2: 2rem;
-$font-size-h3: 1.75rem;
-$font-size-h4: 1.5rem;
-$font-size-h5: 1.25rem;
-$font-size-h6: 1rem;
-
-$headings-font-family: $f-secondary;
-$headings-font-weight:   700;
-$headings-line-height:   1.1;
-$headings-color:         inherit;
+// // Fonts
+// $font-family-base: $f-primary;
+// $font-size-base:              1rem;
+// $font-weight-base:            300;
+// $headings-font-family:        $f-secondary;
+// $headings-line-height:        1.1;
 
 
-// Buttons
-$btn-padding-x:                  1rem;
-$btn-padding-y:                  .5rem;
+// // 75px = 4.688rem
+// // 30px = 1.875rem
+// // 50px = 3.125rem
+// // 20px = 1.25rem
 
-$btn-primary-color:              #FFF;
-$btn-primary-bg:                 $c-primary;
-$btn-primary-border:             $btn-primary-bg;
+// $h1-font-size:                $font-size-base * 4.688;
+// $h2-font-size:                $font-size-base * 1.875;
+// $h3-font-size:                $font-size-base * 3.125;
+// $h4-font-size:                $font-size-base * 1.875;
+// $h5-font-size:                $font-size-base * 1.25;
+// $h6-font-size:                $font-size-base;
 
-$btn-secondary-bg:               $c-secondary;
-$btn-secondary-color:            #FFF;
-$btn-secondary-border:           $c-secondary;
+// $display1-size:               18.75rem; // 300px
+// $display2-size:               6.25rem; // 100px
+// $display3-size:               4.688rem; //75px
+
+// $display1-weight:             300 !default;
+// $display2-weight:             300 !default;
+// $display3-weight:             300 !default;
+// $display-line-height:         1;
+
+/*--------------------------------------------------------------
+# Helpful Variables
+--------------------------------------------------------------*/
+
+//
+// Color system
+// //
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-800 !default;
+
+// // Options
+// //
+// // Quickly modify global styling by enabling or disabling optional features.
+
+// $enable-caret:              true !default;
+// $enable-rounded:            true !default;
+// $enable-shadows:            false !default;
+// $enable-gradients:          false !default;
+// $enable-transitions:        true !default;
+// $enable-hover-media-query:  false !default; // Deprecated, no longer affects any compiled CSS
+// $enable-grid-classes:       true !default;
+// $enable-print-styles:       true !default;
+
+// // Body
+// //
+// // Settings for the `<body>` element.
+
+// $body-bg:                   $white !default;
+// $body-color:                $gray-900 !default;
+
+// // Links
+// //
+// // Style anchor elements.
+
+// $link-color:                theme-color("primary") !default;
+// $link-decoration:           none !default;
+// $link-hover-color:          darken($link-color, 15%) !default;
+// $link-hover-decoration:     underline !default;
+
+// // Grid breakpoints
+// //
+// // Define the minimum dimensions at which your layout will change,
+// // adapting to different screen sizes, for use in media queries.
+
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px
+// ) !default;
+
+// // Grid containers
+// //
+// // Define the maximum width of `.container` for different screen sizes.
+
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px
+// ) !default;
+
+// // Fonts
+// //
+// // Font, line-height, and color for body text, headings, and more.
+
+// // stylelint-disable value-keyword-case
+// $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+// $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+// $font-family-base:            $f-primary, $font-family-sans-serif !default;
+// // stylelint-enable value-keyword-case
+
+// $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+// $font-size-lg:                ($font-size-base * 1.25) !default;
+// $font-size-sm:                ($font-size-base * .875) !default;
+
+// $font-weight-light:           300 !default;
+// $font-weight-normal:          400 !default;
+// $font-weight-bold:            700 !default;
+
+// $font-weight-base:            $font-weight-normal !default;
+// $line-height-base:            1.5 !default;
+
+// $h1-font-size:                $font-size-base * 2.5 !default;
+// $h2-font-size:                $font-size-base * 2 !default;
+// $h3-font-size:                $font-size-base * 1.75 !default;
+// $h4-font-size:                $font-size-base * 1.5 !default;
+// $h5-font-size:                $font-size-base * 1.25 !default;
+// $h6-font-size:                $font-size-base !default;
+
+// $headings-margin-bottom:      ($spacer / 2) !default;
+// $headings-font-family:        inherit !default;
+// $headings-font-weight:        500 !default;
+// $headings-line-height:        1.2 !default;
+// $headings-color:              inherit !default;
+
+// $display1-size:               6rem !default;
+// $display2-size:               5.5rem !default;
+// $display3-size:               4.5rem !default;
+// $display4-size:               3.5rem !default;
+
+// $display1-weight:             300 !default;
+// $display2-weight:             300 !default;
+// $display3-weight:             300 !default;
+// $display4-weight:             300 !default;
+// $display-line-height:         $headings-line-height !default;
+
+// $lead-font-size:              ($font-size-base * 1.25) !default;
+// $lead-font-weight:            300 !default;
+
+
+// // Buttons
+// //
+// // For each of Bootstrap's buttons, define text, background, and border color.
+
+// $btn-padding-y:               $input-btn-padding-y !default;
+// $btn-padding-x:               $input-btn-padding-x !default;
+// $btn-line-height:             $input-btn-line-height !default;
+
+// $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+// $btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+// $btn-line-height-sm:          $input-btn-line-height-sm !default;
+
+// $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+// $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+// $btn-line-height-lg:          $input-btn-line-height-lg !default;
+
+// $btn-border-width:            $input-btn-border-width !default;
+
+// $btn-font-weight:             $font-weight-normal !default;
+// $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+// $btn-focus-width:             $input-btn-focus-width !default;
+// $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+// $btn-disabled-opacity:        .65 !default;
+// $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
