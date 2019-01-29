@@ -2,18 +2,27 @@
 # Variables - First to override third-party variables
 --------------------------------------------------------------*/
 @import './variables';
+@import './wp-core.scss';
+
 
 /*--------------------------------------------------------------
 # Third-Party SCSS
 --------------------------------------------------------------*/
-@import './src/bootstrap/bootstrap';
-@import './src/fontawesome/fontawesome.scss';
-@import './src/fontawesome/fa-solid.scss';
-@import './src/owl-carousel/owl.carousel.scss';
-@import './src/owl-carousel/owl.theme.default.scss';
-@import './src/underscores';
+// NPM Modules
+@import "./node_modules/bootstrap/scss/bootstrap";
+
 
 /*--------------------------------------------------------------
-# Theme - Do not move from bottom
+# Core - Theme Styles
 --------------------------------------------------------------*/
-@import './theme/theme';
+@import "typography";
+@import "forms/forms";
+@import "layouts/layouts";
+@import "widgets";
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/c-instafeed";
+@import "components/c-testimonials";

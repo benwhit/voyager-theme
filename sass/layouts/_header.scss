@@ -1,0 +1,29 @@
+header.site-header {
+	position: relative;
+	z-index: 99;
+	color: #000;
+	.navbar {
+		background-color: rgba(255,255,255,0.8);
+		z-index: 99;
+		.navbar-nav {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 100%;
+		}
+		.navbar__button {
+			background-color: $secondary;
+			height: 55px;
+			border-radius: 10px;
+			overflow: hidden;
+			&.js-menu-close {
+				i.fa-th { display: none; }
+				i.fa-times {
+					display: inline-block;
+					background-color: #FFF;
+					color: $secondary;
+				}
+			}
+		}
+	}
+}

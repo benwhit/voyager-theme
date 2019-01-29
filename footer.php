@@ -6,32 +6,28 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Voyager_Theme
+ * @package _s
  */
+
 ?>
-<footer id="colophon" class="site-footer" role="contentinfo">
-	<div class="container">
-		<div class="row">
-			<div class="col-6">
-				<a href="/" class="footer__brand">
-					<?php echo get_bloginfo('title'); ?>
-				</a>
-			</div>
-			<div class="col-6 footer__menus">
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer">
+		<div class="site-info">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>">
 				<?php
-				wp_nav_menu([
-					'menu'            => 'footer-1',
-					'theme_location'  => 'footer-1',
-					'menu_id'         => false,
-					'depth'           => 2,
-					'fallback_cb'     => 'bs4navwalker::fallback',
-					'walker'          => new bs4navwalker()
-				]);
+				/* translators: %s: CMS name, i.e. WordPress. */
+				printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' );
 				?>
-			</div>
-		</div>
-	</div>
-</footer>
+			</a>
+			<span class="sep"> | </span>
+				<?php
+				/* translators: 1: Theme name, 2: Theme author. */
+				printf( esc_html__( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="https://automattic.com/">Automattic</a>' );
+				?>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

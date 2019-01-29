@@ -1,0 +1,64 @@
+.home-hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	height: 800px;
+	min-height: 600px;
+	width: 100%;
+	background-image: url(../images/plumbing-and-drawings-construction-still-life-PB72DPR.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255,255,255,0.7);
+		z-index: 0;
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 1;
+		max-width: 100%;
+		width: 600px;
+		margin: 0 auto;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+/* About Section */
+.home-about {
+	padding: 100px 0;
+	max-width: 1200px;
+	@include make-container();
+}
+
+
+/* Service Category Section */
+.home-service-categories {
+	padding: 100px 0;
+	max-width: 1200px;
+	@include make-container();
+}
+
+.home-coupon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 75px 25px;
+	min-height: 400px;
+	background-size: cover;
+
+	.btn {
+	}
+
+	&--water-heaters { background-image: url(../images/plumbing-and-drawings-construction-still-life-PCF7UY7.jpg); }
+	&--new-customer { background-image: url(../images/plumbing-and-drawings-construction-still-life-PYUD4NK.JPG); }
+}

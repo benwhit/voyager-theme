@@ -1,0 +1,98 @@
+.site-footer {
+	position: relative;
+	background-color: #f0f0f0;
+	padding-top: 200px;
+	padding-bottom: 100px;
+	margin-top: 125px;
+	ul { margin: 0; padding: 0; }
+	&__brand {
+		position: absolute;
+		top: -100px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		text-align: center;
+		z-index: 9;
+	}
+	&__menu {
+		width: 100%;
+		text-align: center;
+		.menu {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 0;
+			margin: 0 auto;
+			list-style-type: none;
+			width: 100%;
+			@include media-breakpoint-down(sm) {
+				flex-direction: column;
+			}
+			.menu-item {
+				width: auto;
+				margin: 0 50px;
+				padding: 0;
+				background-color: transparent;
+				box-shadow: none;
+				@include media-breakpoint-down(md) {
+					margin: 0 20px;
+				}
+				@include media-breakpoint-down(sm) {
+					margin: 0;
+				}
+				&:first-of-type {
+					margin-left: 0;
+				}
+				&:last-of-type {
+					margin-right: 0;
+				}
+				a {
+					font-family: $f-primary;
+					font-size: 30px;
+					color: $secondary;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	&__info {
+		display: flex;
+		flex-direction: row;
+		margin-top: 50px;
+		@include media-breakpoint-down(sm) {
+			flex-direction: column;
+		}
+	}
+	&__location {
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		span { color: $primary; }
+		a {
+			text-decoration: none;
+			color: $secondary;
+			margin-left: 20px;
+			border-bottom: 2px solid $secondary;
+		}
+	}
+	&__social {
+		margin-left: auto;
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+			margin: 25px auto;
+		}
+		ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			list-style-type: none;
+			width: 100%;
+			padding: 0 25px;
+			li {
+				padding: 0 25px;
+			}
+		}
+	}
+}

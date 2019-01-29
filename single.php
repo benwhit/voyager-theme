@@ -1,25 +1,21 @@
 <?php
-/*
+/**
  * The template for displaying all single posts
  *
- * @package Voyager_Theme
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package _s
  */
 
-get_header(); ?>
+get_header();
+?>
 
-
-<div class="page__header">
-	<h1 class="page__title">
-		<?php the_title(); ?>
-		<br>
-		<hr>
-	</h1>
-</div>
-<div id="primary" class="content-area">
-	<main id="main" class="site-main">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
 
 		<?php
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) :
+			the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
@@ -33,8 +29,9 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
-	</main>
-</div>
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
 <?php
+get_sidebar();
 get_footer();
