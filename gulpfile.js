@@ -1,37 +1,32 @@
 // Plugins
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var plumber = require('gulp-plumber');
-var deporder = require('gulp-deporder');
-var cleanCSS = require('gulp-clean-css');
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
-var imagemin = require('gulp-imagemin');
-var cssBase64 = require('gulp-css-base64');
-var gcmq = require('gulp-group-css-media-queries');
-var autoprefixer = require('gulp-autoprefixer');
-var notify = require("gulp-notify");
-var rename = require("gulp-rename");
-var sassLint = require('gulp-sass-lint');
-var jscs = require('gulp-jscs');
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    plumber = require('gulp-plumber'),
+    deporder = require('gulp-deporder'),
+    cleanCSS = require('gulp-clean-css'),
+    browserSync = require('browser-sync'),
+    imagemin = require('gulp-imagemin'),
+    cssBase64 = require('gulp-css-base64'),
+    gcmq = require('gulp-group-css-media-queries'),
+    autoprefixer = require('gulp-autoprefixer'),
+    notify = require("gulp-notify"),
+    rename = require("gulp-rename"),
+    sassLint = require('gulp-sass-lint'),
+    jscs = require('gulp-jscs'),
+    jscs = require('gulp-changed'),
+    reload = browserSync.reload;
 
 // BrowserSync
 gulp.task('browser-sync', function() {
   browserSync.init({
-
     // Project URL.
-    proxy: "local.test", // change to local server url
-
+    proxy: "voyager.test", // change to local server url
     // `true` Automatically open the browser with BrowserSync live server.
-    // `false` Stop the browser from automatically opening.
     open: true,
-
     // Inject CSS changes.
-    // Commnet it to reload browser for every CSS change.
     injectChanges: true,
-
     // Use a specific port (instead of the one auto-detected by Browsersync).
     port: 3000
   });
@@ -40,22 +35,24 @@ gulp.task('browser-sync', function() {
 // Compile SASS files
 gulp.task('sass', function () {
   gulp.src('sass/voyager.scss')
+  .pipe(changed('./css'))
   .pipe(plumber())
   .pipe( sass( {
       includePaths: ['scss'],
       errLogToConsole: true,
       outputStyle: 'compact',
-      // outputStyle: 'compressed',
-      // outputStyle: 'nested',
-      // outputStyle: 'expanded',
       precision: 10
     } ) )
   .on('error', console.error.bind(console))
-  .pipe(gcmq())
   .pipe(autoprefixer({
-      browsers: ['last 2 versions', 'ie 10'],
-      cascade: false
+      browsers: [
+      "last 1 version",
+      "> 1%",
+      "maintained node versions",
+      "not dead"],
+      cascade: true
   }))
+  .pipe(gcmq())
   .pipe(cssBase64())
   .pipe(sassLint())
   .pipe(gulp.dest('css'))
@@ -87,12 +84,14 @@ gulp.task('imagemin', () =>
     .pipe(gulp.dest('images/'))
 );
 
-
-// Gulp Default Task
-gulp.task('default', ['sass', 'js', 'imagemin', 'browser-sync'], function () {
+gulp.task('watch', function() {
   gulp.watch( './**/*.php', reload );
   gulp.watch( './js/*.js', reload );
   gulp.watch(['js/src/*.js', 'js/theme/*.js'], ['js']);
   gulp.watch(["./**/*.scss", "./sass/**/*.scss"], ['sass']);
-  gulp.watch('./img/**', ['imagemin'])
+  gulp.watch('./img/**', ['imagemin']);
 });
+
+
+// Gulp Default Task
+gulp.task('default', ['watch', 'sass', 'js', 'imagemin', 'browser-sync']);

@@ -19,3 +19,5 @@ voyager.css
 *.min.css
 
 *.min.js
+
+css/*
