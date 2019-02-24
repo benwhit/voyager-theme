@@ -10,6 +10,11 @@
 	background-size: cover;
 	background-attachment: fixed;
 
+	.page-content {
+		max-width: 400px;
+		@include make-container();
+	}
+
 	&:before {
 		content: "";
 		position: absolute;

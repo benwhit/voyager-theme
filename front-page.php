@@ -9,24 +9,26 @@ get_header();
 ?>
 
 <main id="main" class="site-main" role="main">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <section id="content" class="page-content">
-          <?php
-          while ( have_posts() ) : the_post();
-            get_template_part( 'partials/content', 'page' );
-            if ( comments_open() || get_comments_number() ) :
-              comments_template();
-            endif;
-          endwhile;
-          ?>
-        </section>
-      </div>
-    </div>
-  </div>
+  <section id="content" class="page-content">
+    <?php
+    if ( have_posts() ) : while ( have_posts() ) : the_post();
+      get_template_part( 'partials/content', 'page' );
+    endwhile; else:
+        // no posts found
+    endif;
+    ?>
+  </section>
 </main>
 </div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-6"></div>
+    <div class="col-6"></div>
+  </div>
+</div>
+
 
 <?php
 get_footer();
