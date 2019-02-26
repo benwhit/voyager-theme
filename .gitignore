@@ -11,15 +11,3 @@ dist
 dist-product
 
 npm-debug.log
-
-images/
-
-voyager.css
-
-*.min.css
-
-*.min.js
-
-css/
-
-fonts/
