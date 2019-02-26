@@ -36,9 +36,7 @@ function voyager_theme_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'top' 			=> esc_html__( 'Header Menu', 'voyager-theme' ),
-		'footer-1' 	=> esc_html__( 'Footer One', 'voyager-theme' ),
-		'footer-2' 	=> esc_html__( 'Footer Two', 'voyager-theme' )
+		'top' 			=> esc_html__( 'Header Menu', 'voyager-theme' )
 	) );
 
 	/*

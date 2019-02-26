@@ -1,10 +1,8 @@
-/*
- * Gulp Plugins
- */
-
-const gulp = require('gulp'),
+const { series, parallel, src, dest, watch } = require('gulp');
+const
   //Sourcemaps
   sourcemaps = require('gulp-sourcemaps'),
+
   // CSS/SCSS
   sass = require('gulp-sass'),
   cleanCSS = require('gulp-clean-css'),
@@ -12,33 +10,54 @@ const gulp = require('gulp'),
   gcmq = require('gulp-group-css-media-queries'),
   autoprefixer = require('gulp-autoprefixer'),
   sassLint = require('gulp-sass-lint'),
+
   // Javascript
   babel = require('gulp-babel'),
   uglify = require('gulp-uglify'),
   jscs = require('gulp-jscs'),
+
   // BrowserSync
   browserSync = require('browser-sync'),
-  reload = browserSync.reload,
+
   // Concatenation
   concat = require('gulp-concat'),
+
   // Error Checking
   plumber = require('gulp-plumber'),
+
   // Order Dependencies
   deporder = require('gulp-deporder'),
+
   // Task Completion Notifications
   notify = require("gulp-notify"),
+
   // Files
   rename = require("gulp-rename");
+
+const server = browserSync.create();
+
+const paths = {
+  styles: {
+    src: 'assets/scss/**/*.scss',
+    dest: 'assets/css/'
+  },
+  scripts: {
+    src: 'assets/js/src/**/*.js',
+    dest: 'assets/js/'
+  }
+};
+
+
 
 
 /*
  * Gulp Tasks
  */
 
-// BrowserSync
-gulp.task('browser-sync', function() {
-  browserSync.init({
 
+// BrowserSync
+function serve(done) {
+  server.init({
     // Project URL.
     proxy: "local.wordpress.test", // change to local server url
 
@@ -53,13 +72,20 @@ gulp.task('browser-sync', function() {
     // Use a specific port (instead of the one auto-detected by Browsersync).
     port: 3000
   });
-});
+  done();
+}
+
+function reload(done) {
+  server.reload();
+  done();
+}
+
+
 
 // Compile SASS files
-gulp.task('sass', function () {
-  gulp.src('sass/voyager.scss')
+function styles() {
+  return src('assets/scss/voyager.scss', { sourcemaps: true })
   .pipe(plumber())
-  .pipe(sourcemaps.init())
   .pipe( sass( {
       includePaths: ['scss'],
       errLogToConsole: true,
@@ -83,19 +109,17 @@ gulp.task('sass', function () {
   }))
   .pipe(gcmq())
   .pipe(cssBase64())
-  .pipe(sassLint())
-  //.pipe(gulp.dest('css'))
+  .pipe(dest(paths.styles.dest))
   .pipe( rename( { suffix: '.min' } ) )
-  .pipe(sourcemaps.write())
   .pipe(cleanCSS())
-  .pipe(gulp.dest('css'))
+  .pipe(dest(paths.styles.dest))
   .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
-  .pipe(browserSync.stream());
-});
+}
+
 
 // Javascript
-gulp.task('js', function(){
-  gulp.src(['js/src/*.js', 'js/theme/*.js', '!js/theme/customizer.js'])
+function js() {
+  return src([paths.scripts.src, '!js/theme/customizer.js'])
   .pipe(plumber())
   .pipe(jscs())
   .pipe(jscs.reporter())
@@ -103,15 +127,30 @@ gulp.task('js', function(){
   .pipe(concat('script.js'))
   .pipe( rename( { suffix: '.min' } ) )
   .pipe(uglify())
-  .pipe(gulp.dest('js/'))
+  .pipe(dest(paths.scripts.dest))
   .pipe( notify( { message: 'TASK: "js" Completed! 🚀', onLast: true } ) )
-});
+}
+
+function watcher() {
+  watch(paths.styles.src, styles);
+  watch(paths.scripts.src, series(js, reload));
+}
 
 
 // Gulp Default Task
-gulp.task('default', ['sass', 'js', 'browser-sync'], function () {
-  gulp.watch( 'js/*.js', reload );
-  gulp.watch(['*.php', '**/*.php'], reload );
-  gulp.watch(['js/src/*.js', 'js/theme/*.js'], ['js']);
-  gulp.watch(["sass/*.scss", "sass/**/*.scss"], ['sass']);
-});
+// task('default', gulp.series('sass', 'js', 'browser-sync', (done) => {
+
+//   gulp.watch( 'js/*.js', reload );
+
+//   gulp.watch(['*.php', '**/*.php'], reload );
+
+//   gulp.watch(['js/src/*.js', 'js/theme/*.js'], gulp.series('js'));
+
+//   gulp.watch(["sass/*.scss", "sass/**/*.scss"], gulp.series('sass'));
+
+//   done();
+
+// }));
+
+
+exports.default = series(styles, js, serve, watcher);
