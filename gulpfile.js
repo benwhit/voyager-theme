@@ -111,20 +111,14 @@ function js() {
 function watcher() {
 
   browserSync.init({
-    // Project URL.
     proxy: "local.wordpress.test", // change to local server url
-
-    // `true` Automatically open the browser with BrowserSync live server.
-    // `false` Stop the browser from automatically opening.
     open: true,
-
-    // Use a specific port (instead of the one auto-detected by Browsersync).
     port: 3000
   });
 
   watch(paths.styles.src, styles);
   watch(paths.scripts.src, series(js, reload));
-  watch('**/*.php', reload);
+  watch('**/*.php').on('change', reload);
 }
 
 exports.default = series(styles, js, watcher);
