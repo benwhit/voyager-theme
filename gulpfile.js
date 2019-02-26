@@ -17,7 +17,7 @@ const
   jscs = require('gulp-jscs'),
 
   // BrowserSync
-  browserSync = require('browser-sync'),
+  browserSync = require('browser-sync').create(),
 
   // Concatenation
   concat = require('gulp-concat'),
@@ -34,7 +34,7 @@ const
   // Files
   rename = require("gulp-rename");
 
-const server = browserSync.create();
+
 
 const paths = {
   styles: {
@@ -53,33 +53,9 @@ const paths = {
 /*
  * Gulp Tasks
  */
-
-
-// BrowserSync
-function serve(done) {
-  server.init({
-    // Project URL.
-    proxy: "local.wordpress.test", // change to local server url
-
-    // `true` Automatically open the browser with BrowserSync live server.
-    // `false` Stop the browser from automatically opening.
-    open: true,
-
-    // Inject CSS changes.
-    // Commnet it to reload browser for every CSS change.
-    injectChanges: true,
-
-    // Use a specific port (instead of the one auto-detected by Browsersync).
-    port: 3000
-  });
-  done();
+function reload() {
+    browserSync.reload();
 }
-
-function reload(done) {
-  server.reload();
-  done();
-}
-
 
 
 // Compile SASS files
@@ -109,6 +85,7 @@ function styles() {
   }))
   .pipe(gcmq())
   .pipe(cssBase64())
+  .pipe(browserSync.stream())
   .pipe(dest(paths.styles.dest))
   .pipe( rename( { suffix: '.min' } ) )
   .pipe(cleanCSS())
@@ -132,25 +109,22 @@ function js() {
 }
 
 function watcher() {
+
+  browserSync.init({
+    // Project URL.
+    proxy: "local.wordpress.test", // change to local server url
+
+    // `true` Automatically open the browser with BrowserSync live server.
+    // `false` Stop the browser from automatically opening.
+    open: true,
+
+    // Use a specific port (instead of the one auto-detected by Browsersync).
+    port: 3000
+  });
+
   watch(paths.styles.src, styles);
   watch(paths.scripts.src, series(js, reload));
+  watch('**/*.php', reload);
 }
 
-
-// Gulp Default Task
-// task('default', gulp.series('sass', 'js', 'browser-sync', (done) => {
-
-//   gulp.watch( 'js/*.js', reload );
-
-//   gulp.watch(['*.php', '**/*.php'], reload );
-
-//   gulp.watch(['js/src/*.js', 'js/theme/*.js'], gulp.series('js'));
-
-//   gulp.watch(["sass/*.scss", "sass/**/*.scss"], gulp.series('sass'));
-
-//   done();
-
-// }));
-
-
-exports.default = series(styles, js, serve, watcher);
+exports.default = series(styles, js, watcher);
