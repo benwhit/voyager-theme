@@ -2,7 +2,6 @@ const { series, parallel, src, dest, watch } = require('gulp');
 const
   //Sourcemaps
   sourcemaps = require('gulp-sourcemaps'),
-
   // CSS/SCSS
   sass = require('gulp-sass'),
   cleanCSS = require('gulp-clean-css'),
@@ -10,27 +9,20 @@ const
   gcmq = require('gulp-group-css-media-queries'),
   autoprefixer = require('gulp-autoprefixer'),
   sassLint = require('gulp-sass-lint'),
-
   // Javascript
   babel = require('gulp-babel'),
   uglify = require('gulp-uglify'),
   jscs = require('gulp-jscs'),
-
   // BrowserSync
   browserSync = require('browser-sync').create(),
-
   // Concatenation
   concat = require('gulp-concat'),
-
   // Error Checking
   plumber = require('gulp-plumber'),
-
   // Order Dependencies
   deporder = require('gulp-deporder'),
-
   // Task Completion Notifications
   notify = require("gulp-notify"),
-
   // Files
   rename = require("gulp-rename");
 
@@ -39,14 +31,13 @@ const
 const paths = {
   styles: {
     src: 'assets/scss/**/*.scss',
-    dest: 'assets/css/'
+    dest: 'dist/css/'
   },
   scripts: {
-    src: 'assets/js/src/**/*.js',
-    dest: 'assets/js/'
+    src: 'assets/js/*.js',
+    dest: 'dist/js/'
   }
 };
-
 
 
 
@@ -96,12 +87,13 @@ function styles() {
 
 // Javascript
 function js() {
-  return src([paths.scripts.src, '!js/theme/customizer.js'])
+  return src([paths.scripts.src, '!assets/js/customizer.js'])
   .pipe(plumber())
   .pipe(jscs())
   .pipe(jscs.reporter())
   .pipe(deporder())
   .pipe(concat('script.js'))
+  .pipe(dest(paths.scripts.dest))
   .pipe( rename( { suffix: '.min' } ) )
   .pipe(uglify())
   .pipe(dest(paths.scripts.dest))
