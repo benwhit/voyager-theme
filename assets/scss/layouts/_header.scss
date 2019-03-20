@@ -5,6 +5,7 @@ header.site-header {
 	.navbar {
 		background-color: rgba(255,255,255,0.8);
 		z-index: 99;
+		@include admin-sticky-fix;
 		.navbar-nav {
 			display: flex;
 			flex-direction: row;

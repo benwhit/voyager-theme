@@ -1,8 +1,8 @@
 /*--------------------------------------------------------------
 # Variables - First to override third-party variables
 --------------------------------------------------------------*/
-@import 'variables';
-@import 'wp-core.scss';
+@import "variables";
+@import "wp-core";
 
 
 /*--------------------------------------------------------------
@@ -15,6 +15,7 @@
 /*--------------------------------------------------------------
 # Core - Theme Styles
 --------------------------------------------------------------*/
+@import "mixins/mixins";
 @import "typography";
 @import "forms/forms";
 @import "layouts/layouts";
