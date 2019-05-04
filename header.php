@@ -28,25 +28,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'voyager-starter' ); ?></a>
 		<header class="site-header">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-				<a class="navbar-brand" href="#">Navbar</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+                <div class="container">
 
-				<?php
-				wp_nav_menu([
-					'menu'            => 'top',
-					'theme_location'  => 'top',
-					'container'       => 'div',
-					'container_id'    => 'bs4navbar',
-					'container_class' => 'collapse navbar-collapse',
-					'menu_id'         => false,
-					'menu_class'      => 'navbar-nav mr-auto',
-					'depth'           => 2,
-					'fallback_cb'     => 'bs4navwalker::fallback',
-					'walker'          => new bs4navwalker()
-				]);
-				?>
+    				<a class="navbar-brand" href="#">Navbar</a>
+    				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    					<span class="navbar-toggler-icon"></span>
+    				</button>
+
+    				<?php
+    				wp_nav_menu([
+    					'menu'            => 'top',
+    					'theme_location'  => 'top',
+    					'container'       => 'div',
+    					'container_id'    => 'bs4navbar',
+    					'container_class' => 'collapse navbar-collapse',
+    					'menu_id'         => false,
+    					'menu_class'      => 'navbar-nav mr-auto',
+    					'depth'           => 2,
+    					'fallback_cb'     => 'bs4navwalker::fallback',
+    					'walker'          => new bs4navwalker()
+    				]);
+    				?>
+                </div>
 
 			</nav>
 		</header>

@@ -1,30 +1,35 @@
 /*--------------------------------------------------------------
 # Theme Variables
 --------------------------------------------------------------*/
-$f-primary: 'acumin-pro-condensed', sans-serif;
-$f-secondary: 'acumin-pro-condensed', sans-serif;
-
-// Colors
-$c-blue: #1f4b8e;
-$c-red: #ec1c24;
-$c-green: #61a83d;
+$f-primary: "";
+$f-secondary: "";
 
 // Bootstrap Colors
-$primary: $c-blue;
-$secondary: $c-green;
+$primary: #2d3436;
+$secondary: #fdcb6e;
 
-// Bootstrap Typography
-$font-family-base: $f-primary;
-$link-color: $primary;
+$blue:    #007bff !default;
+$red:     #dc3545 !default;
 
-// Bootstrap Typography
-$headings-font-family: $f-primary;
-// $h1-font-size:	170px;
-// $h2-font-size:	60px;
-// $h3-font-size:	45px;
-// $h4-font-size:	32px;
-// $h5-font-size:	30px;
-// $h6-font-size:	24px;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-800 !default;
 
 
-// $display1-size: 120px;
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-rounded:                              false;
+$enable-shadows:                              false !default;
+$enable-gradients:                            false !default;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
