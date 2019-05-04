@@ -2,8 +2,6 @@
 # Variables - First to override third-party variables
 --------------------------------------------------------------*/
 @import 'variables';
-@import 'wp-core.scss';
-
 
 /*--------------------------------------------------------------
 # Third-Party SCSS
@@ -12,13 +10,17 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 
+
 /*--------------------------------------------------------------
 # Core - Theme Styles
 --------------------------------------------------------------*/
-@import "typography";
-@import "forms/forms";
-@import "layouts/layouts";
-@import "widgets";
+@import "base/wp-core";
+@import "base/typography";
+@import "base/gutenberg-colors";
+
+@import "layouts/header";
+@import "layouts/footer" ;
+@import "layouts/widgets";
 
 
 /*--------------------------------------------------------------

@@ -6,21 +6,8 @@ require get_template_directory() . '/inc/setup.php';
 require get_template_directory() . '/inc/enqueue.php';
 require get_template_directory() . '/inc/bs4navwalker.php';
 require get_template_directory() . '/inc/extras.php';
-
-/**
- * Register Widget Area.
- */
 require get_template_directory() . '/inc/widgets.php';
-
-
-/**
- * Custom template tags for this theme.
- */
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
