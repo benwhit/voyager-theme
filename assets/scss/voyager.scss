@@ -6,26 +6,43 @@
 /*--------------------------------------------------------------
 # Third-Party SCSS
 --------------------------------------------------------------*/
-// NPM Modules
+// Required Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-
+// Twenty-Twenty
+@import "../../node_modules/zurb-twentytwenty/scss/twentytwenty-no-compass.scss";
 
 /*--------------------------------------------------------------
 # Core - Theme Styles
 --------------------------------------------------------------*/
 @import "base/wp-core";
-@import "base/typography";
-@import "base/gutenberg-colors";
-@import "base/gutenberg-front-end";
+@import "base/colors";
+@import "base/spacing";
+
+@import "blocks/blocks";
+
+@import "gutenberg/gutenberg-colors";
+@import "gutenberg/gutenberg-front-end";
 
 @import "layouts/header";
-@import "layouts/footer" ;
+@import "layouts/footer";
 @import "layouts/widgets";
 
+@import "border-waves";
+@import "gmap";
+@import "helpers";
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-@import "components/c-instafeed";
-@import "components/c-testimonials";
+@import "components/components";
+
+@import "lib/twenty-twenty";
+@import "lib/jarallax";
+
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import "pages/page-all-services";
+@import "pages/page-service";

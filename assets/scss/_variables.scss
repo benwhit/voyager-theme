@@ -1,35 +1,73 @@
 /*--------------------------------------------------------------
 # Theme Variables
 --------------------------------------------------------------*/
-$f-primary: "";
-$f-secondary: "";
+$swatch_1: #fdfdfe;
+$swatch_2: #b4c8d6;
+$swatch_3: #010d87;
+$swatch_4: #0399fa;
+$swatch_5: #98abbf;
+$swatch_6: #0446da;
+$swatch_7: #9c7655;
 
 // Bootstrap Colors
-$primary: #2d3436;
-$secondary: #fdcb6e;
+$primary: #010d87;
+$secondary: #0446da;
 
-$blue:    #007bff !default;
-$red:     #dc3545 !default;
-
-// $secondary:     $gray-600 !default;
-// $success:       $green !default;
-// $info:          $cyan !default;
-// $warning:       $yellow !default;
-// $danger:        $red !default;
-// $light:         $gray-100 !default;
-// $dark:          $gray-800 !default;
-
-
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
-
-$enable-rounded:                              false;
-$enable-shadows:                              false !default;
-$enable-gradients:                            false !default;
+$gray-100: #f9fbfd;
+$gray-200: #f1f4f8;
+$gray-300: #d9e2ef;
+$gray-400: #c6d3e6;
+$gray-500: #abbcd5;
+$gray-600: #869ab8;
+$gray-700: #506690;
+$gray-800: #384c74;
+$gray-900: #2b354f;
 
 // Typography
 //
-// Font, line-height, and color for body text, headings, and more.
 
+$body-color:               #161c2d;
+
+// Font, line-height, and color for body text, headings, and more.
 $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base: 'Cabin', $font-family-sans-serif;
+
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+
+$h1-font-size:                $font-size-base * 2.25 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+
+$headings-font-family:        'Raleway', $font-family-sans-serif;
+$headings-font-weight:        700;
+$headings-line-height:        1.2 !default;
+
+$display1-size:               4.375rem !default;
+$display2-size:               3.8125rem !default;
+$display3-size:               3rem !default;
+$display4-size:               2.6875rem !default;
+
+
+// Badges
+$badge-font-size:                   75% !default;
+$badge-padding-y:                   .25rem;
+$badge-padding-x:                   .75rem;
+$badge-pill-padding-x:              .75rem !default;
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         .8125rem;
+$input-btn-padding-x:         1.25rem;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-x:               $input-btn-padding-x !default;

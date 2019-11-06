@@ -1,0 +1,17 @@
+.c-home-services {
+	// background: linear-gradient(
+	// 	180deg,
+	// 	#F9FBFD 50%,
+	// 	rgba(255, 255, 255, 0) 100%);
+	padding-top: 6rem;
+	padding-bottom: 3rem;
+
+	.card {
+		img {
+			max-height: 300px;
+			max-width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}

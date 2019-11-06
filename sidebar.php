@@ -13,5 +13,9 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	<div class="card shadow-light-lg lift lift-lg" style="border-top:3px solid #010d87; border-radius:0.25rem;">
+		<div class="card-body">
+			<?php dynamic_sidebar( 'sidebar-1' ); ?>
+		</div>
+	</div>
 </aside><!-- #secondary -->

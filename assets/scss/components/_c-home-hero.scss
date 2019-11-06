@@ -1,0 +1,134 @@
+.c-home-hero {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 65px;
+	background-color: $white;
+	overflow: hidden;
+
+	@include media-breakpoint-down(md) {
+		padding-top: 5rem;
+	}
+
+	&__image {
+		width: 50vw;
+		height: 100%;
+	}
+
+	&__bg-logo {
+	  position: absolute;
+	  left: 25%;
+	  top: 50%;
+		transform: translate(-50%, -50%) rotate(-10deg);
+		opacity: 0.1;
+		z-index: 0;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 4rem;
+		@include media-breakpoint-down(lg) {
+			font-size: 3rem;
+		}
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+			font-size: 1.5rem;
+		}
+	}
+
+	&__text-wrapper {
+    margin: auto 0 auto auto;
+    max-width: calc(650px + 5%);
+    max-width: 50vw;
+    padding: 3em 3%;
+		@include media-breakpoint-down(md) {
+			max-width: 100%;
+		}
+		p {
+			max-width: 80%;
+			@include media-breakpoint-down(md) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.twentytwenty-wrapper  {
+		width: 50vw;
+		height: 100vh;
+		max-height: 850px;
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
+	}
+}
+
+.home-hero-compare {
+	//height: 50% !important;
+	img {
+		width: 50vw;
+    height: 100vh;
+    max-height: 850px;
+    min-height: 850px;
+    object-fit: cover;
+    object-position: right;
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
+	}
+	&:after {
+		content: url(/wp-content/uploads/2019/10/arrow-pristine-2.png);
+		position: absolute;
+		top: calc(50% - 180px);
+		left: calc(50% - 280px);
+		opacity: 1;
+		z-index: 20;
+
+    animation:fade-out 1s 1;
+    animation-delay:2s;
+  	animation-fill-mode: forwards;
+	}
+
+	.twentytwenty-after {
+		z-index: 21 !important;
+	}
+}
+
+// Flickity Settings
+.flickity-prev-next-button {
+	top: 85% !important;
+	height: 65px !important;
+	width: 65px !important;
+}
+.flickity-prev-next-button.previous {
+	left: 25px !important;
+}
+.flickity-prev-next-button.next {
+	left: 90px !important;
+}
+.flickity-button {
+	background-color: rgba(0,0,0,0.5) !important;
+}
+.flickity-button-icon {
+  fill: #FFF !important;
+}
+.flickity-button:disabled {
+  display: none;
+}
+
+/* .is-fullscreen added to carousel when fullscreen
+   size cells to full height when fullscreen */
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+
+@keyframes fade-out{
+    from {opacity :1;}
+    to {opacity :0;}
+}
+
+@-webkit-keyframes fade-out{
+    from {opacity :1;}
+    to {opacity :0;}
+}

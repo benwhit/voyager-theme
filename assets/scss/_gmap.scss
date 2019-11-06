@@ -1,0 +1,73 @@
+.map {
+    width: 50vw;
+    height: 100%;
+    .boxed {
+        border-radius: .25rem;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.05);
+        background-color: #fff;
+    }
+}
+
+.map>[class*=container] {
+    position: static;
+    visibility: hidden
+}
+
+.map>[class*=container] [class*=col] {
+    visibility: visible;
+    position: relative;
+    z-index: 20
+}
+
+.map-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.map-circle {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+[class*=" icon-"],[class^=icon-] {
+    display: inline-block;
+    width: 1em;
+    line-height: 1em;
+    box-sizing: content-box;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+[class*=" icon-"][class*=-bordered],[class^=icon-][class*=-bordered] {
+    border-color: currentColor;
+    border-radius: 50%;
+    border-width: 2px;
+    padding: .5em
+}
+
+[class*=" icon-"][class*=-filled],[class^=icon-][class*=-filled] {
+    border-radius: 50%;
+    border-color: transparent;
+    padding: .5em
+}
+
+.svg-icon {
+    display: inline-block
+}
+
+.svg-icon svg {
+    display: block;
+    height: 150px;
+    width: 150px;
+    stroke: currentColor;
+    fill: currentColor
+}
+
+.svg-icon svg * {
+    stroke: currentColor
+}

@@ -1,0 +1,18 @@
+.pg-all-service__header {
+	margin: 90px auto 0; // Navbar height
+	padding: 8rem 1rem;
+	max-width: 1400px;
+	background-position: center;
+	background-size: cover;
+
+	&__title {
+		//color: $primary;
+		font-weight: 700;
+		line-height: 1;
+	}
+}
+
+.pg-all-service__featured-image {
+	height: 80vh;
+	max-height: 600px;
+}

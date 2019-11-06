@@ -1,0 +1,24 @@
+.twentytwenty-horizontal {
+
+	.twentytwenty-right-arrow {
+		border-left: 6px solid #0399fa !important;
+	}
+
+	.twentytwenty-left-arrow {
+		border-right: 6px solid #0399fa;
+	}
+
+	.twentytwenty-handle {
+		border: 3px solid #0399fa;
+
+		&:before {
+			background: #0399fa;
+			box-shadow: 0 3px 0 #0399fa, 0px 0px 12px rgba(51, 51, 51, 0.5) !important;
+		}
+
+		&:after {
+			background: #0399fa;
+			box-shadow: 0 -3px 0 #0399fa, 0px 0px 12px rgba(51, 51, 51, 0.5) !important;
+		}
+	}
+}

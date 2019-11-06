@@ -1,0 +1,264 @@
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.bg-primary-soft {
+    background-color: rgba(51,94,234,.1);
+}
+
+.btn-primary-soft {
+    background-color: rgba(51,94,234,.1);
+    color: #335eea
+}
+
+.badge-primary-soft {
+    background-color: rgba(51,94,234,.1);
+    color: #335eea;
+}
+
+.twentytwenty-square {
+	img {
+		object-fit: cover;
+		object-position: center;
+		max-height: 500px;
+		max-width: 100%;
+	}
+}
+
+.box-shadow {
+	border-radius: .625rem;
+	box-shadow: 25px 60px 125px -25px rgba(80,102,144,.1),16px 40px 75px -40px rgba(0,0,0,.2)
+}
+
+
+.img-skewed {
+    perspective: 1500px;
+    transform-style: preserve-3d
+}
+
+.img-skewed-left {
+    perspective-origin: left center
+}
+
+.img-skewed-left .img-skewed-item {
+    transform: rotateY(-35deg) rotateX(15deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+.img-skewed-right {
+    perspective-origin: right center
+}
+
+.img-skewed-right .img-skewed-item {
+    transform: rotateY(35deg) rotateX(15deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+
+//Badge
+.badge-float {
+    position: absolute;
+    z-index: 1000
+}
+
+.badge-float-outside {
+    top: -.5rem;
+    right: -.5rem
+}
+
+.badge-float-inside {
+    top: 1rem;
+    right: 1rem
+}
+
+
+// Blog Card
+.card {
+    flex-direction: column;
+    width: 100%
+}
+
+.card-body,.card-footer,.card-header,.card-meta,[class*=card-img] {
+    position: relative;
+    display: block;
+    flex-grow: 0;
+    width: inherit;
+    min-height: 1px
+}
+
+a.card,a.card-body,a.card-footer,a.card-header,a.card-meta {
+    color: inherit
+}
+
+a.card-body:hover,a.card-footer:hover,a.card-header:hover,a.card-meta:hover,a.card:hover {
+    text-decoration: none
+}
+
+.card-img-right {
+    border-radius: .375rem .375rem 0 0
+}
+
+@media (min-width: 768px) {
+    .card-img-right {
+        border-radius:0 .375rem .375rem 0
+    }
+}
+
+.card-img-left {
+    border-radius: .375rem .375rem 0 0
+}
+
+@media (min-width: 768px) {
+    .card-img-left {
+        border-radius:.375rem 0 0 .375rem
+    }
+}
+
+@media (min-width: 768px) {
+    .card-img-slider {
+        height:100%;
+        width: 100%
+    }
+
+    .card-img-slider * {
+        height: inherit!important;
+        width: inherit!important
+    }
+}
+
+.card-btn {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0
+}
+
+.card-border {
+    position: relative
+}
+
+.card-border::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-top-width: 2px;
+    border-bottom-width: calc(.375rem - 2px);
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: inherit;
+    border-bottom-color: transparent;
+    border-top-left-radius: .375rem;
+    border-top-right-radius: .375rem
+}
+
+.card-border-lg::after {
+    border-top-width: 3px;
+    border-bottom-width: calc(.375rem - 3px)
+}
+
+.card-border-xl::after {
+    border-top-width: 4px;
+    border-bottom-width: calc(.375rem - 3px)
+}
+
+@media (min-width: 576px) and (max-width:767.98px) {
+    .card-group {
+        flex-direction:column!important
+    }
+
+    .card-group>.card {
+        flex: auto
+    }
+}
+
+.card-meta {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 2rem 1.5rem
+}
+
+.card-meta-divider {
+    width: 100%;
+    margin: 0 0 1.5rem
+}
+
+@media (min-width: 768px) {
+    .card-row .card-body {
+        padding:4rem 2.5rem
+    }
+}
+
+@media (min-width: 768px) {
+    .card-row .card-meta {
+        padding-left:2.5rem;
+        padding-right: 2.5rem
+    }
+}
+
+.badge-rounded-circle {
+    height: calc(1em + .5rem);
+    padding-left: .25rem;
+    padding-right: .25rem;
+    border-radius: 10rem;
+}
+
+
+// Overlays
+.overlay {
+    position: relative
+}
+
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit
+}
+.overlay-black::before {
+    background-color: #161c2d
+}
+
+.overlay-10::before {
+    opacity: .1
+}
+
+.overlay-20::before {
+    opacity: .2
+}
+
+.overlay-30::before {
+    opacity: .3
+}
+
+.overlay-40::before {
+    opacity: .4
+}
+
+.overlay-50::before {
+    opacity: .5
+}
+
+.overlay-60::before {
+    opacity: .6
+}
+
+.overlay-70::before {
+    opacity: .7
+}
+
+.overlay-80::before {
+    opacity: .8
+}
+
+.overlay-90::before {
+    opacity: .9
+}

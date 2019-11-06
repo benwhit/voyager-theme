@@ -1,0 +1,59 @@
+.section-decorated-top {
+    padding-top: 9.375rem
+}
+
+.section-decorated-bottom {
+    padding-bottom: 9.375rem
+}
+
+.decorated-top {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    z-index: 20;
+    height: 3.125rem;
+    transform: translateZ(0)
+}
+
+.decorated-top svg {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 100%
+}
+
+.decorated-top svg>* {
+    fill: currentColor;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.05)
+}
+
+.decorated-bottom {
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    z-index: 20;
+    height: 3.125rem;
+    transform: translateZ(0)
+}
+
+.decorated-bottom svg {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 100%
+}
+
+.decorated-bottom svg>* {
+    fill: currentColor;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.05)
+}
+
+.decorated-sm {
+    height: 20px
+}

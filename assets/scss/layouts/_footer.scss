@@ -3,7 +3,6 @@
 	background-color: #f0f0f0;
 	padding-top: 200px;
 	padding-bottom: 100px;
-	margin-top: 125px;
 	ul { margin: 0; padding: 0; }
 	&__brand {
 		position: absolute;
@@ -46,12 +45,6 @@
 				&:last-of-type {
 					margin-right: 0;
 				}
-				a {
-					font-family: $f-primary;
-					font-size: 30px;
-					color: $secondary;
-					font-weight: 700;
-				}
 			}
 		}
 	}
@@ -68,7 +61,6 @@
 			text-align: center;
 			margin-bottom: 50px;
 		}
-		span { color: $primary; }
 		a {
 			text-decoration: none;
 			color: $secondary;

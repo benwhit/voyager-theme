@@ -1,4 +1,4 @@
-const LOCAL_SERVER = "atsservice.test";
+const LOCAL_SERVER = "pristinepowerwash.test";
 
 const {
   series,
@@ -34,13 +34,14 @@ const paths = {
 };
 
 
-function reload() {
+function reload(done) {
   browserSync.reload();
+  done();
 }
 
 
 // Compile SASS files
-function styles() {
+function styles(done) {
   return src('assets/scss/voyager.scss', { sourcemaps: true })
   .pipe(plumber())
   .pipe(sass( {
@@ -63,32 +64,34 @@ function styles() {
   .pipe(rename( { suffix: '.min' } ) )
   .pipe(cleanCSS())
   .pipe(dest(paths.styles.dest))
-  .pipe(notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
+  .pipe(notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) );
 }
 
 
 // Javascript
-function js() {
+function js(done) {
   return src(paths.scripts.src)
   .pipe(plumber())
   .pipe(concat('script.js'))
   .pipe(dest(paths.scripts.dest))
-  .pipe( rename( { suffix: '.min' } ) )
+  .pipe(rename( { suffix: '.min' } ) )
   .pipe(uglify())
   .pipe(dest(paths.scripts.dest))
-  .pipe( notify( { message: 'TASK: "js" Completed! 🚀', onLast: true } ) )
+  .pipe(notify( { message: 'TASK: "js" Completed! 🚀', onLast: true } ) );
 }
 
-function watcher() {
+
+function watcher(done) {
   browserSync.init({
+  	host: '192.168.1.159',
     proxy: LOCAL_SERVER,
     open: true,
     port: 3000
   });
 
-  watch(paths.styles.src, styles);
-  watch(paths.scripts.src, series(js, reload));
-  watch('**/*.php').on('change', reload);
+  watch([paths.styles.src], styles);
+  watch(['assets/js/src/*.js'], series(js, reload));
+  watch(['**/*.php']).on('change', series(reload));
 }
 
 exports.default = series(styles, js, watcher);
