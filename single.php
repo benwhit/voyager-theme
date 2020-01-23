@@ -28,18 +28,18 @@ get_header();
 <div class="pg-service__breadcrumbs">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-6">
+			<div class="col-12">
 				<?php
 				if ( function_exists('yoast_breadcrumb') ) {
 					yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
 				}
 				?>
 			</div>
-			<div class="col-12 col-md-6 text-md-right">
+<!-- 			<div class="col-12 col-md-6 text-md-right">
 				We Don't Just Clean...We Make It Pristine!
 				<br class="d-flex d-md-none">
 				<a href="tel:(540) 786-2626" class="ml-0 pl-0 ml-md-2">(540) 786-2626</a>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>

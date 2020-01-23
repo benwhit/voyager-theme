@@ -57,7 +57,7 @@ get_header();
 
 				</div>
 			</div> <!-- / .row -->
-			<div class="row">
+			<div class="row pb-6">
 				<div class="col-12 col-md-4 text-center border-right border-gray-300">
 
 					<!-- Heading -->
@@ -102,6 +102,23 @@ get_header();
 
 				</div>
 			</div> <!-- / .row -->
+			<hr>
+      <div class="row pt-4 text-center">
+          <div class="col-12 col-md-4">
+              <h3>Alexandria</h3>
+              <address>200 N. Washington St #320632, <br>Alexandria, VA 22320</address>
+          </div>
+          <div class="col-12 col-md-4">
+              <h3>Fairfax</h3>
+              <address>10660 Page Avenue, Suite 91,<br> Fairfax, VA 22038</address>
+          </div>
+          <div class="col-12 col-md-4">
+              <h3>Manassas</h3>
+              <address>
+                  8801 Sudley Rd, Suite 2562, <br>Manassas, VA 20110
+              </address>
+          </div>
+      </div>
 		</div>
 	</section>
 

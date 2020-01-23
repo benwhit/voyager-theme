@@ -87,6 +87,14 @@ get_header();
 					<?php endwhile; // end of the loop. ?>
 				</div>
 				<div class="col-12 col-md-4 offset-0 offset-lg-1">
+					<div class="card my-4">
+						<div class="bg-secondary text-white">
+							<h4 class="m-0 py-3 px-2">Request a FREE Quote</h4>
+						</div>
+						<div class="card-body">
+							<?php echo do_shortcode( '[wpforms id="2607"]', false ); ?>
+						</div>
+					</div>
 					<ul class="list-group pg-service_sidebar">
 						<li class="list-group-item bg-secondary text-white">
 							<h4 class="m-0">Our Services</h4>
@@ -108,14 +116,6 @@ get_header();
 						<li class="list-group-item"><a href="/services/seasonal-services/">Seasonal Services</a></li>
 						<li class="list-group-item"><a href="/services/snow-removal-crews/">Snow Removal Crews</a></li>
 					</ul>
-					<div class="card my-4">
-						<div class="bg-secondary text-white">
-							<h4 class="m-0 py-3 px-2">Request a FREE Quote</h4>
-						</div>
-						<div class="card-body">
-							<?php echo do_shortcode( '[wpforms id="2607"]', false ); ?>
-						</div>
-					</div>
 				</div>
 			</div>
 

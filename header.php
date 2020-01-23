@@ -22,6 +22,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<link href="https://fonts.googleapis.com/css?family=Cabin|Raleway:400,700&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
+	<!-- Hotjar Tracking Code for https://www.pristinepowerwash.com -->
+	<script>
+	    (function(h,o,t,j,a,r){
+	        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+	        h._hjSettings={hjid:1387063,hjsv:6};
+	        a=o.getElementsByTagName('head')[0];
+	        r=o.createElement('script');r.async=1;
+	        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+	        a.appendChild(r);
+	    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -31,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<nav class="navbar navbar-expand-xl navbar-dark fixed-top">
 						<!-- Logo -->
 						<a class="navbar-brand" href="/">
-							<img src="/wp-content/themes/voyager-theme/assets/images/logo.png" alt="Shane's Pristine Power Wash logo">
+							<img src="<?php get_site_url(); ?>/wp-content/uploads/2019/09/ShanesPristine_Logo-update_200x80.png" alt="Shane's Pristine Power Wash logo">
 						</a>
 
 						<!-- Mobile Hamburger Button -->

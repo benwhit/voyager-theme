@@ -3,10 +3,27 @@
 	// 	180deg,
 	// 	#F9FBFD 50%,
 	// 	rgba(255, 255, 255, 0) 100%);
-	padding-top: 6rem;
+	padding-top: 5rem;
 	padding-bottom: 3rem;
 
+	// Elements
+	&__title {
+		margin-top: -20px;
+		margin-left: -30px;
+		background-color: $primary;
+		color: #FFF;
+		padding: 1rem;
+	}
+
 	.card {
+		height: 100%;
+		.card-body {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+			padding-top: 0;
+		}
 		img {
 			max-height: 300px;
 			max-width: 100%;

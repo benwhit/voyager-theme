@@ -1,0 +1,16 @@
+.c-service-card {
+	border-top: 3px solid $secondary;
+	border-color: $secondary;
+
+	&:hover {
+    border-color: $secondary;
+    box-shadow: 0 0 2.1875rem rgba(140, 152, 164, 0.25);
+	}
+
+	img {
+		height: 200px;
+		width: 100%;
+		object-fit: cover;
+		object-position: contain;
+	}
+}

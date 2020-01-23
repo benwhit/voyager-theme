@@ -3,13 +3,9 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-top: 65px;
+	padding-top: 60px;
 	background-color: $white;
 	overflow: hidden;
-
-	@include media-breakpoint-down(md) {
-		padding-top: 5rem;
-	}
 
 	&__image {
 		width: 50vw;
@@ -27,13 +23,13 @@
 
 	&__title {
 		font-weight: bold;
-		font-size: 4rem;
+		font-size: 3.5rem;
 		@include media-breakpoint-down(lg) {
 			font-size: 3rem;
 		}
 		@include media-breakpoint-down(sm) {
 			text-align: center;
-			font-size: 1.5rem;
+			font-size: $h1-font-size;
 		}
 	}
 
@@ -57,14 +53,23 @@
 		width: 50vw;
 		height: 100vh;
 		max-height: 850px;
+
 		@include media-breakpoint-down(lg) {
 			width: 100%;
 		}
+		@include media-breakpoint-down(sm) {
+			height: auto;
+		}
+
 	}
 }
 
 .home-hero-compare {
-	//height: 50% !important;
+
+	@include media-breakpoint-down(sm) {
+		max-height: 50vh;
+	}
+
 	img {
 		width: 50vw;
     height: 100vh;
@@ -72,10 +77,19 @@
     min-height: 850px;
     object-fit: cover;
     object-position: right;
+
 		@include media-breakpoint-down(lg) {
 			width: 100%;
 		}
+
+		@include media-breakpoint-down(sm) {
+			height: 50vh;
+			max-height: 50vh;
+			min-height: auto;
+		}
+
 	}
+
 	&:after {
 		content: url(/wp-content/uploads/2019/10/arrow-pristine-2.png);
 		position: absolute;
@@ -92,6 +106,7 @@
 	.twentytwenty-after {
 		z-index: 21 !important;
 	}
+
 }
 
 // Flickity Settings

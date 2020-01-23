@@ -39,7 +39,7 @@
 
 
 			<!-- Text -->
-			<p class="mb-0 text-muted">
+			<p class="mb-0">
 				<?php echo wp_trim_words( get_the_content(), 40, '...' ); ?>
 			</p>
 
@@ -53,24 +53,24 @@
 		</a>
 
 		<!-- Meta -->
-		<a class="card-meta mt-auto" href="<?php echo get_permalink(); ?>">
+		<a class="card-meta mt-auto pb-1" href="<?php echo get_permalink(); ?>">
 
 			<!-- Divider -->
-			<hr class="card-meta-divider">
+			<hr class="card-meta-divider mb-1">
 
 			<!-- Avatar -->
 			<div class="avatar avatar-sm mr-2">
-				<img src="http://pristinepowerwash.test/wp-content/uploads/2019/09/logo.jpg" style="max-height: 50px;" alt="..." class="avatar-img rounded-circle">
+				<img src="/wp-content/uploads/2019/09/logo.jpg" style="max-height: 50px;" alt="..." class="avatar-img rounded-circle">
 			</div>
 
 			<!-- Author -->
-			<h6 class="text-uppercase text-muted mr-2 mb-0">
+			<h6 class="text-uppercase mr-2 mb-0">
 				SPP
 			</h6>
 
 			<!-- Date -->
-			<p class="h6 text-uppercase text-muted mb-0 ml-auto">
-				<time datetime="2019-05-02">Sept 01</time>
+			<p class="h6 text-uppercase mb-0 ml-auto">
+				<time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('M d, Y') ?></time>
 			</p>
 
 		</a>

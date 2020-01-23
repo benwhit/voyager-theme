@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
   				<!-- Text -->
   				<p class="lead mb-7 mb-md-9">
-  					At SHANE’S PRISTINE POWERWASH LLC we take pride in having a team of highly qualified specialists who are equipped with the best state of the art tools and equipment.
+  					At Shane's Pristine Powerwash LLC we take pride in having a team of highly qualified specialists who are equipped with the best state of the art tools and equipment.
   				</p>
 
   			</div>
@@ -85,9 +85,14 @@ if ( ! defined( 'ABSPATH' ) ) {
   				</h2>
 
   				<!-- Text -->
-  				<p>
-  					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi reiciendis odio perferendis libero saepe voluptatum fugiat dolore voluptates aut, ut quas doloremque quo ad quis ipsum molestias neque pariatur commodi.
+  				<p class="mt-6">
+  					At Shane's Pristine Power Wash we take pride in having a team of highly qualified specialists who are equipped with the best state of the tools and equipment. We pride ourselves in not only having a 5-STAR reputation, but also that we offer a wide range of specialty services.
   				</p>
+
+  				<p>
+  					You deserve the best. Here are some of the reasons why Shane’s Pristine Powerwash of Fredericksburg & Spotsylvania VA is truly better than the rest:
+  				</p>
+
   				<ul class="mb-0">
   					<li class="d-flex">
   						<!-- Check -->
@@ -152,6 +157,14 @@ if ( ! defined( 'ABSPATH' ) ) {
   								<p>We provide the best quality service in the Fredericksburg & Stafford Area.</p></li>
   							</ul>
 
+
+  				<p class="h5 mt-5">
+						Our customers are our number one priority that’s why we offer our customer a 100% satisfaction guarantee.
+  				</p>
+  				<p>
+  					We use environmentally safe products combined with our superior equipment to ensure that our workmanship is consistently the best.
+  				</p>
+
   						</div>
   					</div> <!-- / .row -->
   				</div> <!-- / .container -->
@@ -176,7 +189,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						Owner/Operator, Shane French has lived in Fredericksburg/Spotsylvania communities his entire life and is proud to serve its residents as well as those in surrounding areas.
 					</p>
 
-					<p>Shane’s Pristine Powerwash LLC has nearly a decade of experience in the SOFT Power Washing / Pressure Washing field and is professionally trained.</p>
+					<p>Shane’s Pristine Powerwash LLC has nearly a decade of experience in the soft Power Washing / Pressure Washing field and is professionally trained.</p>
 
 					<p>Shane’s Pristine Powerwash LLC is committed to remaining up to date on the latest technology, products, safety and green technologies in the Power Washing / Pressure Washing Industry.
 					</p>
@@ -217,7 +230,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   				<!-- Heading -->
   				<h2>
   					Located in Virginia.<br>
-  					<span class="text-success">We provide the best quality service in the Fredericksburg & Stafford Area.</span>
+  					<span class="text-primary">We provide the best quality service in the Central & Northern Virginia area.</span>
   				</h2>
 
   				<!-- Text -->

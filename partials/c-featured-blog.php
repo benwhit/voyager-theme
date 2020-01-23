@@ -12,7 +12,7 @@
 					</span>
 
 				</div>
-				<a class="col-12 col-md-6 order-md-2 bg-cover card-img-right" style="background-image: url(/wp-content/uploads/2019/09/IMG_2596-768x576.jpeg); background-position: right bottom" href="<?php echo the_permalink(); ?>">
+				<a class="col-12 col-md-6 order-md-2 bg-cover card-img-right" style="background-image: url(/wp-content/uploads/2019/09/IMG_2596-768x576.jpeg); background-position: center; background-size: cover;" href="<?php echo the_permalink(); ?>">
 
 					<!-- Image (placeholder) -->
 					<img src="/wp-content/uploads/2019/09/IMG_2596-768x576.jpeg" alt="..." class="img-fluid d-md-none invisible">
@@ -31,14 +31,16 @@
 					<a class="card-body" href="<?php echo the_permalink(); ?>">
 
 						<!-- Heading -->
-						<h3>
+						<h3 class="text-primary mb-5">
 							<?php echo the_title(); ?>
 						</h3>
 
 						<!-- Text -->
 						<p class="mb-0">
-							<?php echo wp_trim_words( get_the_content(), 40, '...' ); ?>
+							<?php echo wp_trim_words( get_the_content(), 60, '...' ); ?>
 						</p>
+
+						<button class="btn btn-primary mt-6">Read Featured Article <i class="pl-4 fa fa-angle-right"></i></button>
 
 					</a>
 

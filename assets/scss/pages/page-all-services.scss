@@ -5,10 +5,16 @@
 	background-position: center;
 	background-size: cover;
 
+	@include media-breakpoint-down(md) {
+		margin: 60px auto 0; // Navbar height
+		padding: 4rem 5px;
+	}
+
 	&__title {
 		//color: $primary;
 		font-weight: 700;
 		line-height: 1;
+		margin-bottom: 2rem;
 	}
 }
 

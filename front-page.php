@@ -13,24 +13,23 @@ get_header();
 
 		<!-- Component: Home Hero -->
 		<div class="c-home-hero">
-			<div class="container-fluid">
+			<div class="container-fluid px-0">
 				<div class="row align-items-stretch">
-					<div class="col-12 col-lg-6 d-flex">
+					<div class="col-12 col-lg-6 d-flex order-1 order-md-0">
 						<div class="c-home-hero__text-wrapper">
-							<h1 class="c-home-hero__title">Professional Commercial & Residential <span class="text-secondary"> Pressure Washing Services</span></h1>
+							<h1 class="c-home-hero__title">Professional Commercial & Residential <span class="text-primary"> Pressure Washing Services</span></h1>
 							<p class="lead text-center text-md-left mt-4">At Shane's Pristine Power Wash we take pride in having a team of highly qualified specialists who are equipped with the best state of the art tools and equipment.</p>
-							<p class="lead mb-6 mb-lg-8 text-center text-md-left">We Don’t Just Clean. We Make It Pristine!</p>
 							<div class="text-center text-md-left">
-	              <a href="/services" class="btn btn-primary lift">
+	              <a href="/services" class="btn btn-primary lift mr-2 my-2">
 	                View all Services
 	              </a>
-	              <a href="/quote-request" class="btn btn-secondary ml-2">
+	              <a href="/quote-request" class="btn btn-secondary m-2">
 	                Request a FREE Quote <i class="fas fa-arrow-right d-none d-md-inline ml-3"></i>
 	              </a>
 	            </div>
 						</div>
 					</div>
-					<div class="col-12 col-lg-6">
+					<div class="col-12 col-lg-6 order-0 order-md-1">
 						<div class="home-hero-compare">
 							<!-- The before image is first -->
 							<img src="/wp-content/uploads/2019/09/before-home.jpg" />
@@ -40,414 +39,26 @@ get_header();
 					</div>
 				</div>
 			</div>
-			<!-- <div class="decorated-bottom text-light"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 40" preserveAspectRatio="none"> <path d="M 0 9.18948 C 200 9.18948 245.947 30.8105 445.947 30.8105 C 645.947 30.8105 800 9.18948 1000 9.18948 L 1000 50 L 0 50 L 0 9.18948 Z"> <animate attributeName="d" begin="0s" dur="0" repeatCount="indefinite" values="M0,0 C200,7.11236625e-15 200,40 400,40 C600,40 800,0 1000,0 L1000,50 L0,50 L0,0 Z; M0,40 C200,40 400,0 600,0 C800,0 800,40 1000,40 L1000,50 L0,50 L0,40 Z; M0,30 C200,30 200,0 400,0 C600,0 800,40 1000,40 L1000,50 L0,50 L0,30 Z; M0,0 C200,7.11236625e-15 200,40 400,40 C600,40 800,0 1000,0 L1000,50 L0,50 L0,0 Z;"></animate> </path> </svg></div> -->
 		</div>
 
-		<!-- Component: Home Services -->
-		<div class="c-home-services">
-			<div class="container">
-				<div class="row justify-content-center text-center">
-					<div class="col col-md-8">
-						<span class="badge badge-pill badge-primary-soft mb-3">
-							<span class="h6 text-uppercase">Our Services</span>
-						</span>
-						<p class="h2 mb-4 text-center">
-							Our #1 goal is to provide our customers with the
-							<span class="text-secondary">
-								Best Value and Satisfation</span>
-						</p>
-						<p class="lead font-size-lg">From house washing to roof cleaning, the staff at Shane’s Pristine Powerwash are here to help you.</p>
-					</div>
-				</div>
-				<div class="row row-flex pt-4">
-					<div class="col-12 col-lg-6 my-5">
-						<div class="card shadow-light-lg mb-6 mb-md-0 lift lift-lg">
+		<?php get_template_part( 'partials/c', 'home-services' ); ?>
 
-							<!-- Image -->
-							<?php echo wp_get_attachment_image( 1895, 'large', false, 'class=card-img-top'); ?>
-
-							<!-- Shape -->
-							<div class="position-relative">
-								<div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-									<svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
-									</svg>
-								</div>
-							</div>
-
-							<!-- Body -->
-							<div class="card-body position-relative">
-
-								<!-- Heading -->
-								<h3 class="py-4">
-									<span class="text-secondary">Residential</span> Power Washing Services
-								</h3>
-
-								<!-- Text -->
-								<p>
-									From house washing to roof cleaning, the staff at Shane’s Pristine Powerwash are here to help you.
-								</p>
-
-								<div class="row mb-5">
-									<div class="col-12 col-xl-6">
-										<ul class="list-unstyled mb-0">
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													House Washing
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Roof Washing
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Decks and Fences Cleaning
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Exterior Windows Cleaning
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Patios, Pools, Porches Cleaning
-												</p>
-
-											</li>
-										</ul>
-									</div>
-									<div class="col-12 col-xl-6">
-										<ul class="list-unstyled mb-0">
-
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Concrete, Driveways, Walkways
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Sidewalks, Steps Cleaning
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Gutters, Down Spouts
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Chimneys Cleaning … and more.
-												</p>
-
-											</li>
-
-										</ul>
-
-									</div>
-								</div>
-
-								<!-- Link -->
-								<a href="/residential-pressure-washing" class="btn btn-secondary text-decoration-none">
-									View all Residential Services <i class="fa fa-arrow-right ml-3"></i>
-								</a>
-
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-lg-6 my-5">
-						<div class="card shadow-light-lg mb-6 mb-md-0 lift lift-lg">
-
-							<!-- Image -->
-							<?php echo wp_get_attachment_image( 2461, 'large', false, 'class=card-img-top'); ?>
-
-							<!-- Shape -->
-							<div class="position-relative">
-								<div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-									<svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
-									</svg>
-								</div>
-							</div>
-
-							<!-- Body -->
-							<div class="card-body position-relative">
-
-								<!-- Heading -->
-								<h3 class="py-4">
-									<span class="text-secondary">Commercial</span> Power Washing Services
-								</h3>
-
-								<!-- Text -->
-								<p class="">
-									We look forward to providing the most professional pressure washing service to our commercial customers.
-								</p>
-
-								<div class="row mb-5">
-									<div class="col-12 col-xl-6">
-										<ul class="list-unstyled mb-0">
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Building Washing
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Concrete Cleaning
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Fleet Washing
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Multi-Unit Cleaning
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Efflorescence (White Salt) Build-up Removal
-												</p>
-
-											</li>
-										</ul>
-
-									</div>
-									<div class="col-12 col-xl-6">
-
-										<ul class="list-unstyled mb-0">
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Property Managers
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Hood and Kitchen Exhaust Cleaning
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Landscaping and Exterior Maintenance
-												</p>
-
-											</li>
-											<li class="d-flex">
-
-												<!-- Check -->
-												<div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-													<i class="fas fa-check"></i>
-												</div>
-
-												<!-- Text -->
-												<p>
-													Snow Pushing and Salt/Sand Distribution
-												</p>
-
-											</li>
-										</ul>
-									</div>
-								</div>
-
-
-								<!-- Link -->
-								<a href="/commercial-kitchens" class="btn btn-secondary text-decoration-none">
-									View all Commercial Services <i class="fa fa-arrow-right ml-3"></i>
-								</a>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- About Section -->
-		<section class="py-10 bg-white">
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-lg-6">
-						<div class="compare-container twentytwenty-square box-shadow mr-md-6 mb-6 mb-md-0">
-							<?php echo wp_get_attachment_image( 1898, 'large'); ?>
-							<?php echo wp_get_attachment_image( 1897, 'large'); ?>
-						</div>
-					</div>
-					<div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
-						<span class="badge badge-pill badge-primary-soft mb-3">
-							<span class="h6 text-uppercase">About Our Company</span>
-						</span>
-						<p class="h2 pb-4">We Are A Professionally Trained  <span class="text-secondary">Power Washing / Pressure Washing Company.</span></h2>
-						<p class="lead">We power wash houses and commercial structures with a chemical that is environmentally friendly and kills all mold and dirt on the siding of the structure.</p>
-						<p class="mt-1 mb-7 d-flex align-items-center justify-content-center align-middle">
-							<i class="fas fa-star fa-lg text-warning"></i>
-							<i class="fas fa-star fa-lg text-warning"></i>
-							<i class="fas fa-star fa-lg text-warning"></i>
-							<i class="fas fa-star fa-lg text-warning"></i>
-							<i class="fas fa-star fa-lg text-warning"></i>
-							<span class="ml-4 d-flex align-middle align-items-center justify-content-center">
-								See our
-								<a href="https://www.facebook.com/pg/shanespristinepowerwash/reviews/" target="_blank" class="px-2"><i class="fab fa-facebook fa-2x"></i></a>
-								and
-								<a href="https://www.google.com/search?q=pristine+powerwash+reviews&oq=pristine+powerwash+reviews&gs_l=psy-ab.3...61316.61316.0.61886.1.1.0.0.0.0.128.128.0j1.1.0....0...1.1.64.psy-ab..0.0.0....0.vywcoHSMUcY#lrd=0x89b6bf5613b187b5:0xda7c84a61ff0253,1,,," target="_blank" class="px-2"><i class="fab fa-google fa-2x"></i></a>
-								reviews!
-							</span>
-						</p>
-						<p><a class="text-secondary" href="/about/" role="button">Learn more about Shane's Pristine Powerwash <i class="fas fa-arrow-right ml-1"></i></a></p>
-					</div>
-				</div>
-			</div>
-		</section>
+		<?php get_template_part( 'partials/c', 'about' ); ?>
 
 		<!-- Component: Service Box - Residential -->
 		<div class="c-horizontal-service-box bg-secondary text-white py-10">
-			<div class="container px-0">
-				<div class="row no-gutters">
-					<div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start order-1 order-lg-0">
 						<span class="badge badge-pill badge-soft text-white mb-3">
-							<span class="h6 text-uppercase">Residential Services</span>
+							<span class="h6 text-uppercase">Residential Power Washing</span>
 						</span>
 						<h2 class="mb-6">Professional Residential Power Washing Services</h3>
 						<p class="mb-8">At Shane’s Pristine Powerwash we make sure to thoroughly clean the exterior of your home. When we use our soft wash process, we only use chemicals that are environmentally friendly and kills all mold and dirt on the siding of the structures. </p>
-						<a href="/residential-pressure-washing" class="text-white border-bottom text-decoration-none">See All Residential Services <i class="fas fa-arrow-right ml-2"></i></a>
+						<a href="/residential-pressure-washing" class="h5 text-white border-bottom text-decoration-none">See All Residential Services <i class="fas fa-arrow-right ml-2"></i></a>
 					</div>
-					<div class="col-12 col-lg-6 img-skewed img-skewed-left p-6">
-						<?php echo wp_get_attachment_image( 1899, 'large', false, 'class=box-shadow img-fluid img-skewed-item'); ?>
+					<div class="col-12 col-lg-6 order-0 order-lg-1 img-skewed img-skewed-left p-6">
+						<?php echo wp_get_attachment_image( 1899, 'medium-lg', false, 'class=box-shadow img-fluid img-skewed-item my-4'); ?>
 					</div>
 				</div>
 			</div>
@@ -455,18 +66,18 @@ get_header();
 
 		<!-- Component: Service Box - Commercial -->
 		<div class="c-horizontal-service-box bg-primary text-white py-8">
-			<div class="container px-0">
-				<div class="row no-gutters">
+			<div class="container">
+				<div class="row">
 					<div class="col-12 col-lg-6 img-skewed img-skewed-right p-6">
-						<?php echo wp_get_attachment_image( 1901, 'large', false, 'class=box-shadow img-fluid img-skewed-item'); ?>
+						<?php echo wp_get_attachment_image( 1901, 'medium-lg', false, 'class=box-shadow img-fluid img-skewed-item my-4'); ?>
 					</div>
 					<div class="col d-flex flex-column justify-content-center align-items-start">
 						<span class="badge badge-pill badge-soft text-white mb-3">
-							<span class="h6 text-uppercase">Residential Services</span>
+							<span class="h6 text-uppercase">Commercial Power Washing</span>
 						</span>
 						<h3 class="h2 mb-6">Professional Commercial Power Washing Services</h3>
 						<p class="mb-8">As one of the most respected commercial kitchen cleaning companies around, we understand that when it comes to cleanliness, the exterior is just as important as the interior. Our team takes this into consideration every time we arrive for a commercial pressure washing service.</p>
-						<a href="#" class="text-white border-bottom text-decoration-none">See All Commercial Services <i class="fas fa-arrow-right ml-2"></i></a>
+						<a href="<?php echo esc_url( get_page_link( 2549 ) ); ?>" class="h5 text-white border-bottom text-decoration-none">See All Commercial Services <i class="fas fa-arrow-right ml-2"></i></a>
 					</div>
 				</div>
 			</div>
@@ -474,64 +85,71 @@ get_header();
 
 		<!-- Component: Service Box - Roof -->
 		<div class="c-horizontal-service-box py-8 text-white" style="background-color: #0399fa;">
-			<div class="container px-0">
-				<div class="row no-gutters">
-					<div class="col d-flex flex-column justify-content-center align-items-start">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start order-1 order-lg-0">
 						<span class="badge badge-pill badge-soft text-white mb-3">
-							<span class="h6 text-uppercase">Residential Services</span>
+							<span class="h6 text-uppercase">Roof Services</span>
 						</span>
 						<h3 class="h2 mb-6">Professional Roof Power Washing Services</h3>
 						<p class="mb-8">Our roof washing service can restore your roof! We only use chemicals that are environmentally friendly and kills all mold and dirt on the roof of the residential and commercial structures we are cleaning.</p>
-						<a href="#" class="text-white border-bottom text-decoration-none">See All Residential Services <i class="fas fa-arrow-right ml-2"></i></a>
+						<a href="<?php echo esc_url( get_page_link( 1826 ) ); ?>" class="h5 text-white border-bottom text-decoration-none">See All Roof Services <i class="fas fa-arrow-right ml-2"></i></a>
 					</div>
-					<div class="col img-skewed img-skewed-left p-6">
-						<?php echo wp_get_attachment_image( 1902, 'large', false, 'class=box-shadow img-fluid img-skewed-item'); ?>
+					<div class="col-12 col-lg-6 img-skewed img-skewed-left p-6">
+						<?php echo wp_get_attachment_image( 1902, 'medium-lg', false, 'class=box-shadow img-fluid img-skewed-item my-4'); ?>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Component: Service Box - White Salt -->
-		<div class="c-horizontal-service-box bg-white py-8">
-			<div class="container px-0">
-				<div class="row no-gutters">
+		<div class="c-horizontal-service-box bg-secondary text-white py-8 text-center text-lg-left">
+			<div class="container">
+				<div class="row">
 					<div class="col-12 col-lg-6 img-skewed img-skewed-right p-6">
-						<img class="box-shadow img-fluid img-skewed-item" src="/wp-content/uploads/2019/09/efflorescence-coming-off-chimney-e1560679158840.jpg" alt="">
+						<?php echo wp_get_attachment_image( 1906, 'medium-lg', false, 'class=box-shadow img-fluid img-skewed-item my-4'); ?>
 					</div>
-					<div class="col p-8 order-1 order-lg-2 d-flex flex-column justify-content-center align-items-start">
-						<span class="mb-3 text-primary">
-							WHITE SALT BUILD-UP
+					<div class="col order-1 order-lg-2 d-flex flex-column justify-content-center align-items-center align-items-lg-start">
+						<span class="badge badge-pill badge-soft text-white mb-3">
+							<span class="h6 text-uppercase">
+								WHITE SALT BUILD-UP
+							</span>
 						</span>
 						<h3 class="h2 mb-6">Professional Efflorescence (White Salt) Removal Services</h3>
-						<p class="mb-8">We Use Our EXCLUSIVE “SOFT WASH” Processes and Systems To Remove EFFLORESCENCE Build-up and Restore Your Brick, Stone, Concrete and Masonry...To Their PRISTINE Condition!</p>
-						<a href="#" class="text-primary border-bottom text-decoration-none">See Efflorescence Services <i class="fas fa-arrow-right ml-2"></i></a>
+						<p class="mb-8">We use our exclusive "soft wash" processes and systems to remove Efflorescence build-up and restore your Brick, Stone, Concrete and Masonry...to their pristine condition!</p>
+						<p><a href="<?php echo esc_url( get_page_link( 1827 ) ); ?>" class="h5 text-white border-bottom text-decoration-none">See Efflorescence Services <i class="fas fa-arrow-right ml-2"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Testimonials -->
-		<div class="bg-gray-100 py-10">
+		<div class="bg-white py-10">
       <div class="container space-2 space-3--lg">
         <!-- Title -->
-        <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-9">
-          <span class="mb-3">Pricing plans</span>
-          <h3>Customer stories</h3>
-          <p>Discover how Space has helped build businesses just like yours.</p>
+        <div class="text-center mx-md-auto mb-9">
+						<span class="badge badge-pill badge-soft mb-3">
+							<span class="h6 text-uppercase">
+								Our Customers Love Us!
+							</span>
+						</span>
+          <p class="h1">What Our Customers Say</p>
+          <p>Discover how Shane's Pristine Power Wash has helped all types <br class="d-none d-lg-block"> of different Residential and Commercial Clients.</p>
         </div>
         <!-- End Title -->
 
         <div class="card-columns">
+
           <!-- Testimonials -->
           <article class="card rounded mb-3">
             <div class="card-body p-5">
-              <blockquote class="text-secondary">I love Space! I love the ease of use, I love the fact that I have total creative freedom. The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly.</blockquote>
+              <blockquote class="text-primary">I recently had three homes cleaned and am very pleased with the results. Pristine takes pride in their work and provide great customer service. I would definitely recommend them.</blockquote>
             </div>
             <div class="card-footer px-5">
               <div class="media">
-                <img class="u-avatar rounded-circle mr-3" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
+                <img class="u-avatar rounded-circle mr-3" src="https://scontent.fphl2-4.fna.fbcdn.net/v/t1.0-1/p50x50/42800879_10215654471748354_3252544970522886144_n.jpg?_nc_cat=108&_nc_oc=AQlI_Q4EGLc7vYjXBl1fwIjD5k7D9QjgIf0G-_69UjMAxNTLIGKcf9O2si1Faz0JeSc&_nc_ht=scontent.fphl2-4.fna&oh=afbf08f5ff376089e6c7fbecb6488a7c&oe=5E624D93" alt="Image Description">
                 <div class="media-body">
-                  <h4 class="h6 mb-0">Maria Muzynska</h4>
+                  <h4 class="h6 mb-0">Connie Beverly Green</h4>
                   <ul class="list-inline mb-0">
                     <li class="list-inline-item text-warning font-size-13">
                       <span class="fa fa-star"></span>
@@ -550,13 +168,13 @@ get_header();
           <!-- Testimonials -->
           <article class="card rounded mb-3">
             <div class="card-body p-5">
-              <blockquote class="text-secondary">We are incredibly impressed with Space and how well it supports its customers with amazing products and services. One simple subscription gives you access to all our tools, plus so much more.</blockquote>
+              <blockquote class="text-primary">Shane’s Pristine Powerwash did a great job on my house! Very polite and professional! I highly recommend them!</blockquote>
             </div>
             <div class="card-footer px-5">
               <div class="media">
-                <img class="u-avatar rounded-circle mr-3" src="../../assets/img/100x100/img4.jpg" alt="Image Description">
+                <img class="u-avatar rounded-circle mr-3" src="https://scontent.fphl2-4.fna.fbcdn.net/v/t1.0-1/p50x50/14063932_1211724518848781_3296531473222913230_n.jpg?_nc_cat=110&_nc_oc=AQl6Kcl05ggNWbggZx-Ame2kJd8pH_djEaBPPKy9cMpp4xhwfXvClHqo7ROL3DUy8R4&_nc_ht=scontent.fphl2-4.fna&oh=253d081393e874607f7821fd588ae595&oe=5E414ED8" alt="Image Description">
                 <div class="media-body">
-                  <h4 class="h6 mb-0">Mark McManus</h4>
+                  <h4 class="h6 mb-0">Katy Kahle Reep</h4>
                   <ul class="list-inline mb-0">
                     <li class="list-inline-item text-warning font-size-13">
                       <span class="fa fa-star"></span>
@@ -575,13 +193,13 @@ get_header();
           <!-- Testimonials -->
           <article class="card rounded mb-3">
             <div class="card-body p-5">
-              <blockquote class="text-secondary">Space brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things work—and get results.</blockquote>
+              <blockquote class="text-primary">A+ Service provider, with a great crew and unbelievable management. Very reliable and great pricing on all services. They Power washed and sealed my deck and the results were amazing. I Would recommend Pristine When you need it cleaned!</blockquote>
             </div>
             <div class="card-footer px-5">
               <div class="media">
-                <img class="u-avatar rounded-circle mr-3" src="../../assets/img/100x100/img3.jpg" alt="Image Description">
+                <img class="u-avatar rounded-circle mr-3" src="https://scontent.fphl2-3.fna.fbcdn.net/v/t1.0-1/p50x50/42108126_10157873071275200_835967589770330112_n.jpg?_nc_cat=101&_nc_oc=AQnC173hVSyhbXp8mQv8V4OPIB_IwNMMIVXJl4N0Ic2huicHpQtiKqxmGeL4PyIfNWE&_nc_ht=scontent.fphl2-3.fna&oh=121e643490a593edac85c8252c6d4848&oe=5E45DF9E" alt="Image Description">
                 <div class="media-body">
-                  <h4 class="h6 mb-0">Alex Pottorf</h4>
+                  <h4 class="h6 mb-0">Jamie L Ashley </h4>
                   <ul class="list-inline mb-0">
                     <li class="list-inline-item text-warning font-size-13">
                       <span class="fa fa-star"></span>
@@ -600,13 +218,13 @@ get_header();
           <!-- Testimonials -->
           <article class="card rounded mb-3">
             <div class="card-body p-5">
-              <blockquote class="text-secondary">The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. I love Space! I love the ease of use, I love the fact that I have total creative freedom. We are incredibly impressed with Space and how well it supports its customers with amazing products and services.</blockquote>
+              <blockquote class="text-primary">We are incredibly impressed with Space and how well it supports its customers with amazing products and services. One simple subscription gives you access to all our tools, plus so much more.</blockquote>
             </div>
             <div class="card-footer px-5">
               <div class="media">
-                <img class="u-avatar rounded-circle mr-3" src="../../assets/img/100x100/img2.jpg" alt="Image Description">
+                <img class="u-avatar rounded-circle mr-3" src="https://scontent.fphl2-3.fna.fbcdn.net/v/t1.0-1/p50x50/74587150_10218073685105065_5505164534551150592_n.jpg?_nc_cat=101&_nc_oc=AQkll0pdH6uyNlcoT36fy58BoOXZKyXfv5CPKGLy1en_tXZJ3VDz8UPVb8RI3PDA5Ks&_nc_ht=scontent.fphl2-3.fna&oh=b4859f99d4fac49afe346b1938987a7e&oe=5E4E746F" alt="Image Description">
                 <div class="media-body">
-                  <h4 class="h6 mb-0">Charlotte Moore</h4>
+                  <h4 class="h6 mb-0">Jean Godfrey Rose</h4>
                   <ul class="list-inline mb-0">
                     <li class="list-inline-item text-warning font-size-13">
                       <span class="fa fa-star"></span>
@@ -625,13 +243,13 @@ get_header();
           <!-- Testimonials -->
           <article class="card rounded mb-3">
             <div class="card-body p-5">
-              <blockquote class="text-secondary">One simple subscription gives you access to all our tools, plus so much more. Space brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things work—and get results.</blockquote>
+              <blockquote class="text-primary">Fantastic company with a detail-oriented and meticulous owner, Shane! They did a great job on my house. Thanks for the good work!</blockquote>
             </div>
             <div class="card-footer px-5">
               <div class="media">
-                <img class="u-avatar rounded-circle mr-3" src="../../assets/img/100x100/img14.jpg" alt="Image Description">
+                <img class="u-avatar rounded-circle mr-3" src="https://scontent.fphl2-3.fna.fbcdn.net/v/t1.0-1/c8.0.50.50a/p50x50/420966_2685373970544_400536712_n.jpg?_nc_cat=109&_nc_oc=AQmoPafwqWJR1SsKaxlyqlPFaOXGANRvI1tAtFwiHAkXOn5W0K366A1rS_xXdUJRW4w&_nc_ht=scontent.fphl2-3.fna&oh=13b6558c5e11810100f8fdc5ef886c0a&oe=5E5DE964" alt="Image Description">
                 <div class="media-body">
-                  <h4 class="h6 mb-0">Ella Brown</h4>
+                  <h4 class="h6 mb-0">Nancy Parnell</h4>
                   <ul class="list-inline mb-0">
                     <li class="list-inline-item text-warning font-size-13">
                       <span class="fa fa-star"></span>
@@ -650,13 +268,13 @@ get_header();
           <!-- Testimonials -->
           <article class="card rounded mb-3">
             <div class="card-body p-5">
-              <blockquote class="text-secondary">Just Wow! Space brings so many benefits to any team that does anything following a process. It is the easiest way for teams to build cool things work—and get results.</blockquote>
+              <blockquote class="text-primary">Pristine just washed our house and did a great job for a good price. We are happy we didn't have to do it ourselves. My only regret is that they wouldn't bring their hose in and clean the inside of our house.</blockquote>
             </div>
             <div class="card-footer px-5">
               <div class="media">
-                <img class="u-avatar rounded-circle mr-3" src="../../assets/img/100x100/img15.jpg" alt="Image Description">
+                <img class="u-avatar rounded-circle mr-3" src="https://scontent.fphl2-1.fna.fbcdn.net/v/t1.0-1/p50x50/67114337_10219881069082913_408060801228734464_n.jpg?_nc_cat=100&_nc_oc=AQl2JOYI8FI8-_yv1BALT2-3d28NYWG3NK-Y2E969S4vWDivk7ipQ3l-gyivk48iyas&_nc_ht=scontent.fphl2-1.fna&oh=2708eaa438fe87b5090dbdb4786ed1a6&oe=5E570D97" alt="Image Description">
                 <div class="media-body">
-                  <h4 class="h6 mb-0">Markus Brown</h4>
+                  <h4 class="h6 mb-0">Patte Reider Ormsby</h4>
                   <ul class="list-inline mb-0">
                     <li class="list-inline-item text-warning font-size-13">
                       <span class="fa fa-star"></span>
@@ -671,6 +289,7 @@ get_header();
             </div>
           </article>
           <!-- End Testimonials -->
+
         </div>
       </div>
     </div>
@@ -679,23 +298,28 @@ get_header();
 		<section class="pt-7 pt-md-10">
 			<div class="container">
 				<div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-lg-8 text-center">
+          <div class="col text-center">
+		        <!-- Title -->
+		        <div class="text-center mx-md-auto mb-9">
 
-            <!-- Badge -->
-            <span class="badge badge-pill badge-primary-soft mb-3">
-              <span class="h6 text-uppercase">Our blog</span>
-            </span>
+	            <!-- Badge -->
+							<span class="badge badge-pill badge-soft mb-3">
+								<span class="h6 text-uppercase">News & Articles</span>
+	            </span>
 
-            <!-- Heading -->
-            <h1 class="display-3 font-weight-bold mb-7 text-secondary">
-              Shane's Pristine Power Washing News & Articles
-            </h1>
+	            <!-- Heading -->
+	            <p class="h1 font-weight-bold">
+	              Shane's Pristine Power Washing Blog
+	            </p>
 
+	          	<p>Keep up with the latest updates from Shane's Pristine Power Wash.</p>
+
+	          </div>
           </div>
         </div>
 				<?php
 				$featured_args = array(
-				  'p'         => 2436,
+				  'p'         => 2532,
 				  'post_type' => 'any',
 				  'post_count' => 1
 				);
@@ -721,7 +345,7 @@ get_header();
 
 						<!-- Heading -->
 						<h3 class="mb-0">
-							Latest Blog Articles
+							More Blog Articles
 						</h3>
 
 						<!-- Text -->
@@ -733,7 +357,7 @@ get_header();
 					<div class="col-12 col-md-auto">
 
 						<!-- Button -->
-						<a href="/blog" class="btn btn-sm btn-outline-gray-300 d-none d-md-inline">
+						<a href="/blog" class="btn btn-secondary d-none d-md-inline">
 							View all Articles
 						</a>
 
@@ -744,7 +368,7 @@ get_header();
 					$all_args = array(
 					  'post_type' => 'post',
 					  'posts_per_page' => 3,
-					  'post__not_in' => array( 2436 )
+					  'post__not_in' => array( 2532 )
 					);
 					$all_posts = new WP_Query($all_args);
 					if ( $all_posts->have_posts() ) {
@@ -761,7 +385,7 @@ get_header();
 		</section>
 
 		<!-- Google Map Section -->
-		<section class="pt-8 pt-md-8 bg-white">
+		<section class="bg-white">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-6">
@@ -789,7 +413,7 @@ get_header();
 						<!-- Heading -->
 						<h2>
 							Located in Virginia.<br>
-							<span class="text-secondary">We provide the best quality service in the Fredericksburg & Stafford Area.</span>
+							We provide the best quality service to <span class="text-secondary">Central and Northern Virginia.</span>
 						</h2>
 
 						<!-- Text -->
