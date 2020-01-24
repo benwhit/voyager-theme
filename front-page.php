@@ -9,7 +9,6 @@ get_header();
 ?>
 
 <main id="main" class="site-main">
-	<section id="content" class="page-content">
 
 		<!-- Component: Home Hero -->
 		<div class="c-home-hero">
@@ -424,7 +423,6 @@ get_header();
 			</div> <!-- / .container -->
 		</section>
 
-	</section>
 </main>
 
 <?php
