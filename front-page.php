@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-<main id="main" class="site-main" role="main">
+<main id="main" class="site-main">
 	<section id="content" class="page-content">
 
 		<!-- Component: Home Hero -->
@@ -31,10 +31,8 @@ get_header();
 					</div>
 					<div class="col-12 col-lg-6 order-0 order-md-1">
 						<div class="home-hero-compare">
-							<!-- The before image is first -->
-							<img src="/wp-content/uploads/2019/09/before-home.jpg" />
-							<!-- The after image is last -->
-							<img src="/wp-content/uploads/2019/09/after-home.jpg" />
+							<img src="/wp-content/uploads/2019/09/before-home.jpg" alt="hero before image" />
+							<img src="/wp-content/uploads/2019/09/after-home.jpg" alt="hero after image" />
 						</div>
 					</div>
 				</div>
@@ -53,7 +51,7 @@ get_header();
 						<span class="badge badge-pill badge-soft text-white mb-3">
 							<span class="h6 text-uppercase">Residential Power Washing</span>
 						</span>
-						<h2 class="mb-6">Professional Residential Power Washing Services</h3>
+						<h2 class="mb-6">Professional Residential Power Washing Services</h2>
 						<p class="mb-8">At Shane’s Pristine Powerwash we make sure to thoroughly clean the exterior of your home. When we use our soft wash process, we only use chemicals that are environmentally friendly and kills all mold and dirt on the siding of the structures. </p>
 						<a href="/residential-pressure-washing" class="h5 text-white border-bottom text-decoration-none">See All Residential Services <i class="fas fa-arrow-right ml-2"></i></a>
 					</div>
@@ -395,7 +393,7 @@ get_header();
 
 							<!-- Map -->
 							<div class="h-100 w-100 mapboxgl-map" style="background-image: url(/wp-content/uploads/2019/09/P1240953.jpg)">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d566914.7431754646!2d-77.48319898047484!3d38.29659317000123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1568622515462!5m2!1sen!2sus" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+								<iframe class="h-100 w-100" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d566914.7431754646!2d-77.48319898047484!3d38.29659317000123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1568622515462!5m2!1sen!2sus"></iframe>
 							</div>
 
 							<!-- Shape -->

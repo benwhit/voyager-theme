@@ -28,7 +28,7 @@
 				<div class="col-12 col-md-6 order-md-1">
 
 					<!-- Body -->
-					<a class="card-body" href="<?php echo the_permalink(); ?>">
+					<div class="card-body">
 
 						<!-- Heading -->
 						<h3 class="text-primary mb-5">
@@ -40,9 +40,9 @@
 							<?php echo wp_trim_words( get_the_content(), 60, '...' ); ?>
 						</p>
 
-						<button class="btn btn-primary mt-6">Read Featured Article <i class="pl-4 fa fa-angle-right"></i></button>
+						<a href="<?php echo the_permalink(); ?>" class="btn btn-primary mt-6">Read Featured Article <i class="pl-4 fa fa-angle-right"></i></a>
 
-					</a>
+					</div>
 
 					<!-- Meta -->
 					<a class="card-meta" href="<?php echo the_permalink(); ?>">

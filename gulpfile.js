@@ -83,10 +83,10 @@ function js(done) {
 
 function watcher(done) {
   browserSync.init({
-  	host: '192.168.1.159',
     proxy: LOCAL_SERVER,
     open: true,
-    port: 3000
+    port: 8000,
+    https: false
   });
 
   watch([paths.styles.src], styles);

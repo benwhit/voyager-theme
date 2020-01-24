@@ -4,7 +4,7 @@
  */
 function voyager_starter_scripts() {
 	wp_enqueue_style( 'voyager-global', get_stylesheet_uri() );
-	wp_enqueue_style( 'voyager-style', get_template_directory_uri() . '/assets/css/voyager.css', array(), filemtime( get_template_directory() . '/assets/css/voyager.css' ) );
+	wp_enqueue_style( 'voyager-style', get_template_directory_uri() . '/assets/css/voyager.min.css', array(), filemtime( get_template_directory() . '/assets/css/voyager.css' ) );
 	wp_enqueue_style( 'flickity-style', 'https://unpkg.com/flickity@2.1.2/dist/flickity.css', null, null);
 	wp_enqueue_style( 'fontawesome-5.10.2', 'https://use.fontawesome.com/releases/v5.10.2/css/all.css');
 

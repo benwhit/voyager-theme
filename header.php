@@ -37,7 +37,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <body <?php body_class(); ?>>
 	<div class="site">
+
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'voyager-starter' ); ?></a>
+
 		<header class="site-header">
 			<nav class="navbar navbar-expand-xl navbar-dark fixed-top">
 						<!-- Logo -->
@@ -69,11 +71,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 							<div class="ml-auto my-5 my-xl-0">
 								<span class="d-flex flex-column flex-xl-row">
-									<a href="tel:(540) 786-2626" class="h4 text-white pt-2 mr-xl-4">
-										</i> (540) 786-2626
+									<a href="tel:540-786-2626" class="h4 text-white pt-2 mr-xl-4">
+										(540) 786-2626
 									</a>
 		              <a href="/quote-request" class="btn btn-secondary">
-		                </i> REQUEST A FREE QUOTE
+		                REQUEST A FREE QUOTE
 		              </a>
 								</span>
 							</div>
@@ -81,4 +83,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			</nav>
 		</header>
+
 		<div id="content" class="site-content">

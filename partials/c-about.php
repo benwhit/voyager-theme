@@ -11,8 +11,12 @@
 				<span class="badge badge-pill badge-soft mb-3 pl-0">
 					<span class="h6 text-uppercase">About Our Company</span>
 				</span>
-				<p class="h2 pb-4">We Are A Professionally Trained Power Washing Company.</span></p>
-				<p>At Shane's Pristine Powerwash we take pride in having a team of highly qualified specialists who are equipped with the best state of the tools and equipment.</p>
+				<h2 class="pb-4">
+					We Are A Professionally Trained Power Washing Company.
+				</h2>
+				<p>
+					At Shane's Pristine Powerwash we take pride in having a team of highly qualified specialists who are equipped with the best state of the tools and equipment.
+				</p>
 				<p>
 					We provide our service areas with quality, dependable services such as Residential Power Washing Services and Commercial Power Washing Services.
 				</p>
