@@ -40,6 +40,8 @@ function voyager_theme_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
+		'script',
+		'style'
 	) );
 
 	// Add theme support for selective refresh for widgets.
